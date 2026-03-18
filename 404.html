@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Movie Moneyball</title>
+    <script>
+      // GitHub Pages SPA redirect: store the attempted path and redirect to root.
+      // The main index.html will read this and restore the URL via history.replaceState.
+      var path = window.location.pathname || '/';
+      sessionStorage.setItem('spa_redirect', path + window.location.search + window.location.hash);
+      window.location.replace('/');
+    </script>
+  </head>
+  <body></body>
+</html>

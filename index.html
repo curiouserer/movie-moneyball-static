@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Moneyball — Find film talent the numbers can't hide</title>
+    <meta name="description" content="Movie Moneyball: data-driven batting averages for directors, actors, writers, and DPs. Find who consistently makes great films." />
+    <meta property="og:title" content="Movie Moneyball — Find film talent the numbers can't hide" />
+    <meta property="og:description" content="Movie Moneyball: data-driven batting averages for directors, actors, writers, and DPs. Find who consistently makes great films." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moviemoneyball.com" />
+    <meta property="og:site_name" content="Movie Moneyball" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Movie Moneyball — Find film talent the numbers can't hide" />
+    <meta name="twitter:description" content="Movie Moneyball: data-driven batting averages for directors, actors, writers, and DPs. Find who consistently makes great films." />
+    <!-- CSP: script-src no longer uses 'unsafe-inline' — SPA redirect extracted to /spa-redirect.js -->
+    <!-- NOTE: frame-ancestors 'none' in a <meta> CSP tag is ignored by browsers; it only works as an HTTP response header. See public/_headers for the Netlify/Vercel equivalent. -->
+    <!-- NOTE: style-src retains 'unsafe-inline' because CareerArc, DualCareerArc, HitBar, and RatingBreakdown use dynamic inline style attributes (widths, colors, SVG properties) that cannot be expressed as static Tailwind classes. -->
+    <!-- NOTE: connect-src retains api.themoviedb.org because FilmDetailPage calls fetchMovieDetails() at runtime. OMDb calls (fetchOMDbRatings) are also still present in tmdb.ts for the director fallback path. Remove these when those browser-side API calls are fully eliminated. -->
+    <!-- NOTE: worker-src 'self' blob: required for DuckDB WASM web worker (analyticsDb.ts).
+         connect-src blob: required for DuckDB's internal fetch of WASM modules via blob URLs. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https://image.tmdb.org https://via.placeholder.com; connect-src 'self' blob: https://api.themoviedb.org https://www.omdbapi.com https://plausible.io; font-src 'self' https://fonts.gstatic.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self';" />
+    <!-- X-Frame-Options cannot be set via meta tag; it only works as an HTTP response header. See public/_headers. -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&display=swap" rel="stylesheet">
+
+    <!-- GitHub Pages SPA routing: restore path after 404 redirect -->
+    <script src="/spa-redirect.js"></script>
+
+    <!-- Plausible Analytics — privacy-friendly, no cookies, GDPR/CCPA compliant -->
+    <script defer data-domain="moviemoneyball.com" src="https://plausible.io/js/script.js"></script>
+    <script type="module" crossorigin src="/assets/index-C36_Mn5S.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BeHbR3fX.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
