@@ -1,0 +1,54 @@
+{
+  "totalDirectors": 495,
+  "totalFilms": 6213,
+  "totalUniqueFilms": 5959,
+  "averageBattingAverage": 0.279,
+  "averageCombinedRating": 6.72,
+  "hitCount": 1883,
+  "hitPercentage": 30.3,
+  "mostProlificDirector": {
+    "name": "Charlie Chaplin",
+    "filmCount": 54
+  },
+  "highestPrestigeDirector": {
+    "name": "Stanley Kubrick",
+    "totalPrestige": 19.5,
+    "filmCount": 16
+  },
+  "prestigeFilmCount": 329,
+  "topPrestigeLists": [
+    {
+      "name": "Criterion",
+      "count": 112
+    },
+    {
+      "name": "AFI 100",
+      "count": 88
+    },
+    {
+      "name": "NFR",
+      "count": 79
+    },
+    {
+      "name": "TSPDT 250",
+      "count": 75
+    },
+    {
+      "name": "Oscar Winner",
+      "count": 65
+    },
+    {
+      "name": "BFI Top 100",
+      "count": 61
+    },
+    {
+      "name": "Oscar Nominee",
+      "count": 50
+    },
+    {
+      "name": "Palme d'Or",
+      "count": 38
+    }
+  ],
+  "generatedAt": "2026-02-13T00:14:53.968Z"
+}

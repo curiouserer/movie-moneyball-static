@@ -1,0 +1,1412 @@
+{
+  "$schema": "https://moviemoneyball.com/schemas/team-predictor-model-1.json",
+  "generatedAt": "2026-09-30T20:34:58.778Z",
+  "generatedBy": "npm run backtest:team",
+  "methodology": "docs/analytics/team-predictor-methodology.md",
+  "uiCopy": "docs/analytics/team-predictor-ui-copy.md",
+  "hitThreshold": 8,
+  "thinRecordFilms": 8,
+  "castDepth": 3,
+  "rolesInDataset": [
+    "actor",
+    "director",
+    "writer",
+    "producer",
+    "editor",
+    "cinematographer",
+    "composer"
+  ],
+  "rolesAwaitingData": [
+    "production_designer",
+    "costume_designer",
+    "casting_director"
+  ],
+  "roleEffects": {
+    "director": {
+      "measured": true,
+      "sampleFilms": 4179,
+      "soloAuc": 0.793703100723943,
+      "marginalAuc": 0.12255586592178769,
+      "awaitingData": false
+    },
+    "actor": {
+      "measured": true,
+      "sampleFilms": 4170,
+      "soloAuc": 0.7101655730389078,
+      "marginalAuc": 0.03901833823675249,
+      "awaitingData": false
+    },
+    "writer": {
+      "measured": true,
+      "sampleFilms": 4095,
+      "soloAuc": 0.696811675647086,
+      "marginalAuc": 0.02566444084493069,
+      "awaitingData": false
+    },
+    "cinematographer": {
+      "measured": true,
+      "sampleFilms": 3964,
+      "soloAuc": 0.7409589765627582,
+      "marginalAuc": 0.0698117417606029,
+      "awaitingData": false
+    },
+    "editor": {
+      "measured": true,
+      "sampleFilms": 4051,
+      "soloAuc": 0.753474058708803,
+      "marginalAuc": 0.0823268239066477,
+      "awaitingData": false
+    },
+    "composer": {
+      "measured": true,
+      "sampleFilms": 3648,
+      "soloAuc": 0.72253293279561,
+      "marginalAuc": 0.051385697993454715,
+      "awaitingData": false
+    },
+    "producer": {
+      "measured": true,
+      "sampleFilms": 3985,
+      "soloAuc": 0.7251433836897954,
+      "marginalAuc": 0.05399614888764004,
+      "awaitingData": false
+    },
+    "production_designer": {
+      "measured": false,
+      "sampleFilms": 0,
+      "soloAuc": 0.5,
+      "marginalAuc": 0,
+      "awaitingData": true
+    },
+    "costume_designer": {
+      "measured": false,
+      "sampleFilms": 0,
+      "soloAuc": 0.5,
+      "marginalAuc": 0,
+      "awaitingData": true
+    },
+    "casting_director": {
+      "measured": false,
+      "sampleFilms": 0,
+      "soloAuc": 0.5,
+      "marginalAuc": 0,
+      "awaitingData": true
+    }
+  },
+  "model": {
+    "version": 1,
+    "shrinkage": {
+      "director": 5,
+      "actor": 8,
+      "writer": 5,
+      "cinematographer": 8,
+      "editor": 5,
+      "composer": 5,
+      "producer": 5,
+      "production_designer": 8,
+      "costume_designer": 8,
+      "casting_director": 8
+    },
+    "ratingShrinkage": 6,
+    "roleWeights": {
+      "director": 1,
+      "actor": 1,
+      "writer": 1,
+      "cinematographer": 1,
+      "editor": 1,
+      "composer": 1,
+      "producer": 1,
+      "production_designer": 1,
+      "costume_designer": 1,
+      "casting_director": 1
+    },
+    "collinearityExponent": 1,
+    "calibration": {
+      "intercept": -0.7331986750251661,
+      "slope": 0.6047821773194618
+    },
+    "ratingCalibration": {
+      "intercept": -0.02736449757910979,
+      "slope": 0.6628175907827505
+    },
+    "meanEffectCorrelation": 0.3183865819581374,
+    "driftSd": 0.2637463545505397,
+    "ratingResidualSd": 1.0574192157965228,
+    "confidenceBands": {
+      "highMaxLogOddsSd": 1.133,
+      "moderateMaxLogOddsSd": 1.695,
+      "highMaxWidth": 27.9,
+      "moderateMaxWidth": 43.5
+    },
+    "roleDiagnostics": {
+      "actor": {
+        "soloAuc": 0.7101655730389078,
+        "marginalAuc": 0.03901833823675249,
+        "significant": true,
+        "coverage": 4170,
+        "awaitingData": false
+      },
+      "director": {
+        "soloAuc": 0.793703100723943,
+        "marginalAuc": 0.12255586592178769,
+        "significant": true,
+        "coverage": 4179,
+        "awaitingData": false
+      },
+      "writer": {
+        "soloAuc": 0.696811675647086,
+        "marginalAuc": 0.02566444084493069,
+        "significant": true,
+        "coverage": 4095,
+        "awaitingData": false
+      },
+      "producer": {
+        "soloAuc": 0.7251433836897954,
+        "marginalAuc": 0.05399614888764004,
+        "significant": true,
+        "coverage": 3985,
+        "awaitingData": false
+      },
+      "editor": {
+        "soloAuc": 0.753474058708803,
+        "marginalAuc": 0.0823268239066477,
+        "significant": true,
+        "coverage": 4051,
+        "awaitingData": false
+      },
+      "cinematographer": {
+        "soloAuc": 0.7409589765627582,
+        "marginalAuc": 0.0698117417606029,
+        "significant": true,
+        "coverage": 3964,
+        "awaitingData": false
+      },
+      "composer": {
+        "soloAuc": 0.72253293279561,
+        "marginalAuc": 0.051385697993454715,
+        "significant": true,
+        "coverage": 3648,
+        "awaitingData": false
+      },
+      "production_designer": {
+        "soloAuc": 0.5,
+        "marginalAuc": 0,
+        "significant": false,
+        "coverage": 0,
+        "awaitingData": true
+      },
+      "costume_designer": {
+        "soloAuc": 0.5,
+        "marginalAuc": 0,
+        "significant": false,
+        "coverage": 0,
+        "awaitingData": true
+      },
+      "casting_director": {
+        "soloAuc": 0.5,
+        "marginalAuc": 0,
+        "significant": false,
+        "coverage": 0,
+        "awaitingData": true
+      }
+    },
+    "eraTable": {
+      "1914": {
+        "hitRate": 0.15,
+        "meanRating": 6.6
+      },
+      "1915": {
+        "hitRate": 0.09375,
+        "meanRating": 6.279999999999999
+      },
+      "1916": {
+        "hitRate": 0.07075471698113207,
+        "meanRating": 6.235849056603773
+      },
+      "1917": {
+        "hitRate": 0.06048387096774194,
+        "meanRating": 6.296774193548389
+      },
+      "1918": {
+        "hitRate": 0.055970149253731345,
+        "meanRating": 6.340298507462688
+      },
+      "1919": {
+        "hitRate": 0.0528169014084507,
+        "meanRating": 6.356338028169016
+      },
+      "1920": {
+        "hitRate": 0.05,
+        "meanRating": 6.384000000000001
+      },
+      "1921": {
+        "hitRate": 0.060126582278481014,
+        "meanRating": 6.448101265822786
+      },
+      "1922": {
+        "hitRate": 0.07670454545454546,
+        "meanRating": 6.552272727272729
+      },
+      "1923": {
+        "hitRate": 0.07989690721649484,
+        "meanRating": 6.591752577319587
+      },
+      "1924": {
+        "hitRate": 0.08495145631067962,
+        "meanRating": 6.633980582524272
+      },
+      "1925": {
+        "hitRate": 0.11805555555555555,
+        "meanRating": 6.717592592592592
+      },
+      "1926": {
+        "hitRate": 0.16163793103448276,
+        "meanRating": 6.806896551724138
+      },
+      "1927": {
+        "hitRate": 0.1673728813559322,
+        "meanRating": 6.837288135593221
+      },
+      "1928": {
+        "hitRate": 0.16869918699186992,
+        "meanRating": 6.869918699186992
+      },
+      "1929": {
+        "hitRate": 0.1965648854961832,
+        "meanRating": 6.909160305343511
+      },
+      "1930": {
+        "hitRate": 0.23373983739837398,
+        "meanRating": 7.093495934959349
+      },
+      "1931": {
+        "hitRate": 0.25442477876106195,
+        "meanRating": 7.1858407079646005
+      },
+      "1932": {
+        "hitRate": 0.28348214285714285,
+        "meanRating": 7.258928571428571
+      },
+      "1933": {
+        "hitRate": 0.3088235294117647,
+        "meanRating": 7.301680672268907
+      },
+      "1934": {
+        "hitRate": 0.32086614173228345,
+        "meanRating": 7.362204724409448
+      },
+      "1935": {
+        "hitRate": 0.3314814814814815,
+        "meanRating": 7.376296296296294
+      },
+      "1936": {
+        "hitRate": 0.34330985915492956,
+        "meanRating": 7.390845070422532
+      },
+      "1937": {
+        "hitRate": 0.35596026490066224,
+        "meanRating": 7.40529801324503
+      },
+      "1938": {
+        "hitRate": 0.39052287581699346,
+        "meanRating": 7.467973856209149
+      },
+      "1939": {
+        "hitRate": 0.4234375,
+        "meanRating": 7.527499999999999
+      },
+      "1940": {
+        "hitRate": 0.43857142857142856,
+        "meanRating": 7.561142857142858
+      },
+      "1941": {
+        "hitRate": 0.45026881720430106,
+        "meanRating": 7.588172043010758
+      },
+      "1942": {
+        "hitRate": 0.43149038461538464,
+        "meanRating": 7.578846153846158
+      },
+      "1943": {
+        "hitRate": 0.4192477876106195,
+        "meanRating": 7.551327433628323
+      },
+      "1944": {
+        "hitRate": 0.41244725738396626,
+        "meanRating": 7.577215189873421
+      },
+      "1945": {
+        "hitRate": 0.411,
+        "meanRating": 7.57
+      },
+      "1946": {
+        "hitRate": 0.42602996254681647,
+        "meanRating": 7.604868913857677
+      },
+      "1947": {
+        "hitRate": 0.4302120141342756,
+        "meanRating": 7.608480565371024
+      },
+      "1948": {
+        "hitRate": 0.4189419795221843,
+        "meanRating": 7.601706484641639
+      },
+      "1949": {
+        "hitRate": 0.4231391585760518,
+        "meanRating": 7.61812297734628
+      },
+      "1950": {
+        "hitRate": 0.4131419939577039,
+        "meanRating": 7.62416918429003
+      },
+      "1951": {
+        "hitRate": 0.41005665722379603,
+        "meanRating": 7.64050991501416
+      },
+      "1952": {
+        "hitRate": 0.4053867403314917,
+        "meanRating": 7.647513812154693
+      },
+      "1953": {
+        "hitRate": 0.39935064935064934,
+        "meanRating": 7.656623376623375
+      },
+      "1954": {
+        "hitRate": 0.3935523114355231,
+        "meanRating": 7.645012165450121
+      },
+      "1955": {
+        "hitRate": 0.38529411764705884,
+        "meanRating": 7.6402352941176455
+      },
+      "1956": {
+        "hitRate": 0.36821266968325794,
+        "meanRating": 7.630769230769232
+      },
+      "1957": {
+        "hitRate": 0.36751662971175164,
+        "meanRating": 7.634589800443463
+      },
+      "1958": {
+        "hitRate": 0.3725596529284165,
+        "meanRating": 7.652060737527119
+      },
+      "1959": {
+        "hitRate": 0.36822916666666666,
+        "meanRating": 7.645000000000004
+      },
+      "1960": {
+        "hitRate": 0.3682364729458918,
+        "meanRating": 7.658917835671347
+      },
+      "1961": {
+        "hitRate": 0.3733140655105973,
+        "meanRating": 7.6728323699422
+      },
+      "1962": {
+        "hitRate": 0.3643667296786389,
+        "meanRating": 7.6637051039697575
+      },
+      "1963": {
+        "hitRate": 0.37817028985507245,
+        "meanRating": 7.680615942028989
+      },
+      "1964": {
+        "hitRate": 0.3658854166666667,
+        "meanRating": 7.643749999999997
+      },
+      "1965": {
+        "hitRate": 0.3666380789022298,
+        "meanRating": 7.634305317324182
+      },
+      "1966": {
+        "hitRate": 0.35791666666666666,
+        "meanRating": 7.59616666666667
+      },
+      "1967": {
+        "hitRate": 0.351123595505618,
+        "meanRating": 7.574317817014445
+      },
+      "1968": {
+        "hitRate": 0.33917445482866043,
+        "meanRating": 7.521495327102804
+      },
+      "1969": {
+        "hitRate": 0.32170245398773006,
+        "meanRating": 7.487423312883442
+      },
+      "1970": {
+        "hitRate": 0.3101217656012177,
+        "meanRating": 7.440639269406399
+      },
+      "1971": {
+        "hitRate": 0.301405325443787,
+        "meanRating": 7.403846153846152
+      },
+      "1972": {
+        "hitRate": 0.294011544011544,
+        "meanRating": 7.391341991341992
+      },
+      "1973": {
+        "hitRate": 0.28317039106145253,
+        "meanRating": 7.34203910614525
+      },
+      "1974": {
+        "hitRate": 0.2800414364640884,
+        "meanRating": 7.3128453038674035
+      },
+      "1975": {
+        "hitRate": 0.2692048517520216,
+        "meanRating": 7.277358490566033
+      },
+      "1976": {
+        "hitRate": 0.25734312416555405,
+        "meanRating": 7.232843791722294
+      },
+      "1977": {
+        "hitRate": 0.24967277486910994,
+        "meanRating": 7.200261780104704
+      },
+      "1978": {
+        "hitRate": 0.23015364916773368,
+        "meanRating": 7.1519846350832195
+      },
+      "1979": {
+        "hitRate": 0.2221862871927555,
+        "meanRating": 7.131694695989645
+      },
+      "1980": {
+        "hitRate": 0.2144194756554307,
+        "meanRating": 7.087890137328337
+      },
+      "1981": {
+        "hitRate": 0.20291201982651796,
+        "meanRating": 7.051425030978929
+      },
+      "1982": {
+        "hitRate": 0.1894124847001224,
+        "meanRating": 7.003304773561807
+      },
+      "1983": {
+        "hitRate": 0.18053892215568862,
+        "meanRating": 6.972934131736523
+      },
+      "1984": {
+        "hitRate": 0.1756993006993007,
+        "meanRating": 6.916083916083912
+      },
+      "1985": {
+        "hitRate": 0.17446448703494927,
+        "meanRating": 6.911950394588495
+      },
+      "1986": {
+        "hitRate": 0.1698682766190999,
+        "meanRating": 6.860153677277713
+      },
+      "1987": {
+        "hitRate": 0.16356382978723405,
+        "meanRating": 6.804255319148936
+      },
+      "1988": {
+        "hitRate": 0.1577995867768595,
+        "meanRating": 6.782024793388428
+      },
+      "1989": {
+        "hitRate": 0.1515984015984016,
+        "meanRating": 6.763136863136864
+      },
+      "1990": {
+        "hitRate": 0.1514790076335878,
+        "meanRating": 6.74866412213741
+      },
+      "1991": {
+        "hitRate": 0.139519056261343,
+        "meanRating": 6.710889292196014
+      },
+      "1992": {
+        "hitRate": 0.13976377952755906,
+        "meanRating": 6.704636920384953
+      },
+      "1993": {
+        "hitRate": 0.13692504258943783,
+        "meanRating": 6.670272572402047
+      },
+      "1994": {
+        "hitRate": 0.13747987117552335,
+        "meanRating": 6.668035426731084
+      },
+      "1995": {
+        "hitRate": 0.1323529411764706,
+        "meanRating": 6.6349019607843225
+      },
+      "1996": {
+        "hitRate": 0.1341966966966967,
+        "meanRating": 6.619819819819823
+      },
+      "1997": {
+        "hitRate": 0.13219424460431656,
+        "meanRating": 6.603741007194248
+      },
+      "1998": {
+        "hitRate": 0.1316793893129771,
+        "meanRating": 6.599375433726568
+      },
+      "1999": {
+        "hitRate": 0.12802013422818792,
+        "meanRating": 6.59006711409396
+      },
+      "2000": {
+        "hitRate": 0.1246001279590531,
+        "meanRating": 6.565387076135643
+      },
+      "2001": {
+        "hitRate": 0.12049129353233831,
+        "meanRating": 6.54577114427861
+      },
+      "2002": {
+        "hitRate": 0.11834945586457074,
+        "meanRating": 6.537545344619111
+      },
+      "2003": {
+        "hitRate": 0.11606624055781523,
+        "meanRating": 6.5192330040674
+      },
+      "2004": {
+        "hitRate": 0.11066032456631225,
+        "meanRating": 6.486681589255739
+      },
+      "2005": {
+        "hitRate": 0.10406437534097109,
+        "meanRating": 6.4648663393344235
+      },
+      "2006": {
+        "hitRate": 0.10150078988941548,
+        "meanRating": 6.4487098472880495
+      },
+      "2007": {
+        "hitRate": 0.09669692385274836,
+        "meanRating": 6.427382753403942
+      },
+      "2008": {
+        "hitRate": 0.09361340456532297,
+        "meanRating": 6.424089363768828
+      },
+      "2009": {
+        "hitRate": 0.09006137865911237,
+        "meanRating": 6.404485363550527
+      },
+      "2010": {
+        "hitRate": 0.08758034894398531,
+        "meanRating": 6.403673094582187
+      },
+      "2011": {
+        "hitRate": 0.08422103861517977,
+        "meanRating": 6.3939636040834396
+      },
+      "2012": {
+        "hitRate": 0.08444779982743744,
+        "meanRating": 6.380931837791196
+      },
+      "2013": {
+        "hitRate": 0.08361379890618427,
+        "meanRating": 6.36411442995371
+      },
+      "2014": {
+        "hitRate": 0.08571720474049857,
+        "meanRating": 6.3558643236616135
+      },
+      "2015": {
+        "hitRate": 0.08390273311897106,
+        "meanRating": 6.341881028938891
+      },
+      "2016": {
+        "hitRate": 0.08349841521394612,
+        "meanRating": 6.347622820919163
+      },
+      "2017": {
+        "hitRate": 0.08336568322981366,
+        "meanRating": 6.338082298136637
+      },
+      "2018": {
+        "hitRate": 0.08346168656141702,
+        "meanRating": 6.3438968040046175
+      },
+      "2019": {
+        "hitRate": 0.08558644325971058,
+        "meanRating": 6.360396039603948
+      },
+      "2020": {
+        "hitRate": 0.08560864618885097,
+        "meanRating": 6.363784603716333
+      },
+      "2021": {
+        "hitRate": 0.08590695856137608,
+        "meanRating": 6.363526192337755
+      },
+      "2022": {
+        "hitRate": 0.08578528827037774,
+        "meanRating": 6.367912524850893
+      },
+      "2023": {
+        "hitRate": 0.08393646964213912,
+        "meanRating": 6.367551266586242
+      },
+      "2024": {
+        "hitRate": 0.08503054989816701,
+        "meanRating": 6.365010183299386
+      },
+      "2025": {
+        "hitRate": 0.08457866334578663,
+        "meanRating": 6.356288916562885
+      },
+      "2026": {
+        "hitRate": 0.08322649572649572,
+        "meanRating": 6.357307692307693
+      },
+      "2027": {
+        "hitRate": 0.08370685791125056,
+        "meanRating": 6.362707306140746
+      }
+    },
+    "servingEra": {
+      "year": 2026,
+      "hitRate": 0.08322649572649572,
+      "meanRating": 6.357307692307693,
+      "sampleSize": 2315
+    },
+    "genreTable": {
+      "12": {
+        "hitRate": 0.0891983189701032,
+        "meanRating": 6.3515320778806235,
+        "sampleSize": 422
+      },
+      "14": {
+        "hitRate": 0.07550933457277868,
+        "meanRating": 6.315221938182662,
+        "sampleSize": 271
+      },
+      "16": {
+        "hitRate": 0.12925319294140586,
+        "meanRating": 6.678473237788826,
+        "sampleSize": 203
+      },
+      "18": {
+        "hitRate": 0.11913094722663202,
+        "meanRating": 6.693281858854092,
+        "sampleSize": 1006
+      },
+      "27": {
+        "hitRate": 0.036402615044999156,
+        "meanRating": 6.00674987264391,
+        "sampleSize": 242
+      },
+      "28": {
+        "hitRate": 0.07029209432365817,
+        "meanRating": 6.208376558878707,
+        "sampleSize": 637
+      },
+      "35": {
+        "hitRate": 0.05078283266770851,
+        "meanRating": 6.122278173293976,
+        "sampleSize": 826
+      },
+      "36": {
+        "hitRate": 0.1215927465927466,
+        "meanRating": 6.8515246015246,
+        "sampleSize": 162
+      },
+      "37": {
+        "hitRate": 0.07135225885225885,
+        "meanRating": 6.38021978021978,
+        "sampleSize": 24
+      },
+      "53": {
+        "hitRate": 0.05582671699422968,
+        "meanRating": 6.1702850449043325,
+        "sampleSize": 531
+      },
+      "80": {
+        "hitRate": 0.07084931691230904,
+        "meanRating": 6.299313547345048,
+        "sampleSize": 321
+      },
+      "99": {
+        "hitRate": 0.18693975401292476,
+        "meanRating": 6.905190744215135,
+        "sampleSize": 63
+      },
+      "878": {
+        "hitRate": 0.11172948350598781,
+        "meanRating": 6.397817941370946,
+        "sampleSize": 289
+      },
+      "9648": {
+        "hitRate": 0.06608921381648655,
+        "meanRating": 6.343547361729178,
+        "sampleSize": 182
+      },
+      "10402": {
+        "hitRate": 0.11358780108780109,
+        "meanRating": 6.585897435897435,
+        "sampleSize": 72
+      },
+      "10749": {
+        "hitRate": 0.08122996794871795,
+        "meanRating": 6.320745192307693,
+        "sampleSize": 260
+      },
+      "10751": {
+        "hitRate": 0.05815850815850816,
+        "meanRating": 6.261594405594408,
+        "sampleSize": 215
+      },
+      "10752": {
+        "hitRate": 0.07402659069325737,
+        "meanRating": 6.584729344729345,
+        "sampleSize": 75
+      },
+      "10770": {
+        "hitRate": 0.07685263454494223,
+        "meanRating": 6.465257819103974,
+        "sampleSize": 31
+      }
+    }
+  },
+  "dataset": {
+    "films": 7780,
+    "rosterCredits": 88837,
+    "firstYear": 1914,
+    "lastYear": 2026
+  },
+  "split": {
+    "trainFrom": 1965,
+    "trainTo": 2009,
+    "testFrom": 2010,
+    "testTo": 2026,
+    "trainFilms": 4179,
+    "trainHits": 520,
+    "trainHitRate": 0.12443168222062695,
+    "testFilms": 2577,
+    "testHits": 213,
+    "testHitRate": 0.08265424912689173,
+    "testFilmsScored": 2535,
+    "testHitsScored": 208,
+    "refusals": {
+      "NO_TRACK_RECORD": 12,
+      "TOO_FEW_PEOPLE": 30
+    },
+    "validationFrom": 1990,
+    "validationTo": 2009,
+    "eligibility": {
+      "minRosterEntries": 5,
+      "trainEligible": 4127,
+      "trainTotal": 4179,
+      "testEligible": 2547,
+      "testTotal": 2577,
+      "testEligibleHits": 208,
+      "testPeopleDistribution": [
+        {
+          "atLeast": 2,
+          "films": 2574
+        },
+        {
+          "atLeast": 3,
+          "films": 2570
+        },
+        {
+          "atLeast": 4,
+          "films": 2564
+        },
+        {
+          "atLeast": 5,
+          "films": 2547
+        },
+        {
+          "atLeast": 6,
+          "films": 2519
+        },
+        {
+          "atLeast": 7,
+          "films": 2471
+        },
+        {
+          "atLeast": 8,
+          "films": 2344
+        },
+        {
+          "atLeast": 10,
+          "films": 1798
+        },
+        {
+          "atLeast": 12,
+          "films": 932
+        }
+      ],
+      "testWithoutDirector": 0,
+      "testWithoutGenre": 0
+    }
+  },
+  "backtest": {
+    "beatsBaseline": true,
+    "bar": {
+      "criteria": [
+        {
+          "id": "discrimination",
+          "description": "95% bootstrap CI lower bound on holdout AUC > 0.6",
+          "measured": 0.76940599105987,
+          "threshold": 0.6,
+          "pass": true
+        },
+        {
+          "id": "probabilistic-skill",
+          "description": "Brier skill score against the constant base-rate forecast > 0.05",
+          "measured": 0.10511002691822213,
+          "threshold": 0.05,
+          "pass": true
+        },
+        {
+          "id": "usable-ranking",
+          "description": "top-decile hit rate at least 2x the base rate",
+          "measured": 3.7426181102362204,
+          "threshold": 2,
+          "pass": true
+        },
+        {
+          "id": "calibration",
+          "description": "mean absolute calibration error across deciles <= 0.05",
+          "measured": 0.015077672583826428,
+          "threshold": 0.05,
+          "pass": true
+        }
+      ],
+      "statement": "All four criteria must pass. Accuracy at a 0.5 threshold is reported but is deliberately not a criterion: at an 8% base rate, always predicting \"not a hit\" already scores about 92%, so accuracy cannot separate a useful model from a useless one."
+    },
+    "headline": {
+      "auc": 0.7990428002380087,
+      "aucCiLow": 0.76940599105987,
+      "aucCiHigh": 0.8278794358560896,
+      "brier": 0.06900941117554235,
+      "brierBaseline": 0.07711496748353448,
+      "brierSkillScore": 0.10511002691822213,
+      "logLoss": 0.2418545918412318,
+      "accuracyAtHalf": 0.9104536489151874,
+      "accuracyAtBaseRate": 0.8067061143984221,
+      "baselineAccuracy": 0.9179487179487179,
+      "accuracyMarginAtHalf": -0.007495069033530477,
+      "accuracyMarginAtBaseRate": -0.1112426035502958,
+      "topDecileHitRate": 0.30708661417322836,
+      "topDecileLift": 3.7426181102362204,
+      "bottomDecileHitRate": 0.003937007874015748,
+      "calibrationError": 0.015077672583826428,
+      "maxDecileError": 0.0972132530120483,
+      "intervalCoverage": 1,
+      "precisionAtBaseRate": 0.2339622641509434,
+      "recallAtBaseRate": 0.5961538461538461,
+      "confusionAtBaseRate": {
+        "tp": 124,
+        "fp": 406,
+        "tn": 1921,
+        "fn": 84,
+        "precision": 0.2339622641509434,
+        "recall": 0.5961538461538461
+      }
+    },
+    "calibrationDeciles": [
+      {
+        "decile": 1,
+        "count": 254,
+        "meanPredicted": 0.008035039370078743,
+        "observed": 0.003937007874015748,
+        "observedCiLow": 0.0006952990654844808,
+        "observedCiHigh": 0.021960470988688308,
+        "meanIntervalLow": 0.00041614173228346447,
+        "meanIntervalHigh": 0.1793870078740158,
+        "inInterval": true
+      },
+      {
+        "decile": 2,
+        "count": 254,
+        "meanPredicted": 0.01633740157480316,
+        "observed": 0.011811023622047244,
+        "observedCiLow": 0.00402472005541894,
+        "observedCiHigh": 0.03414445047408444,
+        "meanIntervalLow": 0.0010377952755905512,
+        "meanIntervalHigh": 0.2630720472440944,
+        "inInterval": true
+      },
+      {
+        "decile": 3,
+        "count": 254,
+        "meanPredicted": 0.023417716535433085,
+        "observed": 0.01968503937007874,
+        "observedCiLow": 0.008436741674291034,
+        "observedCiHigh": 0.04524582933054294,
+        "meanIntervalLow": 0.0017102362204724421,
+        "meanIntervalHigh": 0.29879763779527546,
+        "inInterval": true
+      },
+      {
+        "decile": 4,
+        "count": 254,
+        "meanPredicted": 0.031652362204724394,
+        "observed": 0.03543307086614173,
+        "observedCiLow": 0.018751238499998702,
+        "observedCiHigh": 0.06595813345549645,
+        "meanIntervalLow": 0.003106299212598425,
+        "meanIntervalHigh": 0.313956692913386,
+        "inInterval": true
+      },
+      {
+        "decile": 5,
+        "count": 254,
+        "meanPredicted": 0.04174409448818897,
+        "observed": 0.03937007874015748,
+        "observedCiLow": 0.021523035467193637,
+        "observedCiHigh": 0.0709430367259668,
+        "meanIntervalLow": 0.005441732283464568,
+        "meanIntervalHigh": 0.3234539370078742,
+        "inInterval": true
+      },
+      {
+        "decile": 6,
+        "count": 254,
+        "meanPredicted": 0.05433149606299219,
+        "observed": 0.051181102362204724,
+        "observedCiLow": 0.030150972927835754,
+        "observedCiHigh": 0.08558519997832056,
+        "meanIntervalLow": 0.008225590551181102,
+        "meanIntervalHigh": 0.3566570866141733,
+        "inInterval": true
+      },
+      {
+        "decile": 7,
+        "count": 254,
+        "meanPredicted": 0.07418779527559048,
+        "observed": 0.06692913385826772,
+        "observedCiLow": 0.0422033827280186,
+        "observedCiHigh": 0.10455959112879892,
+        "meanIntervalLow": 0.013429527559055127,
+        "meanIntervalHigh": 0.3911106299212596,
+        "inInterval": true
+      },
+      {
+        "decile": 8,
+        "count": 254,
+        "meanPredicted": 0.10588818897637796,
+        "observed": 0.11811023622047244,
+        "observedCiLow": 0.0839972236790082,
+        "observedCiHigh": 0.16360285326745813,
+        "meanIntervalLow": 0.0216484251968504,
+        "meanIntervalHigh": 0.4470216535433074,
+        "inInterval": true
+      },
+      {
+        "decile": 9,
+        "count": 254,
+        "meanPredicted": 0.18332874015748019,
+        "observed": 0.16929133858267717,
+        "observedCiLow": 0.12817990482643762,
+        "observedCiHigh": 0.22025727520967753,
+        "meanIntervalLow": 0.040023228346456705,
+        "meanIntervalHigh": 0.5836653543307085,
+        "inInterval": true
+      },
+      {
+        "decile": 10,
+        "count": 249,
+        "meanPredicted": 0.406450200803213,
+        "observed": 0.3092369477911647,
+        "observedCiLow": 0.25509221010480887,
+        "observedCiHigh": 0.36917847952854266,
+        "meanIntervalLow": 0.1336771084337349,
+        "meanIntervalHigh": 0.7566775100401607,
+        "inInterval": true
+      }
+    ],
+    "ratingProjection": {
+      "mae": 0.791491124260353,
+      "rmse": 0.9958182981047498,
+      "baselineMae": 0.923624457593687,
+      "baselineRmse": 1.1399927869248279,
+      "maeImprovement": 0.1321333333333341,
+      "intervalCoverage": 0.8366863905325443,
+      "nominalIntervalLevel": 0.8,
+      "residualSd": 1.0574192157965228
+    },
+    "byConfidence": {
+      "low": {
+        "n": 1823,
+        "hits": 114,
+        "auc": 0.7793082032172297,
+        "brier": 0.05494348163466814,
+        "meanWidth": 37.433400987383386,
+        "observedRate": 0.06253428414701043,
+        "meanPredicted": 0.06603949533735612
+      },
+      "moderate": {
+        "n": 523,
+        "hits": 56,
+        "auc": 0.7954267360048944,
+        "brier": 0.09463561221797322,
+        "meanWidth": 37.28919694072657,
+        "observedRate": 0.10707456978967496,
+        "meanPredicted": 0.15671988527724662
+      },
+      "high": {
+        "n": 189,
+        "hits": 38,
+        "auc": 0.7674276751481353,
+        "brier": 0.13376965671957666,
+        "meanWidth": 29.345343915343914,
+        "observedRate": 0.20105820105820105,
+        "meanPredicted": 0.18908994708994709
+      }
+    },
+    "strata": [
+      {
+        "label": "5-9 people",
+        "n": 739,
+        "hits": 86,
+        "auc": 0.8009811602977314,
+        "brier": 0.09024952810554812,
+        "observedRate": 0.11637347767253045,
+        "meanPredicted": 0.11317848443843036
+      },
+      {
+        "label": "10+ people",
+        "n": 1796,
+        "hits": 122,
+        "auc": 0.7914365317194508,
+        "brier": 0.060269741681514485,
+        "observedRate": 0.06792873051224944,
+        "meanPredicted": 0.08599866369710471
+      },
+      {
+        "label": "3-4 roles filled",
+        "n": 139,
+        "hits": 12,
+        "auc": 0.8202099737532809,
+        "brier": 0.06685522014388488,
+        "observedRate": 0.08633093525179857,
+        "meanPredicted": 0.09647338129496401
+      },
+      {
+        "label": "5+ roles filled",
+        "n": 2396,
+        "hits": 196,
+        "auc": 0.7988752319109462,
+        "brier": 0.0691343830258764,
+        "observedRate": 0.08180300500834725,
+        "meanPredicted": 0.09377408180300506
+      },
+      {
+        "label": ">= 1 thin record",
+        "n": 2534,
+        "hits": 207,
+        "auc": 0.7980740685379986,
+        "brier": 0.06902962185082868,
+        "observedRate": 0.08168902920284135,
+        "meanPredicted": 0.09361716653512235
+      },
+      {
+        "label": ">= 3 thin records",
+        "n": 2511,
+        "hits": 203,
+        "auc": 0.798486310199691,
+        "brier": 0.06884581832337709,
+        "observedRate": 0.08084428514536042,
+        "meanPredicted": 0.09326025487853447
+      },
+      {
+        "label": "shared credits >= 30%",
+        "n": 822,
+        "hits": 78,
+        "auc": 0.7753825475599669,
+        "brier": 0.07697954433090026,
+        "observedRate": 0.0948905109489051,
+        "meanPredicted": 0.09543090024330912
+      },
+      {
+        "label": "shared credits < 30%",
+        "n": 1713,
+        "hits": 130,
+        "auc": 0.8088148112153166,
+        "brier": 0.06518486391710446,
+        "observedRate": 0.07589025102159953,
+        "meanPredicted": 0.09319807355516646
+      },
+      {
+        "label": "2010-2017",
+        "n": 1406,
+        "hits": 125,
+        "auc": 0.7953692427790788,
+        "brier": 0.07154829257468005,
+        "observedRate": 0.08890469416785206,
+        "meanPredicted": 0.08733129445234712
+      },
+      {
+        "label": "2018+",
+        "n": 1129,
+        "hits": 83,
+        "auc": 0.8084728973254395,
+        "brier": 0.0658476155624447,
+        "observedRate": 0.07351638618246235,
+        "meanPredicted": 0.10212993799822855
+      },
+      {
+        "label": "director < 8 prior films",
+        "n": 1304,
+        "hits": 106,
+        "auc": 0.7569140391218068,
+        "brier": 0.07310813308282205,
+        "observedRate": 0.08128834355828221,
+        "meanPredicted": 0.08856226993865036
+      },
+      {
+        "label": "director >= 8 prior films",
+        "n": 1231,
+        "hits": 102,
+        "auc": 0.8421038920439744,
+        "brier": 0.06466762939886272,
+        "observedRate": 0.08285946385052803,
+        "meanPredicted": 0.09959975629569458
+      }
+    ],
+    "widthByRosterSize": [
+      {
+        "rolesFilled": 3,
+        "n": 44,
+        "meanWidth": 18.51159090909091,
+        "meanUnmeasuredRoles": 0,
+        "bandCoverage": 0,
+        "observedRate": 0.022727272727272728,
+        "meanPredicted": 0.07483863636363636
+      },
+      {
+        "rolesFilled": 4,
+        "n": 92,
+        "meanWidth": 26.056086956521746,
+        "meanUnmeasuredRoles": 0,
+        "bandCoverage": 0.5108695652173914,
+        "observedRate": 0.10869565217391304,
+        "meanPredicted": 0.10668260869565213
+      },
+      {
+        "rolesFilled": 5,
+        "n": 291,
+        "meanWidth": 30.363058419244,
+        "meanUnmeasuredRoles": 0,
+        "bandCoverage": 0.9725085910652921,
+        "observedRate": 0.140893470790378,
+        "meanPredicted": 0.123346735395189
+      },
+      {
+        "rolesFilled": 6,
+        "n": 680,
+        "meanWidth": 37.03285294117647,
+        "meanUnmeasuredRoles": 0,
+        "bandCoverage": 0.9764705882352941,
+        "observedRate": 0.10588235294117647,
+        "meanPredicted": 0.11281485294117649
+      },
+      {
+        "rolesFilled": 7,
+        "n": 1425,
+        "meanWidth": 39.30874385964911,
+        "meanUnmeasuredRoles": 0,
+        "bandCoverage": 0.9852631578947368,
+        "observedRate": 0.05824561403508772,
+        "meanPredicted": 0.0786489122807019
+      }
+    ],
+    "thinDirectorComparison": {
+      "n": 1304,
+      "hits": 106,
+      "fullAuc": 0.7569140391218068,
+      "directorOnlyAuc": 0.7521616215705421
+    },
+    "attribution": {
+      "note": "Holdout AUC when only the listed signals are allowed. Each row is refitted on the training period; the roster rows all use weight 1 per role.",
+      "eraOnlyAuc": 0.4629227132987339,
+      "eraPlusGenreAuc": 0.6711472348021553,
+      "directorOnlyAuc": 0.793703100723943,
+      "fullRosterAuc": 0.7990428002380087,
+      "genreGain": 0.2082245215034214,
+      "directorGain": 0.12255586592178769,
+      "restOfRosterGain": 0.0053396995140656545,
+      "restOfRosterGainCi": [
+        -0.014535120849001992,
+        0.025565981496172063
+      ],
+      "directorShareOfRosterGain": 0.9582495335481839,
+      "perRole": [
+        {
+          "role": "actor",
+          "soloAuc": 0.7101655730389078,
+          "marginalAuc": 0.03901833823675249,
+          "ciLow": 0.01298851676169488,
+          "ciHigh": 0.06536680113551474,
+          "significant": true,
+          "dropAuc": 0.8025685101318965,
+          "dropDelta": -0.003525709893887785,
+          "coverage": 4170
+        },
+        {
+          "role": "director",
+          "soloAuc": 0.793703100723943,
+          "marginalAuc": 0.12255586592178769,
+          "ciLow": 0.0894291226222661,
+          "ciHigh": 0.15462300517964178,
+          "significant": true,
+          "dropAuc": 0.7855215530065122,
+          "dropDelta": 0.013521247231496503,
+          "coverage": 4179
+        },
+        {
+          "role": "writer",
+          "soloAuc": 0.696811675647086,
+          "marginalAuc": 0.02566444084493069,
+          "ciLow": 0.006495653036263316,
+          "ciHigh": 0.045739558253951595,
+          "significant": true,
+          "dropAuc": 0.7998712852467686,
+          "dropDelta": -0.0008284850087599827,
+          "coverage": 4095
+        },
+        {
+          "role": "producer",
+          "soloAuc": 0.7251433836897954,
+          "marginalAuc": 0.05399614888764004,
+          "ciLow": 0.02481878943789939,
+          "ciHigh": 0.0833406043049969,
+          "significant": true,
+          "dropAuc": 0.799160564940002,
+          "dropDelta": -0.00011776470199331701,
+          "coverage": 3985
+        },
+        {
+          "role": "editor",
+          "soloAuc": 0.753474058708803,
+          "marginalAuc": 0.0823268239066477,
+          "ciLow": 0.05321432817942817,
+          "ciHigh": 0.11184606923770579,
+          "significant": true,
+          "dropAuc": 0.7942423390962282,
+          "dropDelta": 0.004800461141780454,
+          "coverage": 4051
+        },
+        {
+          "role": "cinematographer",
+          "soloAuc": 0.7409589765627582,
+          "marginalAuc": 0.0698117417606029,
+          "ciLow": 0.04415060510981628,
+          "ciHigh": 0.09628375034151249,
+          "significant": true,
+          "dropAuc": 0.7960790552378434,
+          "dropDelta": 0.0029637450001652743,
+          "coverage": 3964
+        },
+        {
+          "role": "composer",
+          "soloAuc": 0.72253293279561,
+          "marginalAuc": 0.051385697993454715,
+          "ciLow": 0.02274296895982819,
+          "ciHigh": 0.08046010548759963,
+          "significant": true,
+          "dropAuc": 0.7968011388053288,
+          "dropDelta": 0.002241661432679898,
+          "coverage": 3648
+        }
+      ]
+    },
+    "collinearity": {
+      "meanPairwiseEffectCorrelation": 0.3183865819581374,
+      "strongestPairs": [
+        {
+          "pair": "director~editor",
+          "r": 0.5589310879395119,
+          "n": 2884
+        },
+        {
+          "pair": "director~producer",
+          "r": 0.42800566186193273,
+          "n": 2329
+        },
+        {
+          "pair": "director~cinematographer",
+          "r": 0.40790758306855646,
+          "n": 2765
+        },
+        {
+          "pair": "director~writer",
+          "r": 0.3926789436166934,
+          "n": 1627
+        },
+        {
+          "pair": "editor~producer",
+          "r": 0.3831161077568737,
+          "n": 2069
+        },
+        {
+          "pair": "director~composer",
+          "r": 0.382604844024897,
+          "n": 2516
+        },
+        {
+          "pair": "cinematographer~editor",
+          "r": 0.37803766298746205,
+          "n": 2435
+        },
+        {
+          "pair": "writer~composer",
+          "r": 0.3253826061637044,
+          "n": 1316
+        }
+      ],
+      "sharedSignalShare": 0.6399129873375702,
+      "completeRostersMeasured": 659
+    },
+    "roleShrinkageFit": {
+      "actor": {
+        "k": 8,
+        "auc": 0.6589210930271118,
+        "observations": 7064
+      },
+      "director": {
+        "k": 5,
+        "auc": 0.7131340180238602,
+        "observations": 3907
+      },
+      "writer": {
+        "k": 5,
+        "auc": 0.7194974427772265,
+        "observations": 4187
+      },
+      "producer": {
+        "k": 5,
+        "auc": 0.7050385969990833,
+        "observations": 4720
+      },
+      "editor": {
+        "k": 5,
+        "auc": 0.6922000198826921,
+        "observations": 3803
+      },
+      "cinematographer": {
+        "k": 8,
+        "auc": 0.6677125908107165,
+        "observations": 3117
+      },
+      "composer": {
+        "k": 5,
+        "auc": 0.6864317860032363,
+        "observations": 2869
+      }
+    },
+    "drift": {
+      "meanOffset": -0.11850274675503372,
+      "sdOffset": 0.2637463545505397,
+      "years": 20
+    }
+  }
+}
