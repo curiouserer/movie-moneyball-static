@@ -1,0 +1,7 @@
+(function () {
+  var redirect = sessionStorage.getItem('spa_redirect');
+  if (redirect) {
+    sessionStorage.removeItem('spa_redirect');
+    window.history.replaceState(null, '', redirect);
+  }
+})();

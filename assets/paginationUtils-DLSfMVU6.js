@@ -1,0 +1,1 @@
+function u(h,i){if(i<=1)return[1];const n=[],p=2,r=Math.max(2,h-p),t=Math.min(i-1,h+p);n.push(1),r>2&&n.push("...");for(let s=r;s<=t;s++)n.push(s);return t<i-1&&n.push("..."),i>1&&n.push(i),n}export{u as g};
