@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Movie Moneyball</title>
+
+    <!-- Same marks as index.html. This page is a redirect stub, so it carries the two
+         icons a browser asks for and nothing else — no manifest, no social card, since
+         it is noindexed and never shared. Both are same-origin, which `img-src 'self'`
+         below already allows. -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#1F2124" />
+
+    <!-- CSP: the same policy index.html carries, minus the directives this page has no
+         use for (it loads no images, fonts, styles or data). `script-src 'self'` with no
+         'unsafe-inline' is why the redirect lives in /spa-404.js rather than in a block
+         here: an origin with one unprotected document is harder to reason about than an
+         origin with none, and leaving this page bare quietly punished whoever tried to
+         fix it — copying index.html's meta tag across would have silently killed every
+         deep link on the site (security review of #296).
+
+         `base-uri 'self'` matters specifically here: an injected <base> would change how
+         /spa-404.js and the '/' redirect resolve. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self';" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="robots" content="noindex">
+
+    <!-- GitHub Pages SPA routing: record the attempted path and bounce to the root,
+         where /spa-redirect.js restores it before the router mounts. -->
+    <script src="/spa-404.js"></script>
+
+    <!-- Safety net, deliberately slower than the script can possibly be: if
+         /spa-404.js never executes — blocked, 404, a CSP mistake — this turns a blank
+         page into the home page. The redirect above is synchronous, so on any working
+         load it has already happened long before this fires. -->
+    <meta http-equiv="refresh" content="5;url=/" />
+  </head>
+  <body>
+    <noscript><p>Movie Moneyball needs JavaScript. <a href="/">Go to the home page</a>.</p></noscript>
+  </body>
+</html>

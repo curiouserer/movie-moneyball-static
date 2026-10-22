@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Movie Moneyball">
+  <!-- One flap cell holding the monogram M. The hinge across the middle is the
+       material's only signature (docs/design/specs/brand-assets.md). The glyph is
+       drawn as a path, not set in Big Shoulders Display: an SVG favicon cannot rely
+       on a webfont, and the same path then scales to every raster in the family.
+       Colours are the Split-Flap tokens: flap #121212, letter #F2F2EE. -->
+  <rect width="64" height="64" rx="8" fill="#121212"/>
+  <path d="M17 49V15h8l7 16 7-16h8v34h-7V29l-8 14-8-14v20z" fill="#F2F2EE"/>
+  <rect y="31.2" width="64" height="1.6" fill="#000" opacity=".85"/>
+</svg>
