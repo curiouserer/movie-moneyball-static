@@ -1,0 +1,12 @@
+{
+  "totalDirectors": 933,
+  "recordOnlyDirectors": 872,
+  "totalFilms": 10131,
+  "hitCount": 1471,
+  "hitPercentage": 14.5,
+  "averageBattingAverage": 0.138,
+  "mostProlificDirector": {
+    "name": "Charlie Chaplin",
+    "filmCount": 61
+  }
+}

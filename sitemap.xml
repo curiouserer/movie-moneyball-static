@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://moviemoneyball.com/sitemap-hubs.xml</loc>
+    <lastmod>2026-10-30</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://moviemoneyball.com/sitemap-directors.xml</loc>
+    <lastmod>2026-10-30</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://moviemoneyball.com/sitemap-directors-record-only.xml</loc>
+    <lastmod>2026-10-30</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://moviemoneyball.com/sitemap-actors.xml</loc>
+    <lastmod>2026-10-30</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://moviemoneyball.com/sitemap-crew.xml</loc>
+    <lastmod>2026-10-30</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://moviemoneyball.com/sitemap-films.xml</loc>
+    <lastmod>2026-10-30</lastmod>
+  </sitemap>
+</sitemapindex>
