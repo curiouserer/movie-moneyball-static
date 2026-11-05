@@ -1,0 +1,12 @@
+{
+  "totalDirectors": 941,
+  "recordOnlyDirectors": 939,
+  "totalFilms": 9781,
+  "hitCount": 1448,
+  "hitPercentage": 14.8,
+  "averageBattingAverage": 0.143,
+  "mostProlificDirector": {
+    "name": "Alfred Hitchcock",
+    "filmCount": 52
+  }
+}

@@ -1,0 +1,1 @@
+function f(n){if(n.length!==0)return n[Math.floor(Math.random()*n.length)]}function p(n,t){if(t<=1)return[1];const r=[],i=2,o=Math.max(2,n-i),u=Math.min(t-1,n+i);r.push(1),o>2&&r.push("...");for(let h=o;h<=u;h++)r.push(h);return u<t-1&&r.push("..."),t>1&&r.push(t),r}export{p as g,f as p};

@@ -1,0 +1,3695 @@
+{
+  "$schema": "https://moviemoneyball.com/schemas/team-predictor-model-1.json",
+  "generatedAt": "2026-11-02T08:39:12.166Z",
+  "generatedBy": "npm run backtest:team",
+  "methodology": "docs/analytics/team-predictor-methodology.md",
+  "uiCopy": "docs/analytics/team-predictor-ui-copy.md",
+  "hitThreshold": 8,
+  "thinRecordFilms": 8,
+  "castDepth": 3,
+  "rolesInDataset": [
+    "actor",
+    "director",
+    "writer",
+    "producer",
+    "editor",
+    "cinematographer",
+    "composer",
+    "production_designer",
+    "costume_designer",
+    "casting_director"
+  ],
+  "rolesAwaitingData": [],
+  "roleEffects": {
+    "director": {
+      "measured": true,
+      "sampleFilms": 5961,
+      "soloAuc": 0.7620891479477411,
+      "marginalAuc": 0.08297711294876287,
+      "awaitingData": false,
+      "ratingMeasured": true,
+      "ratingDevWeight": 2.02974699442273
+    },
+    "actor": {
+      "measured": true,
+      "sampleFilms": 7599,
+      "soloAuc": 0.7160000442563693,
+      "marginalAuc": 0.03688800925739111,
+      "awaitingData": false,
+      "ratingMeasured": false,
+      "ratingDevWeight": 0
+    },
+    "writer": {
+      "measured": true,
+      "sampleFilms": 5315,
+      "soloAuc": 0.6994468604661758,
+      "marginalAuc": 0.02033482546719756,
+      "awaitingData": false,
+      "ratingMeasured": false,
+      "ratingDevWeight": 0
+    },
+    "cinematographer": {
+      "measured": true,
+      "sampleFilms": 5164,
+      "soloAuc": 0.7207146492487482,
+      "marginalAuc": 0.041602614249769965,
+      "awaitingData": false,
+      "ratingMeasured": false,
+      "ratingDevWeight": 0
+    },
+    "editor": {
+      "measured": true,
+      "sampleFilms": 5231,
+      "soloAuc": 0.7298311359178186,
+      "marginalAuc": 0.050719100918840354,
+      "awaitingData": false,
+      "ratingMeasured": false,
+      "ratingDevWeight": 0
+    },
+    "composer": {
+      "measured": true,
+      "sampleFilms": 4741,
+      "soloAuc": 0.710315053283367,
+      "marginalAuc": 0.03120301828438876,
+      "awaitingData": false,
+      "ratingMeasured": false,
+      "ratingDevWeight": 0
+    },
+    "producer": {
+      "measured": true,
+      "sampleFilms": 5158,
+      "soloAuc": 0.7160124100066254,
+      "marginalAuc": 0.0369003750076472,
+      "awaitingData": false,
+      "ratingMeasured": false,
+      "ratingDevWeight": 0
+    },
+    "production_designer": {
+      "measured": true,
+      "sampleFilms": 4050,
+      "soloAuc": 0.7040924775887047,
+      "marginalAuc": 0.024980442589726537,
+      "awaitingData": false,
+      "ratingMeasured": false,
+      "ratingDevWeight": 0
+    },
+    "costume_designer": {
+      "measured": false,
+      "sampleFilms": 3803,
+      "soloAuc": 0.6903690981202758,
+      "marginalAuc": 0.011257063121297595,
+      "awaitingData": false,
+      "ratingMeasured": false,
+      "ratingDevWeight": 0
+    },
+    "casting_director": {
+      "measured": true,
+      "sampleFilms": 3059,
+      "soloAuc": 0.6922971789167863,
+      "marginalAuc": 0.013185143917808118,
+      "awaitingData": false,
+      "ratingMeasured": false,
+      "ratingDevWeight": 0
+    }
+  },
+  "model": {
+    "version": 2,
+    "shrinkage": {
+      "director": 5,
+      "actor": 8,
+      "writer": 5,
+      "cinematographer": 12,
+      "editor": 8,
+      "composer": 8,
+      "producer": 8,
+      "production_designer": 12,
+      "costume_designer": 5,
+      "casting_director": 18
+    },
+    "ratingShrinkage": 6,
+    "roleWeights": {
+      "director": 1,
+      "actor": 1,
+      "writer": 1,
+      "cinematographer": 1,
+      "editor": 1,
+      "composer": 1,
+      "producer": 1,
+      "production_designer": 1,
+      "costume_designer": 1,
+      "casting_director": 1
+    },
+    "collinearityExponent": 1,
+    "calibration": {
+      "intercept": -1.4899468695599707,
+      "slope": 0.3672359271578889
+    },
+    "ratingCalibration": {
+      "intercept": 0.03479870616818481,
+      "slope": 0.5265536308760468
+    },
+    "meanEffectCorrelation": 0.2741729129422095,
+    "driftSd": 0.2516146762098996,
+    "ratingResidualSd": 1.0603701277947195,
+    "confidenceBands": {
+      "highMaxLogOddsSd": 0.862,
+      "moderateMaxLogOddsSd": 1.277,
+      "highMaxWidth": 16.8,
+      "moderateMaxWidth": 26.8
+    },
+    "roleDiagnostics": {
+      "actor": {
+        "soloAuc": 0.7160000442563693,
+        "marginalAuc": 0.03688800925739111,
+        "significant": true,
+        "coverage": 7599,
+        "awaitingData": false,
+        "ratingDevWeight": 0
+      },
+      "director": {
+        "soloAuc": 0.7620891479477411,
+        "marginalAuc": 0.08297711294876287,
+        "significant": true,
+        "coverage": 5961,
+        "awaitingData": false,
+        "ratingDevWeight": 2.02974699442273
+      },
+      "writer": {
+        "soloAuc": 0.6994468604661758,
+        "marginalAuc": 0.02033482546719756,
+        "significant": true,
+        "coverage": 5315,
+        "awaitingData": false,
+        "ratingDevWeight": 0
+      },
+      "producer": {
+        "soloAuc": 0.7160124100066254,
+        "marginalAuc": 0.0369003750076472,
+        "significant": true,
+        "coverage": 5158,
+        "awaitingData": false,
+        "ratingDevWeight": 0
+      },
+      "editor": {
+        "soloAuc": 0.7298311359178186,
+        "marginalAuc": 0.050719100918840354,
+        "significant": true,
+        "coverage": 5231,
+        "awaitingData": false,
+        "ratingDevWeight": 0
+      },
+      "cinematographer": {
+        "soloAuc": 0.7207146492487482,
+        "marginalAuc": 0.041602614249769965,
+        "significant": true,
+        "coverage": 5164,
+        "awaitingData": false,
+        "ratingDevWeight": 0
+      },
+      "composer": {
+        "soloAuc": 0.710315053283367,
+        "marginalAuc": 0.03120301828438876,
+        "significant": true,
+        "coverage": 4741,
+        "awaitingData": false,
+        "ratingDevWeight": 0
+      },
+      "production_designer": {
+        "soloAuc": 0.7040924775887047,
+        "marginalAuc": 0.024980442589726537,
+        "significant": true,
+        "coverage": 4050,
+        "awaitingData": false,
+        "ratingDevWeight": 0
+      },
+      "costume_designer": {
+        "soloAuc": 0.6903690981202758,
+        "marginalAuc": 0.011257063121297595,
+        "significant": false,
+        "coverage": 3803,
+        "awaitingData": false,
+        "ratingDevWeight": 0
+      },
+      "casting_director": {
+        "soloAuc": 0.6922971789167863,
+        "marginalAuc": 0.013185143917808118,
+        "significant": true,
+        "coverage": 3059,
+        "awaitingData": false,
+        "ratingDevWeight": 0
+      }
+    },
+    "eraTable": {
+      "1913": {
+        "hitRate": 0.15,
+        "meanRating": 6.6
+      },
+      "1914": {
+        "hitRate": 0.14423076923076922,
+        "meanRating": 6.611538461538462
+      },
+      "1915": {
+        "hitRate": 0.14423076923076922,
+        "meanRating": 6.611538461538462
+      },
+      "1916": {
+        "hitRate": 0.16964285714285715,
+        "meanRating": 6.692857142857143
+      },
+      "1917": {
+        "hitRate": 0.19827586206896552,
+        "meanRating": 6.751724137931035
+      },
+      "1918": {
+        "hitRate": 0.19166666666666668,
+        "meanRating": 6.766666666666667
+      },
+      "1919": {
+        "hitRate": 0.2109375,
+        "meanRating": 6.809375
+      },
+      "1920": {
+        "hitRate": 0.20945945945945946,
+        "meanRating": 6.878378378378378
+      },
+      "1921": {
+        "hitRate": 0.25,
+        "meanRating": 6.953846153846153
+      },
+      "1922": {
+        "hitRate": 0.26704545454545453,
+        "meanRating": 7.036363636363637
+      },
+      "1923": {
+        "hitRate": 0.295,
+        "meanRating": 7.1
+      },
+      "1924": {
+        "hitRate": 0.29385964912280704,
+        "meanRating": 7.184210526315789
+      },
+      "1925": {
+        "hitRate": 0.3492647058823529,
+        "meanRating": 7.35
+      },
+      "1926": {
+        "hitRate": 0.39197530864197533,
+        "meanRating": 7.434567901234568
+      },
+      "1927": {
+        "hitRate": 0.39705882352941174,
+        "meanRating": 7.477647058823528
+      },
+      "1928": {
+        "hitRate": 0.42010309278350516,
+        "meanRating": 7.549484536082472
+      },
+      "1929": {
+        "hitRate": 0.46621621621621623,
+        "meanRating": 7.600000000000002
+      },
+      "1930": {
+        "hitRate": 0.47291666666666665,
+        "meanRating": 7.6158333333333355
+      },
+      "1931": {
+        "hitRate": 0.4596153846153846,
+        "meanRating": 7.600000000000002
+      },
+      "1932": {
+        "hitRate": 0.4588815789473684,
+        "meanRating": 7.6164473684210545
+      },
+      "1933": {
+        "hitRate": 0.4511173184357542,
+        "meanRating": 7.630726256983244
+      },
+      "1934": {
+        "hitRate": 0.44543147208121825,
+        "meanRating": 7.6390862944162485
+      },
+      "1935": {
+        "hitRate": 0.44642857142857145,
+        "meanRating": 7.655238095238098
+      },
+      "1936": {
+        "hitRate": 0.44288793103448276,
+        "meanRating": 7.6530172413793105
+      },
+      "1937": {
+        "hitRate": 0.441699604743083,
+        "meanRating": 7.659683794466402
+      },
+      "1938": {
+        "hitRate": 0.4542910447761194,
+        "meanRating": 7.68768656716418
+      },
+      "1939": {
+        "hitRate": 0.460387323943662,
+        "meanRating": 7.693309859154929
+      },
+      "1940": {
+        "hitRate": 0.46824104234527686,
+        "meanRating": 7.711726384364822
+      },
+      "1941": {
+        "hitRate": 0.47629969418960244,
+        "meanRating": 7.734250764525992
+      },
+      "1942": {
+        "hitRate": 0.4606353591160221,
+        "meanRating": 7.717127071823201
+      },
+      "1943": {
+        "hitRate": 0.45844327176781,
+        "meanRating": 7.700791556728227
+      },
+      "1944": {
+        "hitRate": 0.4440874035989717,
+        "meanRating": 7.698971722365039
+      },
+      "1945": {
+        "hitRate": 0.44106699751861045,
+        "meanRating": 7.700000000000002
+      },
+      "1946": {
+        "hitRate": 0.44702380952380955,
+        "meanRating": 7.715000000000003
+      },
+      "1947": {
+        "hitRate": 0.45417633410672853,
+        "meanRating": 7.714385150812067
+      },
+      "1948": {
+        "hitRate": 0.44538288288288286,
+        "meanRating": 7.695270270270277
+      },
+      "1949": {
+        "hitRate": 0.44745222929936307,
+        "meanRating": 7.704883227176225
+      },
+      "1950": {
+        "hitRate": 0.4391089108910891,
+        "meanRating": 7.693267326732674
+      },
+      "1951": {
+        "hitRate": 0.43620037807183365,
+        "meanRating": 7.701323251417771
+      },
+      "1952": {
+        "hitRate": 0.4294171220400729,
+        "meanRating": 7.6916211293260455
+      },
+      "1953": {
+        "hitRate": 0.41942508710801396,
+        "meanRating": 7.677526132404182
+      },
+      "1954": {
+        "hitRate": 0.4110655737704918,
+        "meanRating": 7.660327868852458
+      },
+      "1955": {
+        "hitRate": 0.39111635220125784,
+        "meanRating": 7.6232704402515745
+      },
+      "1956": {
+        "hitRate": 0.37369597615499256,
+        "meanRating": 7.598360655737706
+      },
+      "1957": {
+        "hitRate": 0.36432706222865413,
+        "meanRating": 7.578002894356008
+      },
+      "1958": {
+        "hitRate": 0.3543994413407821,
+        "meanRating": 7.566480446927379
+      },
+      "1959": {
+        "hitRate": 0.3504704301075269,
+        "meanRating": 7.559139784946235
+      },
+      "1960": {
+        "hitRate": 0.34529860228716647,
+        "meanRating": 7.546124523506984
+      },
+      "1961": {
+        "hitRate": 0.34539473684210525,
+        "meanRating": 7.539114832535881
+      },
+      "1962": {
+        "hitRate": 0.33420441347270613,
+        "meanRating": 7.531475029035999
+      },
+      "1963": {
+        "hitRate": 0.33864653243847875,
+        "meanRating": 7.536241610738248
+      },
+      "1964": {
+        "hitRate": 0.3240540540540541,
+        "meanRating": 7.507351351351343
+      },
+      "1965": {
+        "hitRate": 0.31691253951527926,
+        "meanRating": 7.491359325605895
+      },
+      "1966": {
+        "hitRate": 0.3046714579055442,
+        "meanRating": 7.452977412731003
+      },
+      "1967": {
+        "hitRate": 0.2999502982107356,
+        "meanRating": 7.433499005964213
+      },
+      "1968": {
+        "hitRate": 0.2921103581800581,
+        "meanRating": 7.4080348499515924
+      },
+      "1969": {
+        "hitRate": 0.28127962085308056,
+        "meanRating": 7.381421800947861
+      },
+      "1970": {
+        "hitRate": 0.27691947565543074,
+        "meanRating": 7.354400749063667
+      },
+      "1971": {
+        "hitRate": 0.26797235023041477,
+        "meanRating": 7.3156682027649715
+      },
+      "1972": {
+        "hitRate": 0.2612309074573225,
+        "meanRating": 7.305300988319849
+      },
+      "1973": {
+        "hitRate": 0.2526246719160105,
+        "meanRating": 7.272790901137349
+      },
+      "1974": {
+        "hitRate": 0.24722696245733788,
+        "meanRating": 7.251962457337877
+      },
+      "1975": {
+        "hitRate": 0.23601836393989983,
+        "meanRating": 7.221786310517517
+      },
+      "1976": {
+        "hitRate": 0.2236842105263158,
+        "meanRating": 7.1866332497911385
+      },
+      "1977": {
+        "hitRate": 0.21263200649878147,
+        "meanRating": 7.143704305442721
+      },
+      "1978": {
+        "hitRate": 0.1974,
+        "meanRating": 7.088559999999995
+      },
+      "1979": {
+        "hitRate": 0.18715415019762846,
+        "meanRating": 7.044505928853749
+      },
+      "1980": {
+        "hitRate": 0.1821870170015456,
+        "meanRating": 7.016383307573419
+      },
+      "1981": {
+        "hitRate": 0.17290249433106575,
+        "meanRating": 6.973847316704449
+      },
+      "1982": {
+        "hitRate": 0.15860413589364844,
+        "meanRating": 6.933973412112249
+      },
+      "1983": {
+        "hitRate": 0.14974892395982783,
+        "meanRating": 6.892826398852219
+      },
+      "1984": {
+        "hitRate": 0.14288194444444444,
+        "meanRating": 6.83805555555555
+      },
+      "1985": {
+        "hitRate": 0.1386653252850436,
+        "meanRating": 6.809859154929566
+      },
+      "1986": {
+        "hitRate": 0.13398587933247755,
+        "meanRating": 6.757124518613597
+      },
+      "1987": {
+        "hitRate": 0.12754472547809995,
+        "meanRating": 6.698766193707578
+      },
+      "1988": {
+        "hitRate": 0.1234622144112478,
+        "meanRating": 6.663913298183936
+      },
+      "1989": {
+        "hitRate": 0.11763881099270891,
+        "meanRating": 6.623331463825006
+      },
+      "1990": {
+        "hitRate": 0.11556219445953286,
+        "meanRating": 6.578164041281908
+      },
+      "1991": {
+        "hitRate": 0.1092057761732852,
+        "meanRating": 6.534089736977819
+      },
+      "1992": {
+        "hitRate": 0.1087333003463632,
+        "meanRating": 6.5097476496783795
+      },
+      "1993": {
+        "hitRate": 0.1055449785816278,
+        "meanRating": 6.485292717753455
+      },
+      "1994": {
+        "hitRate": 0.10691609977324264,
+        "meanRating": 6.471020408163268
+      },
+      "1995": {
+        "hitRate": 0.10301126516464472,
+        "meanRating": 6.414861351819767
+      },
+      "1996": {
+        "hitRate": 0.10365853658536585,
+        "meanRating": 6.4003720545680105
+      },
+      "1997": {
+        "hitRate": 0.10254638768258982,
+        "meanRating": 6.3678641926569375
+      },
+      "1998": {
+        "hitRate": 0.10236294896030246,
+        "meanRating": 6.350699432892256
+      },
+      "1999": {
+        "hitRate": 0.0981622998544396,
+        "meanRating": 6.336098981077152
+      },
+      "2000": {
+        "hitRate": 0.09553198887343532,
+        "meanRating": 6.308692628650906
+      },
+      "2001": {
+        "hitRate": 0.09106903485254692,
+        "meanRating": 6.28602546916891
+      },
+      "2002": {
+        "hitRate": 0.0908287825248956,
+        "meanRating": 6.268390619980734
+      },
+      "2003": {
+        "hitRate": 0.08796725362990424,
+        "meanRating": 6.2388940376892235
+      },
+      "2004": {
+        "hitRate": 0.0842238052834669,
+        "meanRating": 6.216978331849217
+      },
+      "2005": {
+        "hitRate": 0.08195224719101124,
+        "meanRating": 6.206938202247207
+      },
+      "2006": {
+        "hitRate": 0.07823813354786806,
+        "meanRating": 6.191954947707176
+      },
+      "2007": {
+        "hitRate": 0.07345881758463871,
+        "meanRating": 6.175922182920694
+      },
+      "2008": {
+        "hitRate": 0.07111402047131635,
+        "meanRating": 6.167031659128806
+      },
+      "2009": {
+        "hitRate": 0.06722736509370061,
+        "meanRating": 6.145743960261929
+      },
+      "2010": {
+        "hitRate": 0.0642964392964393,
+        "meanRating": 6.140218790218808
+      },
+      "2011": {
+        "hitRate": 0.062091169255928044,
+        "meanRating": 6.137551103843014
+      },
+      "2012": {
+        "hitRate": 0.061083984375,
+        "meanRating": 6.135468749999993
+      },
+      "2013": {
+        "hitRate": 0.05941286113699907,
+        "meanRating": 6.128835041938476
+      },
+      "2014": {
+        "hitRate": 0.06025641025641026,
+        "meanRating": 6.126702033598567
+      },
+      "2015": {
+        "hitRate": 0.05793398123324397,
+        "meanRating": 6.121900134048261
+      },
+      "2016": {
+        "hitRate": 0.058717866836979084,
+        "meanRating": 6.12648890308159
+      },
+      "2017": {
+        "hitRate": 0.05933170954483179,
+        "meanRating": 6.128193027858113
+      },
+      "2018": {
+        "hitRate": 0.059957873329459614,
+        "meanRating": 6.1356624055781355
+      },
+      "2019": {
+        "hitRate": 0.06152303223129064,
+        "meanRating": 6.150560243463821
+      },
+      "2020": {
+        "hitRate": 0.06195724782899131,
+        "meanRating": 6.168136272545101
+      },
+      "2021": {
+        "hitRate": 0.06225257323832146,
+        "meanRating": 6.175217735550293
+      },
+      "2022": {
+        "hitRate": 0.06351546121593292,
+        "meanRating": 6.18874475890986
+      },
+      "2023": {
+        "hitRate": 0.06452553798288825,
+        "meanRating": 6.202450090744115
+      },
+      "2024": {
+        "hitRate": 0.06638399792853444,
+        "meanRating": 6.220339202485731
+      },
+      "2025": {
+        "hitRate": 0.06686841077704021,
+        "meanRating": 6.23221397891446
+      },
+      "2026": {
+        "hitRate": 0.06732797258107039,
+        "meanRating": 6.240456103348252
+      },
+      "2027": {
+        "hitRate": 0.0697840260798696,
+        "meanRating": 6.2555827220863724
+      }
+    },
+    "servingEra": {
+      "year": 2026,
+      "hitRate": 0.06732797258107039,
+      "meanRating": 6.240456103348252,
+      "sampleSize": 7561
+    },
+    "genreTable": {
+      "12": {
+        "hitRate": 0.07462217159748087,
+        "meanRating": 6.298736064641704,
+        "sampleSize": 1026
+      },
+      "14": {
+        "hitRate": 0.07076883170578688,
+        "meanRating": 6.331919809182256,
+        "sampleSize": 746
+      },
+      "16": {
+        "hitRate": 0.1388663999360683,
+        "meanRating": 6.7844580257803075,
+        "sampleSize": 646
+      },
+      "18": {
+        "hitRate": 0.09229705095853263,
+        "meanRating": 6.577493533200248,
+        "sampleSize": 3440
+      },
+      "27": {
+        "hitRate": 0.013023820366293341,
+        "meanRating": 5.759301823934037,
+        "sampleSize": 1018
+      },
+      "28": {
+        "hitRate": 0.05112070239278254,
+        "meanRating": 6.001333717692803,
+        "sampleSize": 1760
+      },
+      "35": {
+        "hitRate": 0.0376513655833136,
+        "meanRating": 6.090337736620587,
+        "sampleSize": 2597
+      },
+      "36": {
+        "hitRate": 0.11075665699973636,
+        "meanRating": 6.789373526603681,
+        "sampleSize": 455
+      },
+      "37": {
+        "hitRate": 0.06953598734510939,
+        "meanRating": 6.352518201545347,
+        "sampleSize": 70
+      },
+      "53": {
+        "hitRate": 0.03832990096014942,
+        "meanRating": 5.947508529568226,
+        "sampleSize": 1976
+      },
+      "80": {
+        "hitRate": 0.06022192440265206,
+        "meanRating": 6.196136450186006,
+        "sampleSize": 1020
+      },
+      "99": {
+        "hitRate": 0.282418057882517,
+        "meanRating": 7.244061960487481,
+        "sampleSize": 188
+      },
+      "878": {
+        "hitRate": 0.06917013635353021,
+        "meanRating": 6.092082219125457,
+        "sampleSize": 808
+      },
+      "9648": {
+        "hitRate": 0.04646930851598344,
+        "meanRating": 6.143357758369755,
+        "sampleSize": 651
+      },
+      "10402": {
+        "hitRate": 0.15067985073428036,
+        "meanRating": 6.765331061651953,
+        "sampleSize": 219
+      },
+      "10749": {
+        "hitRate": 0.06218894095998536,
+        "meanRating": 6.2357396718004585,
+        "sampleSize": 1018
+      },
+      "10751": {
+        "hitRate": 0.0548310089253711,
+        "meanRating": 6.302285626686654,
+        "sampleSize": 652
+      },
+      "10752": {
+        "hitRate": 0.08741701219950626,
+        "meanRating": 6.506281331639616,
+        "sampleSize": 215
+      },
+      "10770": {
+        "hitRate": 0.06232308802220327,
+        "meanRating": 6.1854834589216665,
+        "sampleSize": 69
+      }
+    },
+    "ratingDevSd": 1.2695899090299714,
+    "ratingDevWeights": {
+      "actor": 0,
+      "director": 2.02974699442273,
+      "writer": 0,
+      "producer": 0,
+      "editor": 0,
+      "cinematographer": 0,
+      "composer": 0,
+      "production_designer": 0,
+      "costume_designer": 0,
+      "casting_director": 0
+    },
+    "driftSdByHorizon": {
+      "base": 0.3277464582579792,
+      "perYear": 0.007365388492664017,
+      "fittedThrough": 2009
+    }
+  },
+  "dataset": {
+    "films": 18021,
+    "rosterCredits": 165105,
+    "firstYear": 1913,
+    "lastYear": 2026
+  },
+  "split": {
+    "trainFrom": 1965,
+    "trainTo": 2009,
+    "testFrom": 2010,
+    "testTo": 2026,
+    "trainFilms": 8189,
+    "trainHits": 762,
+    "trainHitRate": 0.09305165465868849,
+    "testFilms": 8231,
+    "testHits": 561,
+    "testHitRate": 0.06815696756165715,
+    "testFilmsScored": 4063,
+    "testHitsScored": 422,
+    "refusals": {
+      "NO_DIRECTOR": 2697,
+      "TOO_FEW_PEOPLE": 1165,
+      "NO_TRACK_RECORD": 37,
+      "EMPTY_ROSTER": 269
+    },
+    "validationFrom": 1990,
+    "validationTo": 2009,
+    "eligibility": {
+      "minRosterEntries": 5,
+      "trainEligible": 5380,
+      "trainTotal": 8189,
+      "testEligible": 4100,
+      "testTotal": 8231,
+      "testEligibleHits": 431,
+      "testPeopleDistribution": [
+        {
+          "atLeast": 2,
+          "films": 6323
+        },
+        {
+          "atLeast": 3,
+          "films": 5245
+        },
+        {
+          "atLeast": 4,
+          "films": 4235
+        },
+        {
+          "atLeast": 5,
+          "films": 4100
+        },
+        {
+          "atLeast": 6,
+          "films": 4060
+        },
+        {
+          "atLeast": 7,
+          "films": 4003
+        },
+        {
+          "atLeast": 8,
+          "films": 3916
+        },
+        {
+          "atLeast": 10,
+          "films": 3609
+        },
+        {
+          "atLeast": 12,
+          "films": 3003
+        }
+      ],
+      "testWithoutDirector": 2966,
+      "testWithoutGenre": 0
+    }
+  },
+  "backtest": {
+    "beatsBaseline": true,
+    "bar": {
+      "criteria": [
+        {
+          "id": "discrimination",
+          "description": "95% bootstrap CI lower bound on holdout AUC > 0.6",
+          "measured": 0.7570987615828791,
+          "threshold": 0.6,
+          "pass": true
+        },
+        {
+          "id": "probabilistic-skill",
+          "description": "Brier skill score against the constant base-rate forecast > 0.05",
+          "measured": 0.0769776769253595,
+          "threshold": 0.05,
+          "pass": true
+        },
+        {
+          "id": "usable-ranking",
+          "description": "top-decile hit rate at least 2x the base rate",
+          "measured": 2.9806467389405777,
+          "threshold": 2,
+          "pass": true
+        },
+        {
+          "id": "calibration",
+          "description": "mean absolute calibration error across deciles <= 0.05",
+          "measured": 0.027957839035195668,
+          "threshold": 0.05,
+          "pass": true
+        }
+      ],
+      "statement": "All four criteria must pass. Accuracy at a 0.5 threshold is reported but is deliberately not a criterion: at an 8% base rate, always predicting \"not a hit\" already scores about 92%, so accuracy cannot separate a useful model from a useless one."
+    },
+    "headline": {
+      "auc": 0.7776882164813322,
+      "aucCiLow": 0.7570987615828791,
+      "aucCiHigh": 0.7985932800827863,
+      "brier": 0.08601948712035459,
+      "brierBaseline": 0.09319329009705717,
+      "brierSkillScore": 0.0769776769253595,
+      "logLoss": 0.292300669165214,
+      "accuracyAtHalf": 0.8936746246615801,
+      "accuracyAtBaseRate": 0.7285257199113955,
+      "baselineAccuracy": 0.8961358602018213,
+      "accuracyMarginAtHalf": -0.0024612355402412467,
+      "accuracyMarginAtBaseRate": -0.16761014029042587,
+      "topDecileHitRate": 0.3095823095823096,
+      "topDecileLift": 2.9806467389405777,
+      "bottomDecileHitRate": 0.002457002457002457,
+      "calibrationError": 0.027957839035195668,
+      "maxDecileError": 0.06014471744471743,
+      "decilesWithinObservedCi": 4,
+      "worstDecileSignedError": -0.06014471744471743,
+      "worstDecile": 8,
+      "decileIntervalCoverage": 1,
+      "probabilityBandNominalLevel": 0.8,
+      "precisionAtBaseRate": 0.2242914979757085,
+      "recallAtBaseRate": 0.6563981042654028,
+      "confusionAtBaseRate": {
+        "tp": 277,
+        "fp": 958,
+        "tn": 2683,
+        "fn": 145,
+        "precision": 0.2242914979757085,
+        "recall": 0.6563981042654028
+      }
+    },
+    "calibrationDeciles": [
+      {
+        "decile": 1,
+        "count": 407,
+        "meanPredicted": 0.01397985257985257,
+        "observed": 0.002457002457002457,
+        "observedCiLow": 0.00043384184977681854,
+        "observedCiHigh": 0.013784776712705655,
+        "meanIntervalLow": 0.0014297297297297296,
+        "meanIntervalHigh": 0.14246879606879598,
+        "inInterval": true
+      },
+      {
+        "decile": 2,
+        "count": 407,
+        "meanPredicted": 0.024097542997543003,
+        "observed": 0.009828009828009828,
+        "observedCiLow": 0.003828310072083666,
+        "observedCiHigh": 0.024994477104287954,
+        "meanIntervalLow": 0.0031078624078624086,
+        "meanIntervalHigh": 0.19387837837837862,
+        "inInterval": true
+      },
+      {
+        "decile": 3,
+        "count": 407,
+        "meanPredicted": 0.03292923832923832,
+        "observed": 0.014742014742014743,
+        "observedCiLow": 0.006773358664374479,
+        "observedCiHigh": 0.03178554092125657,
+        "meanIntervalLow": 0.005530958230958233,
+        "meanIntervalHigh": 0.2081088452088452,
+        "inInterval": true
+      },
+      {
+        "decile": 4,
+        "count": 407,
+        "meanPredicted": 0.04238746928746932,
+        "observed": 0.04668304668304668,
+        "observedCiLow": 0.030086696875688133,
+        "observedCiHigh": 0.07175693337012923,
+        "meanIntervalLow": 0.008340540540540543,
+        "meanIntervalHigh": 0.22998550368550355,
+        "inInterval": true
+      },
+      {
+        "decile": 5,
+        "count": 407,
+        "meanPredicted": 0.05275208845208844,
+        "observed": 0.056511056511056514,
+        "observedCiLow": 0.037947892728336936,
+        "observedCiHigh": 0.08336796233599929,
+        "meanIntervalLow": 0.011732186732186728,
+        "meanIntervalHigh": 0.24602923832923845,
+        "inInterval": true
+      },
+      {
+        "decile": 6,
+        "count": 407,
+        "meanPredicted": 0.06586584766584763,
+        "observed": 0.10073710073710074,
+        "observedCiLow": 0.07512768044258951,
+        "observedCiHigh": 0.1338131863050816,
+        "meanIntervalLow": 0.01433243243243244,
+        "meanIntervalHigh": 0.294132923832924,
+        "inInterval": true
+      },
+      {
+        "decile": 7,
+        "count": 407,
+        "meanPredicted": 0.08352407862407873,
+        "observed": 0.13022113022113022,
+        "observedCiLow": 0.10095212221735488,
+        "observedCiHigh": 0.16640541898587277,
+        "meanIntervalLow": 0.021520884520884517,
+        "meanIntervalHigh": 0.319208108108108,
+        "inInterval": true
+      },
+      {
+        "decile": 8,
+        "count": 407,
+        "meanPredicted": 0.11184545454545457,
+        "observed": 0.171990171990172,
+        "observedCiLow": 0.1384373581105508,
+        "observedCiHigh": 0.21167713857138207,
+        "meanIntervalLow": 0.02829115479115479,
+        "meanIntervalHigh": 0.39246707616707577,
+        "inInterval": true
+      },
+      {
+        "decile": 9,
+        "count": 407,
+        "meanPredicted": 0.1722626535626535,
+        "observed": 0.20393120393120392,
+        "observedCiLow": 0.16763985249351626,
+        "observedCiHigh": 0.24575937484860289,
+        "meanIntervalLow": 0.04863538083538082,
+        "meanIntervalHigh": 0.4868481572481571,
+        "inInterval": true
+      },
+      {
+        "decile": 10,
+        "count": 400,
+        "meanPredicted": 0.35962125000000006,
+        "observed": 0.305,
+        "observedCiLow": 0.2619118577039248,
+        "observedCiHigh": 0.3517980721299507,
+        "meanIntervalLow": 0.1264055,
+        "meanIntervalHigh": 0.6901765000000002,
+        "inInterval": true
+      }
+    ],
+    "ratingProjection": {
+      "mae": 0.8279005660841763,
+      "rmse": 1.0450787124119418,
+      "baselineMae": 0.9675865124292383,
+      "baselineRmse": 1.17574751542772,
+      "maeImprovement": 0.13968594634506204,
+      "intervalCoverage": 0.8166379522520305,
+      "nominalIntervalLevel": 0.8,
+      "residualSd": 1.0603701277947195
+    },
+    "byConfidence": {
+      "low": {
+        "n": 3164,
+        "hits": 306,
+        "auc": 0.779749653535312,
+        "brier": 0.08077105830594171,
+        "meanWidth": 29.830464601769883,
+        "observedRate": 0.09671302149178256,
+        "meanPredicted": 0.08073280657395691
+      },
+      "moderate": {
+        "n": 742,
+        "hits": 90,
+        "auc": 0.779217791411043,
+        "brier": 0.09930394227762793,
+        "meanWidth": 28.70257412398923,
+        "observedRate": 0.12129380053908356,
+        "meanPredicted": 0.14606347708894865
+      },
+      "high": {
+        "n": 157,
+        "hits": 26,
+        "auc": 0.7483852025836759,
+        "brier": 0.12900651286624207,
+        "meanWidth": 21.255605095541398,
+        "observedRate": 0.16560509554140126,
+        "meanPredicted": 0.15341401273885352
+      }
+    },
+    "strata": [
+      {
+        "label": "5-9 people",
+        "n": 471,
+        "hits": 66,
+        "auc": 0.8133183688739244,
+        "brier": 0.10574683539278139,
+        "observedRate": 0.14012738853503184,
+        "meanPredicted": 0.10296836518046709
+      },
+      {
+        "label": "10+ people",
+        "n": 3592,
+        "hits": 356,
+        "auc": 0.7726042867460174,
+        "brier": 0.08343274407015591,
+        "observedRate": 0.09910913140311804,
+        "meanPredicted": 0.09448930957683752
+      },
+      {
+        "label": "3-4 roles filled",
+        "n": 155,
+        "hits": 18,
+        "auc": 0.7045823195458232,
+        "brier": 0.09723847883870967,
+        "observedRate": 0.11612903225806452,
+        "meanPredicted": 0.09206451612903223
+      },
+      {
+        "label": "5+ roles filled",
+        "n": 3908,
+        "hits": 404,
+        "auc": 0.7805171035082961,
+        "brier": 0.08557451687563987,
+        "observedRate": 0.10337768679631525,
+        "meanPredicted": 0.0956073950870013
+      },
+      {
+        "label": ">= 1 thin record",
+        "n": 4063,
+        "hits": 422,
+        "auc": 0.7776882164813322,
+        "brier": 0.08601948712035459,
+        "observedRate": 0.10386413979817868,
+        "meanPredicted": 0.09547223726310632
+      },
+      {
+        "label": ">= 3 thin records",
+        "n": 4042,
+        "hits": 417,
+        "auc": 0.7756745224510048,
+        "brier": 0.08599545597723915,
+        "observedRate": 0.10316674913409203,
+        "meanPredicted": 0.09488540326571027
+      },
+      {
+        "label": "shared credits >= 30%",
+        "n": 1166,
+        "hits": 136,
+        "auc": 0.7986936036550543,
+        "brier": 0.09194948104631226,
+        "observedRate": 0.11663807890222985,
+        "meanPredicted": 0.09410668953687823
+      },
+      {
+        "label": "shared credits < 30%",
+        "n": 2897,
+        "hits": 286,
+        "auc": 0.7687721126058927,
+        "brier": 0.08363275156023452,
+        "observedRate": 0.09872281670693821,
+        "meanPredicted": 0.09602185018985152
+      },
+      {
+        "label": "2010-2017",
+        "n": 2099,
+        "hits": 210,
+        "auc": 0.7824308654112784,
+        "brier": 0.0823975127012863,
+        "observedRate": 0.10004764173415913,
+        "meanPredicted": 0.08664344926155336
+      },
+      {
+        "label": "2018+",
+        "n": 1964,
+        "hits": 212,
+        "auc": 0.7726129706211768,
+        "brier": 0.089890426176171,
+        "observedRate": 0.1079429735234216,
+        "meanPredicted": 0.10490789205702629
+      },
+      {
+        "label": "director < 8 prior films",
+        "n": 2681,
+        "hits": 322,
+        "auc": 0.755428529301025,
+        "brier": 0.0995765266430434,
+        "observedRate": 0.12010443864229765,
+        "meanPredicted": 0.09369052592316286
+      },
+      {
+        "label": "director >= 8 prior films",
+        "n": 1382,
+        "hits": 100,
+        "auc": 0.8451482059282371,
+        "brier": 0.05971961522431251,
+        "observedRate": 0.0723589001447178,
+        "meanPredicted": 0.09892865412445756
+      }
+    ],
+    "widthByRosterSize": [
+      {
+        "rolesFilled": 3,
+        "n": 43,
+        "meanWidth": 14.584651162790697,
+        "meanUnmeasuredRoles": 0,
+        "localNeighbourhoodCoverage": 0.4883720930232558,
+        "observedRate": 0.06976744186046512,
+        "meanPredicted": 0.08159534883720933
+      },
+      {
+        "rolesFilled": 4,
+        "n": 98,
+        "meanWidth": 18.786122448979597,
+        "meanUnmeasuredRoles": 0.01020408163265306,
+        "localNeighbourhoodCoverage": 0.9183673469387755,
+        "observedRate": 0.14285714285714285,
+        "meanPredicted": 0.09862346938775517
+      },
+      {
+        "rolesFilled": 5,
+        "n": 180,
+        "meanWidth": 19.287555555555553,
+        "meanUnmeasuredRoles": 0.06666666666666667,
+        "localNeighbourhoodCoverage": 0.6777777777777778,
+        "observedRate": 0.16111111111111112,
+        "meanPredicted": 0.09430222222222222
+      },
+      {
+        "rolesFilled": 6,
+        "n": 285,
+        "meanWidth": 23.744912280701755,
+        "meanUnmeasuredRoles": 0.15789473684210525,
+        "localNeighbourhoodCoverage": 0.8245614035087719,
+        "observedRate": 0.15087719298245614,
+        "meanPredicted": 0.1169073684210526
+      },
+      {
+        "rolesFilled": 7,
+        "n": 411,
+        "meanWidth": 24.384306569343078,
+        "meanUnmeasuredRoles": 0.25790754257907544,
+        "localNeighbourhoodCoverage": 0.8880778588807786,
+        "observedRate": 0.1386861313868613,
+        "meanPredicted": 0.09553333333333332
+      },
+      {
+        "rolesFilled": 8,
+        "n": 673,
+        "meanWidth": 26.630029717682007,
+        "meanUnmeasuredRoles": 0.5794947994056464,
+        "localNeighbourhoodCoverage": 0.8870728083209509,
+        "observedRate": 0.09955423476968796,
+        "meanPredicted": 0.09427280832095096
+      },
+      {
+        "rolesFilled": 9,
+        "n": 1020,
+        "meanWidth": 31.875950980392172,
+        "meanUnmeasuredRoles": 0.7970588235294118,
+        "localNeighbourhoodCoverage": 0.9862745098039216,
+        "observedRate": 0.10882352941176471,
+        "meanPredicted": 0.10420303921568617
+      },
+      {
+        "rolesFilled": 10,
+        "n": 1339,
+        "meanWidth": 34.11645257654964,
+        "meanUnmeasuredRoles": 1,
+        "localNeighbourhoodCoverage": 0.9940253920836445,
+        "observedRate": 0.07244212098581031,
+        "meanPredicted": 0.08539492158327112
+      }
+    ],
+    "bandCoverage": {
+      "note": "Measured for #198. The band is a nominal 80% interval on the model's estimate of a film's hit probability, not a prediction interval for one film's binary outcome, so every test here is a group test. Which group makes the test valid is the whole question.",
+      "nominalLevel": 0.8,
+      "zInterval": 1.2816,
+      "binnedCoverage": 1,
+      "binnedCoverageFine": 0.9,
+      "rosterStrataCovered": 8,
+      "rosterStrataMeasured": 8,
+      "localNeighbourhoodCoverage": 0.8190757128810227,
+      "localNeighbourhoodCeiling": 0.928220255653884,
+      "localNeighbourhoodCoverageV1": 0.8623402163225172,
+      "holdoutDriftRms": 0.25546718740515095,
+      "bandDriftAtServingHorizon": 0.4529580626332675,
+      "bandDriftFlat": 0.2516146762098996,
+      "meanWidthAtServingHorizon": 29.85086302693939,
+      "meanWidthWithFlatTau": 28.30304354968143,
+      "servingHorizonBand": {
+        "note": "The band a user sees is the one at the serving horizon, not the one a 2010 holdout film got. `meanWidthWithFlatTau` is what the band would be if drift stayed the single in-sample scalar it was before #198.",
+        "servingYear": 2026,
+        "horizon": 17,
+        "driftSdAtServingHorizon": 0.4529580626332675,
+        "driftSdFlat": 0.2516146762098996,
+        "meanWidthAtServingHorizon": 29.85086302693939,
+        "meanWidthWithFlatTau": 28.30304354968143,
+        "byRosterSize": [
+          {
+            "rolesFilled": 3,
+            "n": 43,
+            "meanWidthAsScored": 14.584651162790697,
+            "meanWidthAtServingHorizon": 15.502851406602227,
+            "meanWidthWithFlatTau": 13.242811443795329
+          },
+          {
+            "rolesFilled": 4,
+            "n": 98,
+            "meanWidthAsScored": 18.786122448979597,
+            "meanWidthAtServingHorizon": 19.675031400162947,
+            "meanWidthWithFlatTau": 17.28326369552241
+          },
+          {
+            "rolesFilled": 5,
+            "n": 180,
+            "meanWidthAsScored": 19.287555555555553,
+            "meanWidthAtServingHorizon": 20.096992248660264,
+            "meanWidthWithFlatTau": 17.86515983870273
+          },
+          {
+            "rolesFilled": 6,
+            "n": 285,
+            "meanWidthAsScored": 23.744912280701755,
+            "meanWidthAtServingHorizon": 24.54971346794193,
+            "meanWidthWithFlatTau": 22.32821863543738
+          },
+          {
+            "rolesFilled": 7,
+            "n": 411,
+            "meanWidthAsScored": 24.384306569343078,
+            "meanWidthAtServingHorizon": 25.079121485033852,
+            "meanWidthWithFlatTau": 23.16151829061542
+          },
+          {
+            "rolesFilled": 8,
+            "n": 673,
+            "meanWidthAsScored": 26.630029717682007,
+            "meanWidthAtServingHorizon": 27.218585968960884,
+            "meanWidthWithFlatTau": 25.58621946480866
+          },
+          {
+            "rolesFilled": 9,
+            "n": 1020,
+            "meanWidthAsScored": 31.875950980392172,
+            "meanWidthAtServingHorizon": 32.36594522732198,
+            "meanWidthWithFlatTau": 30.95123536399337
+          },
+          {
+            "rolesFilled": 10,
+            "n": 1339,
+            "meanWidthAsScored": 34.11645257654964,
+            "meanWidthAtServingHorizon": 34.53908835094801,
+            "meanWidthWithFlatTau": 33.37597216108616
+          }
+        ]
+      },
+      "localNeighbourhood": {
+        "method": "For each film: the observed hit rate among films in the same roster-size stratum whose predicted probability is within 2 points, compared against that film's own band. This is the metric #198 cites.",
+        "v2": {
+          "coverage": 0.8190757128810227,
+          "ceiling": 0.928220255653884,
+          "filmsScored": 1017,
+          "medianNeighbourhoodFilms": 60,
+          "byRosterSize": [
+            {
+              "rolesFilled": 3,
+              "n": 43,
+              "coverage": 0.4883720930232558,
+              "meanNeighbourhoodFilms": 14.395348837209303,
+              "ceiling": 0.5813953488372093
+            },
+            {
+              "rolesFilled": 4,
+              "n": 98,
+              "coverage": 0.9183673469387755,
+              "meanNeighbourhoodFilms": 24.183673469387756,
+              "ceiling": 0.9591836734693877
+            },
+            {
+              "rolesFilled": 5,
+              "n": 180,
+              "coverage": 0.6777777777777778,
+              "meanNeighbourhoodFilms": 44.577777777777776,
+              "ceiling": 0.9833333333333333
+            },
+            {
+              "rolesFilled": 6,
+              "n": 285,
+              "coverage": 0.8245614035087719,
+              "meanNeighbourhoodFilms": 64.00350877192983,
+              "ceiling": 0.9333333333333333
+            },
+            {
+              "rolesFilled": 7,
+              "n": 411,
+              "coverage": 0.8880778588807786,
+              "meanNeighbourhoodFilms": 107.02433090024331,
+              "ceiling": 0.9294403892944039
+            }
+          ]
+        },
+        "v1": {
+          "coverage": 0.8623402163225172,
+          "ceiling": 0.9311701081612586,
+          "filmsScored": 1017,
+          "medianNeighbourhoodFilms": 48,
+          "byRosterSize": [
+            {
+              "rolesFilled": 3,
+              "n": 43,
+              "coverage": 0.37209302325581395,
+              "meanNeighbourhoodFilms": 11.232558139534884,
+              "ceiling": 0.4418604651162791
+            },
+            {
+              "rolesFilled": 4,
+              "n": 98,
+              "coverage": 0.8367346938775511,
+              "meanNeighbourhoodFilms": 19.06122448979592,
+              "ceiling": 0.9081632653061225
+            },
+            {
+              "rolesFilled": 5,
+              "n": 180,
+              "coverage": 0.8111111111111111,
+              "meanNeighbourhoodFilms": 36.84444444444444,
+              "ceiling": 0.9777777777777777
+            },
+            {
+              "rolesFilled": 6,
+              "n": 285,
+              "coverage": 0.8771929824561403,
+              "meanNeighbourhoodFilms": 50.656140350877195,
+              "ceiling": 0.9473684210526315
+            },
+            {
+              "rolesFilled": 7,
+              "n": 411,
+              "coverage": 0.9318734793187348,
+              "meanNeighbourhoodFilms": 86.76642335766424,
+              "ceiling": 0.9562043795620438
+            }
+          ]
+        },
+        "ceilingNote": "A neighbourhood with no hits has an observed rate of exactly 0. The band's lower bound is a probability and is never 0, so those films cannot be covered by any band, however wide. `ceiling` is the share of films whose neighbourhood contains at least one hit — the largest coverage this metric can report on this data."
+      },
+      "binned": {
+        "method": "Equal-count bins by predicted probability. `coverage` = share of bins whose observed rate is inside the mean band of its films; `coverageAllowingObservedCi` = share where the observed rate's 95% Wilson interval overlaps the band.",
+        "deciles": {
+          "bins": 10,
+          "meanBinFilms": 406.3,
+          "coverage": 1,
+          "coverageAllowingObservedCi": 1,
+          "rows": [
+            {
+              "bin": 1,
+              "n": 407,
+              "meanPredicted": 0.01397985257985257,
+              "observed": 0.002457002457002457,
+              "bandLow": 0.0014304051924547729,
+              "bandHigh": 0.14246238431144764,
+              "inside": true,
+              "observedCiLow": 0.00043384184977681854,
+              "observedCiHigh": 0.013784776712705655,
+              "overlapsBand": true
+            },
+            {
+              "bin": 2,
+              "n": 407,
+              "meanPredicted": 0.024097542997543003,
+              "observed": 0.009828009828009828,
+              "bandLow": 0.0031094497645787413,
+              "bandHigh": 0.19388261970312884,
+              "inside": true,
+              "observedCiLow": 0.003828310072083666,
+              "observedCiHigh": 0.024994477104287954,
+              "overlapsBand": true
+            },
+            {
+              "bin": 3,
+              "n": 407,
+              "meanPredicted": 0.03292923832923832,
+              "observed": 0.014742014742014743,
+              "bandLow": 0.0055309365086572216,
+              "bandHigh": 0.20810249494743022,
+              "inside": true,
+              "observedCiLow": 0.006773358664374479,
+              "observedCiHigh": 0.03178554092125657,
+              "overlapsBand": true
+            },
+            {
+              "bin": 4,
+              "n": 407,
+              "meanPredicted": 0.04238746928746932,
+              "observed": 0.04668304668304668,
+              "bandLow": 0.008340997391351808,
+              "bandHigh": 0.22998541294666572,
+              "inside": true,
+              "observedCiLow": 0.030086696875688133,
+              "observedCiHigh": 0.07175693337012923,
+              "overlapsBand": true
+            },
+            {
+              "bin": 5,
+              "n": 407,
+              "meanPredicted": 0.05275208845208844,
+              "observed": 0.056511056511056514,
+              "bandLow": 0.011731974233123178,
+              "bandHigh": 0.24602144255436512,
+              "inside": true,
+              "observedCiLow": 0.037947892728336936,
+              "observedCiHigh": 0.08336796233599929,
+              "overlapsBand": true
+            },
+            {
+              "bin": 6,
+              "n": 407,
+              "meanPredicted": 0.06586584766584763,
+              "observed": 0.10073710073710074,
+              "bandLow": 0.014332712112087139,
+              "bandHigh": 0.2941328264071176,
+              "inside": true,
+              "observedCiLow": 0.07512768044258951,
+              "observedCiHigh": 0.1338131863050816,
+              "overlapsBand": true
+            },
+            {
+              "bin": 7,
+              "n": 407,
+              "meanPredicted": 0.08352407862407873,
+              "observed": 0.13022113022113022,
+              "bandLow": 0.021517576312360787,
+              "bandHigh": 0.3192166082336896,
+              "inside": true,
+              "observedCiLow": 0.10095212221735488,
+              "observedCiHigh": 0.16640541898587277,
+              "overlapsBand": true
+            },
+            {
+              "bin": 8,
+              "n": 407,
+              "meanPredicted": 0.11184545454545457,
+              "observed": 0.171990171990172,
+              "bandLow": 0.028290272032114615,
+              "bandHigh": 0.39247049750305935,
+              "inside": true,
+              "observedCiLow": 0.1384373581105508,
+              "observedCiHigh": 0.21167713857138207,
+              "overlapsBand": true
+            },
+            {
+              "bin": 9,
+              "n": 407,
+              "meanPredicted": 0.1722626535626535,
+              "observed": 0.20393120393120392,
+              "bandLow": 0.04863317186549833,
+              "bandHigh": 0.4868458762735735,
+              "inside": true,
+              "observedCiLow": 0.16763985249351626,
+              "observedCiHigh": 0.24575937484860289,
+              "overlapsBand": true
+            },
+            {
+              "bin": 10,
+              "n": 400,
+              "meanPredicted": 0.35962125000000006,
+              "observed": 0.305,
+              "bandLow": 0.12640358668420132,
+              "bandHigh": 0.6901772337115426,
+              "inside": true,
+              "observedCiLow": 0.2619118577039248,
+              "observedCiHigh": 0.3517980721299507,
+              "overlapsBand": true
+            }
+          ]
+        },
+        "twentieths": {
+          "bins": 20,
+          "meanBinFilms": 203.15,
+          "coverage": 0.9,
+          "coverageAllowingObservedCi": 1,
+          "rows": [
+            {
+              "bin": 1,
+              "n": 204,
+              "meanPredicted": 0.010606372549019607,
+              "observed": 0,
+              "bandLow": 0.001072753710937297,
+              "bandHigh": 0.11595191536312359,
+              "inside": false,
+              "observedCiLow": 0,
+              "observedCiHigh": 0.01848330651804066,
+              "overlapsBand": true
+            },
+            {
+              "bin": 2,
+              "n": 204,
+              "meanPredicted": 0.017382352941176477,
+              "observed": 0.004901960784313725,
+              "bandLow": 0.001803018154471796,
+              "bandHigh": 0.1686856702442553,
+              "inside": true,
+              "observedCiLow": 0.000865818894013333,
+              "observedCiHigh": 0.027240200305223006,
+              "overlapsBand": true
+            },
+            {
+              "bin": 3,
+              "n": 204,
+              "meanPredicted": 0.022124019607843163,
+              "observed": 0,
+              "bandLow": 0.002719097835935916,
+              "bandHigh": 0.18375121874020062,
+              "inside": false,
+              "observedCiLow": 0,
+              "observedCiHigh": 0.01848330651804066,
+              "overlapsBand": true
+            },
+            {
+              "bin": 4,
+              "n": 204,
+              "meanPredicted": 0.026134803921568646,
+              "observed": 0.0196078431372549,
+              "bandLow": 0.0034906771300192273,
+              "bandHigh": 0.20539983576313364,
+              "inside": true,
+              "observedCiLow": 0.007650755366888734,
+              "observedCiHigh": 0.04932340187593464,
+              "overlapsBand": true
+            },
+            {
+              "bin": 5,
+              "n": 204,
+              "meanPredicted": 0.03064313725490195,
+              "observed": 0.014705882352941176,
+              "bandLow": 0.004857274354433186,
+              "bandHigh": 0.20293899228541679,
+              "inside": true,
+              "observedCiLow": 0.005013618846058772,
+              "observedCiHigh": 0.042337825715568926,
+              "overlapsBand": true
+            },
+            {
+              "bin": 6,
+              "n": 204,
+              "meanPredicted": 0.03533039215686278,
+              "observed": 0.014705882352941176,
+              "bandLow": 0.00626090093257136,
+              "bandHigh": 0.2121694159337183,
+              "inside": true,
+              "observedCiLow": 0.005013618846058772,
+              "observedCiHigh": 0.042337825715568926,
+              "overlapsBand": true
+            },
+            {
+              "bin": 7,
+              "n": 204,
+              "meanPredicted": 0.040009313725490166,
+              "observed": 0.049019607843137254,
+              "bandLow": 0.00754763892605356,
+              "bandHigh": 0.2245359317050368,
+              "inside": true,
+              "observedCiLow": 0.026841074556920915,
+              "observedCiHigh": 0.08786935877307653,
+              "overlapsBand": true
+            },
+            {
+              "bin": 8,
+              "n": 204,
+              "meanPredicted": 0.04493088235294119,
+              "observed": 0.049019607843137254,
+              "bandLow": 0.009134835687657867,
+              "bandHigh": 0.2370428354818624,
+              "inside": true,
+              "observedCiLow": 0.026841074556920915,
+              "observedCiHigh": 0.08786935877307653,
+              "overlapsBand": true
+            },
+            {
+              "bin": 9,
+              "n": 204,
+              "meanPredicted": 0.04998333333333339,
+              "observed": 0.058823529411764705,
+              "bandLow": 0.01080773723124454,
+              "bandHigh": 0.24176098881217015,
+              "inside": true,
+              "observedCiLow": 0.03396593932795771,
+              "observedCiHigh": 0.09998991936443108,
+              "overlapsBand": true
+            },
+            {
+              "bin": 10,
+              "n": 204,
+              "meanPredicted": 0.05577303921568631,
+              "observed": 0.05392156862745098,
+              "bandLow": 0.012745261099991214,
+              "bandHigh": 0.24970985871065055,
+              "inside": true,
+              "observedCiLow": 0.030372106395149694,
+              "observedCiHigh": 0.09396103961604345,
+              "overlapsBand": true
+            },
+            {
+              "bin": 11,
+              "n": 204,
+              "meanPredicted": 0.06219950980392149,
+              "observed": 0.09313725490196079,
+              "bandLow": 0.013104669559070314,
+              "bandHigh": 0.2899443747631898,
+              "inside": true,
+              "observedCiLow": 0.06043674452692693,
+              "observedCiHigh": 0.14087810293383166,
+              "overlapsBand": true
+            },
+            {
+              "bin": 12,
+              "n": 204,
+              "meanPredicted": 0.06994705882352939,
+              "observed": 0.10294117647058823,
+              "bandLow": 0.015698543534239662,
+              "bandHigh": 0.30032423042908346,
+              "inside": true,
+              "observedCiLow": 0.0683195815722035,
+              "observedCiHigh": 0.1522406912509464,
+              "overlapsBand": true
+            },
+            {
+              "bin": 13,
+              "n": 204,
+              "meanPredicted": 0.07881617647058828,
+              "observed": 0.15196078431372548,
+              "bandLow": 0.02058742149030817,
+              "bandHigh": 0.30479267398269433,
+              "inside": true,
+              "observedCiLow": 0.10916665273100525,
+              "observedCiHigh": 0.20762074690410146,
+              "overlapsBand": true
+            },
+            {
+              "bin": 14,
+              "n": 204,
+              "meanPredicted": 0.088896568627451,
+              "observed": 0.11274509803921569,
+              "bandLow": 0.022379682017805744,
+              "bandHigh": 0.33703385836242983,
+              "inside": true,
+              "observedCiLow": 0.07631172789646846,
+              "observedCiHigh": 0.1634939702890728,
+              "overlapsBand": true
+            },
+            {
+              "bin": 15,
+              "n": 204,
+              "meanPredicted": 0.10313676470588233,
+              "observed": 0.1568627450980392,
+              "bandLow": 0.024672209276243494,
+              "bandHigh": 0.38374488925121314,
+              "inside": true,
+              "observedCiLow": 0.11335760554939678,
+              "observedCiHigh": 0.21305250676690562,
+              "overlapsBand": true
+            },
+            {
+              "bin": 16,
+              "n": 204,
+              "meanPredicted": 0.12202745098039212,
+              "observed": 0.18627450980392157,
+              "bandLow": 0.032298797061199536,
+              "bandHigh": 0.40342884802790707,
+              "inside": true,
+              "observedCiLow": 0.13882606972484038,
+              "observedCiHigh": 0.24532031867863613,
+              "overlapsBand": true
+            },
+            {
+              "bin": 17,
+              "n": 204,
+              "meanPredicted": 0.1511289215686274,
+              "observed": 0.21568627450980393,
+              "bandLow": 0.04024940897326967,
+              "bandHigh": 0.4626531872443907,
+              "inside": true,
+              "observedCiLow": 0.1647776676670441,
+              "observedCiHigh": 0.27710499682360645,
+              "overlapsBand": true
+            },
+            {
+              "bin": 18,
+              "n": 204,
+              "meanPredicted": 0.19713578431372566,
+              "observed": 0.20588235294117646,
+              "bandLow": 0.05868713747376505,
+              "bandHigh": 0.5142469762927846,
+              "inside": true,
+              "observedCiLow": 0.15607843784485384,
+              "observedCiHigh": 0.2665588012834053,
+              "overlapsBand": true
+            },
+            {
+              "bin": 19,
+              "n": 204,
+              "meanPredicted": 0.27145343137254924,
+              "observed": 0.28431372549019607,
+              "bandLow": 0.08529383533071971,
+              "bandHigh": 0.6124039901416195,
+              "inside": true,
+              "observedCiLow": 0.22684411191374163,
+              "observedCiHigh": 0.3497565301136483,
+              "overlapsBand": true
+            },
+            {
+              "bin": 20,
+              "n": 187,
+              "meanPredicted": 0.46235935828876995,
+              "observed": 0.32085561497326204,
+              "bandLow": 0.17408038369705642,
+              "bandHigh": 0.7818437577746299,
+              "inside": true,
+              "observedCiLow": 0.25813354830392365,
+              "observedCiHigh": 0.3907899568438009,
+              "overlapsBand": true
+            }
+          ]
+        },
+        "v1Deciles": {
+          "bins": 10,
+          "meanBinFilms": 406.3,
+          "coverage": 1,
+          "coverageAllowingObservedCi": 1,
+          "rows": [
+            {
+              "bin": 1,
+              "n": 407,
+              "meanPredicted": 0.011157002457002458,
+              "observed": 0.004914004914004914,
+              "bandLow": 0.0005982052983936746,
+              "bandHigh": 0.22052280716650807,
+              "inside": true,
+              "observedCiLow": 0.0013486051545460005,
+              "observedCiHigh": 0.017738069612566187,
+              "overlapsBand": true
+            },
+            {
+              "bin": 2,
+              "n": 407,
+              "meanPredicted": 0.021163144963144965,
+              "observed": 0.0171990171990172,
+              "bandLow": 0.0014746214455536358,
+              "bandHigh": 0.2951054892319339,
+              "inside": true,
+              "observedCiLow": 0.00835552580882296,
+              "observedCiHigh": 0.03507142998143781,
+              "overlapsBand": true
+            },
+            {
+              "bin": 3,
+              "n": 407,
+              "meanPredicted": 0.031025061425061437,
+              "observed": 0.0171990171990172,
+              "bandLow": 0.0032774545933778715,
+              "bandHigh": 0.3110272975026401,
+              "inside": true,
+              "observedCiLow": 0.00835552580882296,
+              "observedCiHigh": 0.03507142998143781,
+              "overlapsBand": true
+            },
+            {
+              "bin": 4,
+              "n": 407,
+              "meanPredicted": 0.04262923832923836,
+              "observed": 0.04914004914004914,
+              "bandLow": 0.006246894216932402,
+              "bandHigh": 0.3182735943047367,
+              "inside": true,
+              "observedCiLow": 0.03203259780726759,
+              "observedCiHigh": 0.07467908864317947,
+              "overlapsBand": true
+            },
+            {
+              "bin": 5,
+              "n": 407,
+              "meanPredicted": 0.05585257985257985,
+              "observed": 0.06142506142506143,
+              "bandLow": 0.00872419549778545,
+              "bandHigh": 0.35393748274841247,
+              "inside": true,
+              "observedCiLow": 0.041948528354596434,
+              "observedCiHigh": 0.0891034391189992,
+              "overlapsBand": true
+            },
+            {
+              "bin": 6,
+              "n": 407,
+              "meanPredicted": 0.07215675675675676,
+              "observed": 0.09090909090909091,
+              "bandLow": 0.01150302664670458,
+              "bandHigh": 0.4170913575728228,
+              "inside": true,
+              "observedCiLow": 0.06667356307102913,
+              "observedCiHigh": 0.12279507885812313,
+              "overlapsBand": true
+            },
+            {
+              "bin": 7,
+              "n": 407,
+              "meanPredicted": 0.09679852579852574,
+              "observed": 0.12285012285012285,
+              "bandLow": 0.019326558699698765,
+              "bandHigh": 0.445411362943253,
+              "inside": true,
+              "observedCiLow": 0.09443871094682255,
+              "observedCiHigh": 0.158314661642516,
+              "overlapsBand": true
+            },
+            {
+              "bin": 8,
+              "n": 407,
+              "meanPredicted": 0.13756216216216213,
+              "observed": 0.1597051597051597,
+              "bandLow": 0.027191364998158055,
+              "bandHigh": 0.5322003296325915,
+              "inside": true,
+              "observedCiLow": 0.12732076342114082,
+              "observedCiHigh": 0.1984534522376434,
+              "overlapsBand": true
+            },
+            {
+              "bin": 9,
+              "n": 407,
+              "meanPredicted": 0.2252648648648647,
+              "observed": 0.20884520884520885,
+              "bandLow": 0.05442360192555498,
+              "bandHigh": 0.6283714241899665,
+              "inside": true,
+              "observedCiLow": 0.17216722811713697,
+              "observedCiHigh": 0.25096811163424165,
+              "overlapsBand": true
+            },
+            {
+              "bin": 10,
+              "n": 400,
+              "meanPredicted": 0.4808502499999999,
+              "observed": 0.31,
+              "bandLow": 0.16073993946813073,
+              "bandHigh": 0.8233206842701822,
+              "inside": true,
+              "observedCiLow": 0.26666296102378073,
+              "observedCiHigh": 0.3569518424040979,
+              "overlapsBand": true
+            }
+          ]
+        }
+      },
+      "byRosterSize": [
+        {
+          "rolesFilled": 3,
+          "n": 43,
+          "meanWidth": 14.584651162790697,
+          "meanPredicted": 0.08159534883720933,
+          "observedRate": 0.06976744186046512,
+          "bandLow": 0.03633953488372093,
+          "bandHigh": 0.18219069767441862,
+          "inside": true,
+          "observedCiLow": 0.024011153791962503,
+          "observedCiHigh": 0.1860926855303493,
+          "localNeighbourhoodCoverage": 0.4883720930232558
+        },
+        {
+          "rolesFilled": 4,
+          "n": 98,
+          "meanWidth": 18.786122448979597,
+          "meanPredicted": 0.09862346938775517,
+          "observedRate": 0.14285714285714285,
+          "bandLow": 0.04056326530612244,
+          "bandHigh": 0.22841836734693882,
+          "inside": true,
+          "observedCiLow": 0.0870439104644005,
+          "observedCiHigh": 0.22561417817521243,
+          "localNeighbourhoodCoverage": 0.9183673469387755
+        },
+        {
+          "rolesFilled": 5,
+          "n": 180,
+          "meanWidth": 19.287555555555553,
+          "meanPredicted": 0.09430222222222222,
+          "observedRate": 0.16111111111111112,
+          "bandLow": 0.03723666666666665,
+          "bandHigh": 0.23011111111111104,
+          "inside": true,
+          "observedCiLow": 0.11457950211011259,
+          "observedCiHigh": 0.22180573387564909,
+          "localNeighbourhoodCoverage": 0.6777777777777778
+        },
+        {
+          "rolesFilled": 6,
+          "n": 285,
+          "meanWidth": 23.744912280701755,
+          "meanPredicted": 0.1169073684210526,
+          "observedRate": 0.15087719298245614,
+          "bandLow": 0.04465508771929822,
+          "bandHigh": 0.28210280701754387,
+          "inside": true,
+          "observedCiLow": 0.11398175697401795,
+          "observedCiHigh": 0.19705931190248738,
+          "localNeighbourhoodCoverage": 0.8245614035087719
+        },
+        {
+          "rolesFilled": 7,
+          "n": 411,
+          "meanWidth": 24.384306569343078,
+          "meanPredicted": 0.09553333333333332,
+          "observedRate": 0.1386861313868613,
+          "bandLow": 0.031672992700729895,
+          "bandHigh": 0.27551532846715343,
+          "inside": true,
+          "observedCiLow": 0.10860493820323157,
+          "observedCiHigh": 0.17545914794434864,
+          "localNeighbourhoodCoverage": 0.8880778588807786
+        },
+        {
+          "rolesFilled": 8,
+          "n": 673,
+          "meanWidth": 26.630029717682007,
+          "meanPredicted": 0.09427280832095096,
+          "observedRate": 0.09955423476968796,
+          "bandLow": 0.028136701337295702,
+          "bandHigh": 0.29443952451708766,
+          "inside": true,
+          "observedCiLow": 0.07915638218478767,
+          "observedCiHigh": 0.12449776673277291,
+          "localNeighbourhoodCoverage": 0.8870728083209509
+        },
+        {
+          "rolesFilled": 9,
+          "n": 1020,
+          "meanWidth": 31.875950980392172,
+          "meanPredicted": 0.10420303921568617,
+          "observedRate": 0.10882352941176471,
+          "bandLow": 0.027212156862745085,
+          "bandHigh": 0.3459725490196078,
+          "inside": true,
+          "observedCiLow": 0.09115908811005402,
+          "observedCiHigh": 0.12942347075452038,
+          "localNeighbourhoodCoverage": 0.9862745098039216
+        },
+        {
+          "rolesFilled": 10,
+          "n": 1339,
+          "meanWidth": 34.11645257654964,
+          "meanPredicted": 0.08539492158327112,
+          "observedRate": 0.07244212098581031,
+          "bandLow": 0.017573711725168036,
+          "bandHigh": 0.35873868558625793,
+          "inside": true,
+          "observedCiLow": 0.05974675129748485,
+          "observedCiHigh": 0.08758380503916721,
+          "localNeighbourhoodCoverage": 0.9940253920836445
+        }
+      ],
+      "horizonDrift": {
+        "method": "Rolling origin inside 1965-2009: for each origin year the two Platt constants are fitted on the 8 years ending there, then the level offset that would have been needed is measured at each later training year. The holdout plays no part.",
+        "windowYears": 8,
+        "fittedThrough": 2009,
+        "horizons": 37,
+        "observations": 703,
+        "rows": [
+          {
+            "horizon": 1,
+            "observations": 37,
+            "meanOffset": -0.08791127913919723,
+            "sdOffset": 0.321948842970183,
+            "rmsOffset": 0.3295118670967277
+          },
+          {
+            "horizon": 2,
+            "observations": 36,
+            "meanOffset": -0.11616840906961667,
+            "sdOffset": 0.32158487189416846,
+            "rmsOffset": 0.337696963829143
+          },
+          {
+            "horizon": 3,
+            "observations": 35,
+            "meanOffset": -0.1320804226608493,
+            "sdOffset": 0.3305333765053733,
+            "rmsOffset": 0.35153386234845785
+          },
+          {
+            "horizon": 4,
+            "observations": 34,
+            "meanOffset": -0.15443318728246877,
+            "sdOffset": 0.34011024850757227,
+            "rmsOffset": 0.3689476726399843
+          },
+          {
+            "horizon": 5,
+            "observations": 33,
+            "meanOffset": -0.16772071733292454,
+            "sdOffset": 0.35590431382624,
+            "rmsOffset": 0.3885353252904441
+          },
+          {
+            "horizon": 6,
+            "observations": 32,
+            "meanOffset": -0.18082710661890775,
+            "sdOffset": 0.36668756701465516,
+            "rmsOffset": 0.40367851865369964
+          },
+          {
+            "horizon": 7,
+            "observations": 31,
+            "meanOffset": -0.1787355997804311,
+            "sdOffset": 0.3659888447669613,
+            "rmsOffset": 0.4019618778389647
+          },
+          {
+            "horizon": 8,
+            "observations": 30,
+            "meanOffset": -0.21090977326056964,
+            "sdOffset": 0.35251060934909484,
+            "rmsOffset": 0.4057148479376117
+          },
+          {
+            "horizon": 9,
+            "observations": 29,
+            "meanOffset": -0.2086329633735844,
+            "sdOffset": 0.33422230439756173,
+            "rmsOffset": 0.3890763179265033
+          },
+          {
+            "horizon": 10,
+            "observations": 28,
+            "meanOffset": -0.205088208852342,
+            "sdOffset": 0.33934174706755976,
+            "rmsOffset": 0.39128173219856427
+          },
+          {
+            "horizon": 11,
+            "observations": 27,
+            "meanOffset": -0.2079938166974962,
+            "sdOffset": 0.35333225793425216,
+            "rmsOffset": 0.40432817378307445
+          },
+          {
+            "horizon": 12,
+            "observations": 26,
+            "meanOffset": -0.2175346008151009,
+            "sdOffset": 0.3578025777321216,
+            "rmsOffset": 0.41281961893134717
+          },
+          {
+            "horizon": 13,
+            "observations": 25,
+            "meanOffset": -0.24700027572870392,
+            "sdOffset": 0.33666328857820704,
+            "rmsOffset": 0.4120893341149431
+          },
+          {
+            "horizon": 14,
+            "observations": 24,
+            "meanOffset": -0.27825623686637724,
+            "sdOffset": 0.31324731157023467,
+            "rmsOffset": 0.4140796018107725
+          },
+          {
+            "horizon": 15,
+            "observations": 23,
+            "meanOffset": -0.28785534268624297,
+            "sdOffset": 0.31220575955740776,
+            "rmsOffset": 0.41963698907597885
+          },
+          {
+            "horizon": 16,
+            "observations": 22,
+            "meanOffset": -0.30035114630727744,
+            "sdOffset": 0.3194131536912844,
+            "rmsOffset": 0.4331259454513809
+          },
+          {
+            "horizon": 17,
+            "observations": 21,
+            "meanOffset": -0.3235934369919699,
+            "sdOffset": 0.3171112049536615,
+            "rmsOffset": 0.4477540400441518
+          },
+          {
+            "horizon": 18,
+            "observations": 20,
+            "meanOffset": -0.35779517783810255,
+            "sdOffset": 0.2630464436886182,
+            "rmsOffset": 0.4401717269936443
+          },
+          {
+            "horizon": 19,
+            "observations": 19,
+            "meanOffset": -0.3536998509539227,
+            "sdOffset": 0.26595086356488423,
+            "rmsOffset": 0.4383044855906051
+          },
+          {
+            "horizon": 20,
+            "observations": 18,
+            "meanOffset": -0.36404964837750486,
+            "sdOffset": 0.24285565967712355,
+            "rmsOffset": 0.4338599012956392
+          },
+          {
+            "horizon": 21,
+            "observations": 17,
+            "meanOffset": -0.37069729278660574,
+            "sdOffset": 0.24411215400663136,
+            "rmsOffset": 0.4398884958104544
+          },
+          {
+            "horizon": 22,
+            "observations": 16,
+            "meanOffset": -0.39874837021826504,
+            "sdOffset": 0.20123780200365873,
+            "rmsOffset": 0.44380837632618236
+          },
+          {
+            "horizon": 23,
+            "observations": 15,
+            "meanOffset": -0.4290135017611805,
+            "sdOffset": 0.196456527825686,
+            "rmsOffset": 0.4691212432449562
+          },
+          {
+            "horizon": 24,
+            "observations": 14,
+            "meanOffset": -0.4636216106609692,
+            "sdOffset": 0.15091111008002,
+            "rmsOffset": 0.4858934400447129
+          },
+          {
+            "horizon": 25,
+            "observations": 13,
+            "meanOffset": -0.4612901518288582,
+            "sdOffset": 0.18426290217347507,
+            "rmsOffset": 0.4940947946789224
+          },
+          {
+            "horizon": 26,
+            "observations": 12,
+            "meanOffset": -0.4763783482188737,
+            "sdOffset": 0.2009356741550078,
+            "rmsOffset": 0.5137576085770987
+          },
+          {
+            "horizon": 27,
+            "observations": 11,
+            "meanOffset": -0.48727340823763304,
+            "sdOffset": 0.19101386225017492,
+            "rmsOffset": 0.520196822353022
+          },
+          {
+            "horizon": 28,
+            "observations": 10,
+            "meanOffset": -0.5412315259207664,
+            "sdOffset": 0.18080633346118077,
+            "rmsOffset": 0.5677617474330489
+          },
+          {
+            "horizon": 29,
+            "observations": 9,
+            "meanOffset": -0.5668442639435887,
+            "sdOffset": 0.1760889797658621,
+            "rmsOffset": 0.5906559824514884
+          },
+          {
+            "horizon": 30,
+            "observations": 8,
+            "meanOffset": -0.5999024089617684,
+            "sdOffset": 0.18138598082149718,
+            "rmsOffset": 0.6234349726009019
+          },
+          {
+            "horizon": 31,
+            "observations": 7,
+            "meanOffset": -0.6238734107249141,
+            "sdOffset": 0.19116819684811806,
+            "rmsOffset": 0.648492527237893
+          },
+          {
+            "horizon": 32,
+            "observations": 6,
+            "meanOffset": -0.6462009923116409,
+            "sdOffset": 0.20684830033989854,
+            "rmsOffset": 0.6732242607475883
+          },
+          {
+            "horizon": 33,
+            "observations": 5,
+            "meanOffset": -0.6756955449897313,
+            "sdOffset": 0.18671707975758606,
+            "rmsOffset": 0.6960280768888067
+          },
+          {
+            "horizon": 34,
+            "observations": 4,
+            "meanOffset": -0.5966809096824129,
+            "sdOffset": 0.09831320071362165,
+            "rmsOffset": 0.6027248311255722
+          },
+          {
+            "horizon": 35,
+            "observations": 3,
+            "meanOffset": -0.58603512075513,
+            "sdOffset": 0.08909814545808793,
+            "rmsOffset": 0.5905332187448844
+          },
+          {
+            "horizon": 36,
+            "observations": 2,
+            "meanOffset": -0.536180484972586,
+            "sdOffset": 0.006119724617492853,
+            "rmsOffset": 0.5361979466392374
+          },
+          {
+            "horizon": 37,
+            "observations": 1,
+            "meanOffset": -0.47241354391077084,
+            "sdOffset": 0,
+            "rmsOffset": 0.47241354391077084
+          }
+        ],
+        "fit": {
+          "base": 0.3277464582579792,
+          "perYear": 0.007365388492664017,
+          "form": "driftSd(h) = base + perYear * h, h = max(0, anchorYear - fittedThrough)"
+        },
+        "atHoldoutMeanHorizon": 0.3940349546919554,
+        "atServingHorizon": 0.4529580626332675,
+        "servingHorizon": 17
+      },
+      "commonMode": {
+        "method": "Per holdout year, the log-odds intercept shift that would have made that year calibrated. `sdOffset` is the quantity the band carries as tau; `rmsOffset` adds the level error the band does not carry. Measured on the holdout as a check — tau itself is fitted on the validation years and the holdout never sets it.",
+        "holdout": {
+          "years": 17,
+          "meanOffset": 0.080352705186492,
+          "sdOffset": 0.2499647165562185,
+          "rmsOffset": 0.25546718740515095,
+          "rows": [
+            {
+              "year": 2010,
+              "n": 241,
+              "offset": 0.12257528735874579,
+              "predicted": 0.08232406639004153,
+              "observed": 0.0912863070539419
+            },
+            {
+              "year": 2011,
+              "n": 242,
+              "offset": -0.09199350733845396,
+              "predicted": 0.08478842975206606,
+              "observed": 0.07851239669421488
+            },
+            {
+              "year": 2012,
+              "n": 248,
+              "offset": 0.27652063678842,
+              "predicted": 0.0835967741935484,
+              "observed": 0.10483870967741936
+            },
+            {
+              "year": 2013,
+              "n": 270,
+              "offset": 0.24337731321892409,
+              "predicted": 0.08531037037037037,
+              "observed": 0.1037037037037037
+            },
+            {
+              "year": 2014,
+              "n": 278,
+              "offset": 0.05262351302558643,
+              "predicted": 0.08272805755395689,
+              "observed": 0.08633093525179857
+            },
+            {
+              "year": 2015,
+              "n": 260,
+              "offset": 0.09868288460599214,
+              "predicted": 0.0924773076923077,
+              "observed": 0.1
+            },
+            {
+              "year": 2016,
+              "n": 280,
+              "offset": 0.37278987957863874,
+              "predicted": 0.08705964285714275,
+              "observed": 0.11785714285714285
+            },
+            {
+              "year": 2017,
+              "n": 280,
+              "offset": 0.249237710217168,
+              "predicted": 0.09400250000000002,
+              "observed": 0.11428571428571428
+            },
+            {
+              "year": 2018,
+              "n": 286,
+              "offset": 0.23643603478130149,
+              "predicted": 0.11153076923076922,
+              "observed": 0.13286713286713286
+            },
+            {
+              "year": 2019,
+              "n": 253,
+              "offset": 0.14454899703399293,
+              "predicted": 0.10619565217391307,
+              "observed": 0.11857707509881422
+            },
+            {
+              "year": 2020,
+              "n": 180,
+              "offset": -0.144495054978798,
+              "predicted": 0.0994238888888889,
+              "observed": 0.08888888888888889
+            },
+            {
+              "year": 2021,
+              "n": 222,
+              "offset": -0.19652915448701969,
+              "predicted": 0.11024639639639644,
+              "observed": 0.0945945945945946
+            },
+            {
+              "year": 2022,
+              "n": 231,
+              "offset": 0.057134534230858014,
+              "predicted": 0.09529004329004326,
+              "observed": 0.09956709956709957
+            },
+            {
+              "year": 2023,
+              "n": 222,
+              "offset": 0.2489157104069516,
+              "predicted": 0.10516531531531531,
+              "observed": 0.12612612612612611
+            },
+            {
+              "year": 2024,
+              "n": 197,
+              "offset": -0.3339555337125393,
+              "predicted": 0.10512994923857867,
+              "observed": 0.08121827411167512
+            },
+            {
+              "year": 2025,
+              "n": 187,
+              "offset": -0.44493327703747676,
+              "predicted": 0.11192994652406425,
+              "observed": 0.08021390374331551
+            },
+            {
+              "year": 2026,
+              "n": 186,
+              "offset": 0.4750600144780729,
+              "predicted": 0.09625053763440862,
+              "observed": 0.13440860215053763
+            }
+          ]
+        },
+        "modelTau": 0.2516146762098996,
+        "validationTau": 0.2516146762098996,
+        "validationMeanOffset": 0.17236845469759893
+      },
+      "scaleSweep": [
+        {
+          "scale": 0.25,
+          "meanWidth": 6.214048284637783,
+          "localNeighbourhoodCoverage": 0.2949852507374631,
+          "binnedCoverage": 0.4,
+          "binnedCoverageFine": 0.5
+        },
+        {
+          "scale": 0.5,
+          "meanWidth": 12.93598902559011,
+          "localNeighbourhoodCoverage": 0.5526057030481809,
+          "binnedCoverage": 0.9,
+          "binnedCoverageFine": 0.85
+        },
+        {
+          "scale": 0.75,
+          "meanWidth": 20.573446383614847,
+          "localNeighbourhoodCoverage": 0.7305801376597837,
+          "binnedCoverage": 0.9,
+          "binnedCoverageFine": 0.9
+        },
+        {
+          "scale": 1,
+          "meanWidth": 29.293181010842094,
+          "localNeighbourhoodCoverage": 0.8190757128810227,
+          "binnedCoverage": 1,
+          "binnedCoverageFine": 0.9
+        },
+        {
+          "scale": 1.25,
+          "meanWidth": 38.87833536467448,
+          "localNeighbourhoodCoverage": 0.8662733529990168,
+          "binnedCoverage": 1,
+          "binnedCoverageFine": 0.9
+        },
+        {
+          "scale": 1.5,
+          "meanWidth": 48.72588284012094,
+          "localNeighbourhoodCoverage": 0.8928220255653884,
+          "binnedCoverage": 1,
+          "binnedCoverageFine": 0.9
+        },
+        {
+          "scale": 2,
+          "meanWidth": 66.34194468896042,
+          "localNeighbourhoodCoverage": 0.9134709931170109,
+          "binnedCoverage": 1,
+          "binnedCoverageFine": 0.9
+        },
+        {
+          "scale": 3,
+          "meanWidth": 86.65948256043197,
+          "localNeighbourhoodCoverage": 0.9242871189773845,
+          "binnedCoverage": 1,
+          "binnedCoverageFine": 0.9
+        },
+        {
+          "scale": 5,
+          "meanWidth": 97.50963868485628,
+          "localNeighbourhoodCoverage": 0.9242871189773845,
+          "binnedCoverage": 1,
+          "binnedCoverageFine": 0.9
+        }
+      ]
+    },
+    "thinDirectorComparison": {
+      "n": 2681,
+      "hits": 322,
+      "fullAuc": 0.7554239216006361,
+      "directorOnlyAuc": 0.7394490243523548
+    },
+    "attribution": {
+      "note": "Holdout AUC when only the listed signals are allowed. Each row is refitted on the training period; the roster rows all use weight 1 per role.",
+      "eraOnlyAuc": 0.48803971618650677,
+      "eraPlusGenreAuc": 0.6791120349989782,
+      "directorOnlyAuc": 0.7620891479477411,
+      "fullRosterAuc": 0.7776882164813322,
+      "genreGain": 0.19107231881247144,
+      "directorGain": 0.08297711294876287,
+      "restOfRosterGain": 0.015594512730865318,
+      "restOfRosterGainCi": [
+        0.0016229140295842548,
+        0.029338513151166645
+      ],
+      "restOfRosterGainCiLow": 0.0016229140295842548,
+      "restOfRosterGainCiHigh": 0.029338513151166645,
+      "restOfRosterMeasured": true,
+      "note2": "directorOnlyAuc here keeps only the director role, which answers #112. The D41-5 gate in backtest.ratingDeviationTerm.directorOnlyGate is a different comparison: it keeps every role's hit-rate effect and varies only which roles carry the rating term.",
+      "directorShareOfRosterGain": 0.841756210283074,
+      "perRole": [
+        {
+          "role": "actor",
+          "soloAuc": 0.7160000442563693,
+          "marginalAuc": 0.03688800925739111,
+          "ciLow": 0.01957796089421382,
+          "ciHigh": 0.05374989941256936,
+          "significant": true,
+          "dropAuc": 0.7746560043527441,
+          "dropDelta": 0.003027656325862327,
+          "coverage": 7599,
+          "ratingDevWeight": 0,
+          "ratingDevCoef": 1.8053089296759812,
+          "ratingDevSe": 0.9351076849540267,
+          "ratingDevZ": 1.930589341445458
+        },
+        {
+          "role": "director",
+          "soloAuc": 0.7620891479477411,
+          "marginalAuc": 0.08297711294876287,
+          "ciLow": 0.06008091067938015,
+          "ciHigh": 0.1055277951682756,
+          "significant": true,
+          "dropAuc": 0.7622209408123126,
+          "dropDelta": 0.015462719866293773,
+          "coverage": 5961,
+          "ratingDevWeight": 2.02974699442273,
+          "ratingDevCoef": 2.02974699442273,
+          "ratingDevSe": 0.803513815320407,
+          "ratingDevZ": 2.5260884825152057
+        },
+        {
+          "role": "writer",
+          "soloAuc": 0.6994468604661758,
+          "marginalAuc": 0.02033482546719756,
+          "ciLow": 0.007748645544353949,
+          "ciHigh": 0.032475380615973215,
+          "significant": true,
+          "dropAuc": 0.7767965808049713,
+          "dropDelta": 0.0008870798736351215,
+          "coverage": 5315,
+          "ratingDevWeight": 0,
+          "ratingDevCoef": -0.4663075568416338,
+          "ratingDevSe": 1.3271460219700952,
+          "ratingDevZ": -0.3513611532734121
+        },
+        {
+          "role": "producer",
+          "soloAuc": 0.7160124100066254,
+          "marginalAuc": 0.0369003750076472,
+          "ciLow": 0.020453048408410335,
+          "ciHigh": 0.0536024387227888,
+          "significant": true,
+          "dropAuc": 0.7760081015189046,
+          "dropDelta": 0.001675559159701745,
+          "coverage": 5158,
+          "ratingDevWeight": 0,
+          "ratingDevCoef": 1.8100755138141396,
+          "ratingDevSe": 0.9551894879846965,
+          "ratingDevZ": 1.8949910322329044
+        },
+        {
+          "role": "editor",
+          "soloAuc": 0.7298311359178186,
+          "marginalAuc": 0.050719100918840354,
+          "ciLow": 0.03332063640523575,
+          "ciHigh": 0.06816326422073482,
+          "significant": true,
+          "dropAuc": 0.7752934913198941,
+          "dropDelta": 0.0023901693587122796,
+          "coverage": 5231,
+          "ratingDevWeight": 0,
+          "ratingDevCoef": -0.9468908101717095,
+          "ratingDevSe": 0.9296651877159853,
+          "ratingDevZ": -1.0185288453126273
+        },
+        {
+          "role": "cinematographer",
+          "soloAuc": 0.7207146492487482,
+          "marginalAuc": 0.041602614249769965,
+          "ciLow": 0.02698365597818375,
+          "ciHigh": 0.05586014471364409,
+          "significant": true,
+          "dropAuc": 0.7758981114245214,
+          "dropDelta": 0.0017855492540850282,
+          "coverage": 5164,
+          "ratingDevWeight": 0,
+          "ratingDevCoef": -0.3631741830271337,
+          "ratingDevSe": 0.8539288750387415,
+          "ratingDevZ": -0.42529793012404815
+        },
+        {
+          "role": "composer",
+          "soloAuc": 0.710315053283367,
+          "marginalAuc": 0.03120301828438876,
+          "ciLow": 0.014246320097383913,
+          "ciHigh": 0.04773776031343446,
+          "significant": true,
+          "dropAuc": 0.7772772179925571,
+          "dropDelta": 0.0004064426860492798,
+          "coverage": 4741,
+          "ratingDevWeight": 0,
+          "ratingDevCoef": 0.24796152184978837,
+          "ratingDevSe": 0.8704165984624742,
+          "ratingDevZ": 0.2848768305749153
+        },
+        {
+          "role": "production_designer",
+          "soloAuc": 0.7040924775887047,
+          "marginalAuc": 0.024980442589726537,
+          "ciLow": 0.008774555168317377,
+          "ciHigh": 0.04002005072662462,
+          "significant": true,
+          "dropAuc": 0.7773911130607054,
+          "dropDelta": 0.0002925476179009845,
+          "coverage": 4050,
+          "ratingDevWeight": 0,
+          "ratingDevCoef": -0.5889724439457823,
+          "ratingDevSe": 1.025635807975855,
+          "ratingDevZ": -0.5742510541906193
+        },
+        {
+          "role": "costume_designer",
+          "soloAuc": 0.6903690981202758,
+          "marginalAuc": 0.011257063121297595,
+          "ciLow": -0.0074420533773916775,
+          "ciHigh": 0.028854684769458183,
+          "significant": false,
+          "dropAuc": 0.7809726248322488,
+          "dropDelta": -0.0032889641536424374,
+          "coverage": 3803,
+          "ratingDevWeight": 0,
+          "ratingDevCoef": -0.0974697157555356,
+          "ratingDevSe": 1.0128615895955928,
+          "ratingDevZ": -0.09623201902093308
+        },
+        {
+          "role": "casting_director",
+          "soloAuc": 0.6922971789167863,
+          "marginalAuc": 0.013185143917808118,
+          "ciLow": 0.0011157710514082542,
+          "ciHigh": 0.025226015119632184,
+          "significant": true,
+          "dropAuc": 0.7780181867644819,
+          "dropDelta": -0.00033452608587547505,
+          "coverage": 3059,
+          "ratingDevWeight": 0,
+          "ratingDevCoef": -0.8776558449776898,
+          "ratingDevSe": 1.0098362492953323,
+          "ratingDevZ": -0.8691070909666012
+        }
+      ]
+    },
+    "collinearity": {
+      "meanPairwiseEffectCorrelation": 0.2741729129422095,
+      "strongestPairs": [
+        {
+          "pair": "director:hit~director:rating",
+          "r": 0.7258732243045533,
+          "n": 4581
+        },
+        {
+          "pair": "director:hit~editor:hit",
+          "r": 0.5521676001217477,
+          "n": 3626
+        },
+        {
+          "pair": "director:hit~cinematographer:hit",
+          "r": 0.418338248239603,
+          "n": 3567
+        },
+        {
+          "pair": "director:hit~writer:hit",
+          "r": 0.4180064884896854,
+          "n": 2117
+        },
+        {
+          "pair": "director:hit~producer:hit",
+          "r": 0.409766813694988,
+          "n": 2989
+        },
+        {
+          "pair": "director:rating~editor:hit",
+          "r": 0.4085023487437604,
+          "n": 3626
+        },
+        {
+          "pair": "director:hit~composer:hit",
+          "r": 0.3894926602254739,
+          "n": 3199
+        },
+        {
+          "pair": "cinematographer:hit~editor:hit",
+          "r": 0.3517953484445723,
+          "n": 3180
+        }
+      ],
+      "sharedSignalShare": 0.6245649485706316,
+      "completeRostersMeasured": 422
+    },
+    "roleShrinkageFit": {
+      "actor": {
+        "k": 8,
+        "auc": 0.6721053925431277,
+        "observations": 13590
+      },
+      "director": {
+        "k": 5,
+        "auc": 0.7141010893789956,
+        "observations": 5260
+      },
+      "writer": {
+        "k": 5,
+        "auc": 0.7025222338325786,
+        "observations": 5460
+      },
+      "producer": {
+        "k": 8,
+        "auc": 0.6690928003327615,
+        "observations": 6049
+      },
+      "editor": {
+        "k": 8,
+        "auc": 0.6764957455302498,
+        "observations": 4850
+      },
+      "cinematographer": {
+        "k": 12,
+        "auc": 0.6512017133338621,
+        "observations": 4092
+      },
+      "composer": {
+        "k": 8,
+        "auc": 0.6602422303337969,
+        "observations": 3765
+      },
+      "production_designer": {
+        "k": 12,
+        "auc": 0.667625279329787,
+        "observations": 2892
+      },
+      "costume_designer": {
+        "k": 5,
+        "auc": 0.6733197800907154,
+        "observations": 2779
+      },
+      "casting_director": {
+        "k": 18,
+        "auc": 0.6307195634855903,
+        "observations": 3686
+      }
+    },
+    "drift": {
+      "meanOffset": 0.17236845469759893,
+      "sdOffset": 0.2516146762098996,
+      "years": 20
+    },
+    "ratingDeviationTerm": {
+      "form": "Z = logit(genre base rate) + (1 - sharedCreditShare) * sum_r (roleWeight_r * effect_r + ratingDevWeight_r * ratingDev_r)",
+      "fittedOn": {
+        "from": 1990,
+        "to": 2009,
+        "films": 3275,
+        "hits": 335
+      },
+      "fitConverged": true,
+      "fitPasses": 1,
+      "fitForm": "Penalty-free IRLS logistic regression of the outcome on the ten per-role pooled rating deviations, with the v1 score carried as a FREE-SLOPE covariate and a free intercept. Coefficients are divided by that slope to put them in engine units. A slope pinned to 1 is the wrong specification here and does not describe this run: see #224 and the correction note in docs/analytics/team-predictor-methodology.md section 2.",
+      "fitV1ScoreSlope": 0.39536049008769747,
+      "fitV1ScoreSlopeNote": "The slope of the v1 score in the FINAL pass (the survivors-only refit). The ten-role pass has its own, under tenRolePass.",
+      "ratingDevSd": 1.2695899090299714,
+      "weights": {
+        "director": 2.02974699442273,
+        "actor": 0,
+        "writer": 0,
+        "cinematographer": 0,
+        "editor": 0,
+        "composer": 0,
+        "producer": 0,
+        "production_designer": 0,
+        "costume_designer": 0,
+        "casting_director": 0
+      },
+      "perRoleFitNote": "One row per role. `pass` says which fit the row came from: \"ten-role\" for a role zeroed by rule 2, \"survivors\" for one that was refitted without the zeroed roles. The selection decision does not depend on the pass; `tenRolePass` holds the first pass in full so that can be checked.",
+      "perRoleFit": {
+        "actor": {
+          "coef": 1.8053089296759812,
+          "se": 0.9351076849540267,
+          "z": 1.930589341445458,
+          "weight": 0,
+          "measured": false,
+          "pass": "ten-role"
+        },
+        "director": {
+          "coef": 2.02974699442273,
+          "se": 0.803513815320407,
+          "z": 2.5260884825152057,
+          "weight": 2.02974699442273,
+          "measured": true,
+          "pass": "survivors"
+        },
+        "writer": {
+          "coef": -0.4663075568416338,
+          "se": 1.3271460219700952,
+          "z": -0.3513611532734121,
+          "weight": 0,
+          "measured": false,
+          "pass": "ten-role"
+        },
+        "producer": {
+          "coef": 1.8100755138141396,
+          "se": 0.9551894879846965,
+          "z": 1.8949910322329044,
+          "weight": 0,
+          "measured": false,
+          "pass": "ten-role"
+        },
+        "editor": {
+          "coef": -0.9468908101717095,
+          "se": 0.9296651877159853,
+          "z": -1.0185288453126273,
+          "weight": 0,
+          "measured": false,
+          "pass": "ten-role"
+        },
+        "cinematographer": {
+          "coef": -0.3631741830271337,
+          "se": 0.8539288750387415,
+          "z": -0.42529793012404815,
+          "weight": 0,
+          "measured": false,
+          "pass": "ten-role"
+        },
+        "composer": {
+          "coef": 0.24796152184978837,
+          "se": 0.8704165984624742,
+          "z": 0.2848768305749153,
+          "weight": 0,
+          "measured": false,
+          "pass": "ten-role"
+        },
+        "production_designer": {
+          "coef": -0.5889724439457823,
+          "se": 1.025635807975855,
+          "z": -0.5742510541906193,
+          "weight": 0,
+          "measured": false,
+          "pass": "ten-role"
+        },
+        "costume_designer": {
+          "coef": -0.0974697157555356,
+          "se": 1.0128615895955928,
+          "z": -0.09623201902093308,
+          "weight": 0,
+          "measured": false,
+          "pass": "ten-role"
+        },
+        "casting_director": {
+          "coef": -0.8776558449776898,
+          "se": 1.0098362492953323,
+          "z": -0.8691070909666012,
+          "weight": 0,
+          "measured": false,
+          "pass": "ten-role"
+        }
+      },
+      "tenRolePass": {
+        "note": "The first pass, before rule 2 zeroed anything: all ten rating deviations in one fit. Published because `perRoleFit` mixes this pass with the survivors-only refit (#224 ask 3).",
+        "v1ScoreSlope": 0.38487765324442175,
+        "converged": true,
+        "perRole": {
+          "actor": {
+            "coef": 1.8053089296759812,
+            "se": 0.9351076849540267,
+            "z": 1.930589341445458
+          },
+          "director": {
+            "coef": 2.255702509387379,
+            "se": 0.8937857542415609,
+            "z": 2.523761985109618
+          },
+          "writer": {
+            "coef": -0.4663075568416338,
+            "se": 1.3271460219700952,
+            "z": -0.3513611532734121
+          },
+          "producer": {
+            "coef": 1.8100755138141396,
+            "se": 0.9551894879846965,
+            "z": 1.8949910322329044
+          },
+          "editor": {
+            "coef": -0.9468908101717095,
+            "se": 0.9296651877159853,
+            "z": -1.0185288453126273
+          },
+          "cinematographer": {
+            "coef": -0.3631741830271337,
+            "se": 0.8539288750387415,
+            "z": -0.42529793012404815
+          },
+          "composer": {
+            "coef": 0.24796152184978837,
+            "se": 0.8704165984624742,
+            "z": 0.2848768305749153
+          },
+          "production_designer": {
+            "coef": -0.5889724439457823,
+            "se": 1.025635807975855,
+            "z": -0.5742510541906193
+          },
+          "costume_designer": {
+            "coef": -0.0974697157555356,
+            "se": 1.0128615895955928,
+            "z": -0.09623201902093308
+          },
+          "casting_director": {
+            "coef": -0.8776558449776898,
+            "se": 1.0098362492953323,
+            "z": -0.8691070909666012
+          }
+        }
+      },
+      "holdout": {
+        "v1Auc": 0.7724776798207877,
+        "shippedAuc": 0.7776882164813322,
+        "gainOverV1": 0.005210536660544496,
+        "gainOverV1Ci": [
+          0.0013086682636855862,
+          0.009329172472149594
+        ],
+        "filmsPaired": 4063,
+        "hitsPaired": 422
+      },
+      "directorOnlyGate": {
+        "rule": "D41-5, declared in docs/analytics/team-predictor-methodology.md before the holdout was scored: ship the per-role version unless the paired holdout difference against the director-only version has a 95% CI upper bound below zero.",
+        "perRoleAuc": 0.7776836606786064,
+        "directorOnlyAuc": 0.7776836606786064,
+        "diff": 0,
+        "ci": [
+          0,
+          0
+        ],
+        "fired": false,
+        "shipped": "per-role",
+        "nonDirectorRolesWithWeight": [],
+        "variantsIdentical": true
+      },
+      "leakagePlacebo": {
+        "note": "Rating-deviation features rebuilt from year + 1, so the film being predicted enters its own roster records. A leak must show up as a large AUC gain; the harness throws if it does not.",
+        "cleanAuc": 0.7776882164813322,
+        "sameYearAuc": 0.9730851512547278,
+        "gap": 0.1953969347733956,
+        "filmsScored": 4100,
+        "threshold": 0.05
+      },
+      "bandComparison": {
+        "note": "Shipped model against a v1 pipeline fitted on the same data in the same run. logOddsSd is what confidence is graded on; intervalWidth is in percentage points.",
+        "v1": {
+          "meanLogOddsSd": 1.7869821314299783,
+          "meanIntervalWidth": 40.473234063499824,
+          "calibration": {
+            "intercept": -0.8382951097839941,
+            "slope": 0.5144051449626746
+          },
+          "calibrationFilms": 5227,
+          "meanEffectCorrelation": 0.25817575840804224,
+          "driftSd": 0.23698585919887172,
+          "confidenceBands": {
+            "highMaxLogOddsSd": 1.053,
+            "moderateMaxLogOddsSd": 1.627,
+            "highMaxWidth": 25.7,
+            "moderateMaxWidth": 41.6
+          },
+          "widthByRosterSize": [
+            {
+              "rolesFilled": 3,
+              "n": 43,
+              "meanWidth": 18.866279069767444,
+              "meanUnmeasuredRoles": 3,
+              "localNeighbourhoodCoverage": 0.37209302325581395,
+              "observedRate": 0.06976744186046512,
+              "meanPredicted": 0.09590465116279073
+            },
+            {
+              "rolesFilled": 4,
+              "n": 98,
+              "meanWidth": 24.443061224489803,
+              "meanUnmeasuredRoles": 4,
+              "localNeighbourhoodCoverage": 0.8367346938775511,
+              "observedRate": 0.14285714285714285,
+              "meanPredicted": 0.11832040816326536
+            },
+            {
+              "rolesFilled": 5,
+              "n": 180,
+              "meanWidth": 25.675611111111113,
+              "meanUnmeasuredRoles": 5,
+              "localNeighbourhoodCoverage": 0.8111111111111111,
+              "observedRate": 0.16111111111111112,
+              "meanPredicted": 0.11402999999999999
+            },
+            {
+              "rolesFilled": 6,
+              "n": 285,
+              "meanWidth": 31.608210526315784,
+              "meanUnmeasuredRoles": 6,
+              "localNeighbourhoodCoverage": 0.8771929824561403,
+              "observedRate": 0.15087719298245614,
+              "meanPredicted": 0.1447547368421053
+            },
+            {
+              "rolesFilled": 7,
+              "n": 411,
+              "meanWidth": 33.92564476885644,
+              "meanUnmeasuredRoles": 7,
+              "localNeighbourhoodCoverage": 0.9318734793187348,
+              "observedRate": 0.1386861313868613,
+              "meanPredicted": 0.11662676399026757
+            },
+            {
+              "rolesFilled": 8,
+              "n": 673,
+              "meanWidth": 37.019227340267456,
+              "meanUnmeasuredRoles": 8,
+              "localNeighbourhoodCoverage": 0.9093610698365527,
+              "observedRate": 0.09955423476968796,
+              "meanPredicted": 0.11451946508172375
+            },
+            {
+              "rolesFilled": 9,
+              "n": 1020,
+              "meanWidth": 44.05621568627455,
+              "meanUnmeasuredRoles": 9,
+              "localNeighbourhoodCoverage": 0.9794117647058823,
+              "observedRate": 0.10882352941176471,
+              "meanPredicted": 0.13002950980392167
+            },
+            {
+              "rolesFilled": 10,
+              "n": 1339,
+              "meanWidth": 47.498147871545925,
+              "meanUnmeasuredRoles": 10,
+              "localNeighbourhoodCoverage": 0.9828230022404779,
+              "observedRate": 0.07244212098581031,
+              "meanPredicted": 0.1032424943988051
+            }
+          ],
+          "confidenceMix": {
+            "high": 176,
+            "moderate": 764,
+            "low": 3123
+          }
+        },
+        "v1Recalibrated": {
+          "meanLogOddsSd": 1.5086148658626632,
+          "meanIntervalWidth": 31.365303962589202,
+          "calibration": {
+            "intercept": -1.2635333668840956,
+            "slope": 0.42478383860723506
+          },
+          "calibrationFilms": 1595,
+          "meanEffectCorrelation": 0.25817575840804224,
+          "driftSd": 0.23505839078695606,
+          "confidenceBands": {
+            "highMaxLogOddsSd": 0.916,
+            "moderateMaxLogOddsSd": 1.374,
+            "highMaxWidth": 19.4,
+            "moderateMaxWidth": 30.7
+          },
+          "widthByRosterSize": [
+            {
+              "rolesFilled": 3,
+              "n": 43,
+              "meanWidth": 14.898837209302325,
+              "meanUnmeasuredRoles": 3,
+              "localNeighbourhoodCoverage": 0.4418604651162791,
+              "observedRate": 0.06976744186046512,
+              "meanPredicted": 0.07951860465116277
+            },
+            {
+              "rolesFilled": 4,
+              "n": 98,
+              "meanWidth": 18.85418367346939,
+              "meanUnmeasuredRoles": 4,
+              "localNeighbourhoodCoverage": 0.8571428571428571,
+              "observedRate": 0.14285714285714285,
+              "meanPredicted": 0.09546938775510198
+            },
+            {
+              "rolesFilled": 5,
+              "n": 180,
+              "meanWidth": 19.741444444444443,
+              "meanUnmeasuredRoles": 5,
+              "localNeighbourhoodCoverage": 0.7055555555555556,
+              "observedRate": 0.16111111111111112,
+              "meanPredicted": 0.09214055555555556
+            },
+            {
+              "rolesFilled": 6,
+              "n": 285,
+              "meanWidth": 24.49715789473683,
+              "meanUnmeasuredRoles": 6,
+              "localNeighbourhoodCoverage": 0.8736842105263158,
+              "observedRate": 0.15087719298245614,
+              "meanPredicted": 0.11384666666666662
+            },
+            {
+              "rolesFilled": 7,
+              "n": 411,
+              "meanWidth": 25.791873479318724,
+              "meanUnmeasuredRoles": 7,
+              "localNeighbourhoodCoverage": 0.9197080291970803,
+              "observedRate": 0.1386861313868613,
+              "meanPredicted": 0.09393917274939172
+            },
+            {
+              "rolesFilled": 8,
+              "n": 673,
+              "meanWidth": 28.38751857355125,
+              "meanUnmeasuredRoles": 8,
+              "localNeighbourhoodCoverage": 0.9479940564635958,
+              "observedRate": 0.09955423476968796,
+              "meanPredicted": 0.09273046062407138
+            },
+            {
+              "rolesFilled": 9,
+              "n": 1020,
+              "meanWidth": 34.376009803921534,
+              "meanUnmeasuredRoles": 9,
+              "localNeighbourhoodCoverage": 0.9823529411764705,
+              "observedRate": 0.10882352941176471,
+              "meanPredicted": 0.10387460784313726
+            },
+            {
+              "rolesFilled": 10,
+              "n": 1339,
+              "meanWidth": 36.947669902912494,
+              "meanUnmeasuredRoles": 10,
+              "localNeighbourhoodCoverage": 0.9873039581777446,
+              "observedRate": 0.07244212098581031,
+              "meanPredicted": 0.0836939507094848
+            }
+          ],
+          "confidenceMix": {
+            "high": 175,
+            "moderate": 765,
+            "low": 3123
+          }
+        },
+        "shipped": {
+          "meanLogOddsSd": 1.4087676593650014,
+          "meanIntervalWidth": 29.293140536549373,
+          "calibration": {
+            "intercept": -1.4899468695599707,
+            "slope": 0.3672359271578889
+          },
+          "calibrationFilms": 1595,
+          "meanEffectCorrelation": 0.2741729129422095,
+          "driftSd": 0.2516146762098996,
+          "confidenceBands": {
+            "highMaxLogOddsSd": 0.862,
+            "moderateMaxLogOddsSd": 1.277,
+            "highMaxWidth": 16.8,
+            "moderateMaxWidth": 26.8
+          },
+          "widthByRosterSize": [
+            {
+              "rolesFilled": 3,
+              "n": 43,
+              "meanWidth": 14.584651162790697,
+              "meanUnmeasuredRoles": 0,
+              "localNeighbourhoodCoverage": 0.4883720930232558,
+              "observedRate": 0.06976744186046512,
+              "meanPredicted": 0.08159534883720933
+            },
+            {
+              "rolesFilled": 4,
+              "n": 98,
+              "meanWidth": 18.786122448979597,
+              "meanUnmeasuredRoles": 0.01020408163265306,
+              "localNeighbourhoodCoverage": 0.9183673469387755,
+              "observedRate": 0.14285714285714285,
+              "meanPredicted": 0.09862346938775517
+            },
+            {
+              "rolesFilled": 5,
+              "n": 180,
+              "meanWidth": 19.287555555555553,
+              "meanUnmeasuredRoles": 0.06666666666666667,
+              "localNeighbourhoodCoverage": 0.6777777777777778,
+              "observedRate": 0.16111111111111112,
+              "meanPredicted": 0.09430222222222222
+            },
+            {
+              "rolesFilled": 6,
+              "n": 285,
+              "meanWidth": 23.744912280701755,
+              "meanUnmeasuredRoles": 0.15789473684210525,
+              "localNeighbourhoodCoverage": 0.8245614035087719,
+              "observedRate": 0.15087719298245614,
+              "meanPredicted": 0.1169073684210526
+            },
+            {
+              "rolesFilled": 7,
+              "n": 411,
+              "meanWidth": 24.384306569343078,
+              "meanUnmeasuredRoles": 0.25790754257907544,
+              "localNeighbourhoodCoverage": 0.8880778588807786,
+              "observedRate": 0.1386861313868613,
+              "meanPredicted": 0.09553333333333332
+            },
+            {
+              "rolesFilled": 8,
+              "n": 673,
+              "meanWidth": 26.630029717682007,
+              "meanUnmeasuredRoles": 0.5794947994056464,
+              "localNeighbourhoodCoverage": 0.8870728083209509,
+              "observedRate": 0.09955423476968796,
+              "meanPredicted": 0.09427280832095096
+            },
+            {
+              "rolesFilled": 9,
+              "n": 1020,
+              "meanWidth": 31.875950980392172,
+              "meanUnmeasuredRoles": 0.7970588235294118,
+              "localNeighbourhoodCoverage": 0.9862745098039216,
+              "observedRate": 0.10882352941176471,
+              "meanPredicted": 0.10420303921568617
+            },
+            {
+              "rolesFilled": 10,
+              "n": 1339,
+              "meanWidth": 34.11645257654964,
+              "meanUnmeasuredRoles": 1,
+              "localNeighbourhoodCoverage": 0.9940253920836445,
+              "observedRate": 0.07244212098581031,
+              "meanPredicted": 0.08539492158327112
+            }
+          ],
+          "confidenceMix": {
+            "high": 157,
+            "moderate": 742,
+            "low": 3164
+          }
+        },
+        "meanLogOddsSdChange": -0.37821447206497694,
+        "meanIntervalWidthChange": -11.18009352695045,
+        "widthChangeFromTerm": -2.072163426039829,
+        "widthChangeFromWindow": -9.107930100910622
+      }
+    },
+    "recalibration": {
+      "selection": {
+        "rule": "Rolling origin on 1990-2009: for each year, the two Platt constants are fitted on films released before it within the candidate window and scored on it. Selection is by pooled out-of-fold log loss among candidates whose shipped fitting window holds at least 1000 films. The holdout is not involved.",
+        "minCalibrationFilms": 1000,
+        "chosen": "8y",
+        "chosenWindowYears": 8,
+        "appliesDriftMean": false,
+        "fittedFrom": 2002,
+        "fittedTo": 2009,
+        "fittedFilms": 1595,
+        "driftOffsetApplied": 0,
+        "candidates": [
+          {
+            "id": "full (v1)",
+            "windowYears": null,
+            "applyDriftMean": false,
+            "films": 3275,
+            "shippedWindowFilms": 5227,
+            "eligible": true,
+            "logLoss": 0.2993070365948751,
+            "brier": 0.08776190219054134,
+            "meanDecileError": 0.028240419543443956,
+            "maxDecileError": 0.17718904526756518,
+            "meanPredicted": 0.12815494237169714,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.02586486603581928
+          },
+          {
+            "id": "30y",
+            "windowYears": 30,
+            "applyDriftMean": false,
+            "films": 3275,
+            "shippedWindowFilms": 4218,
+            "eligible": true,
+            "logLoss": 0.29765045410497315,
+            "brier": 0.08694747849492071,
+            "meanDecileError": 0.023784590845929925,
+            "maxDecileError": 0.1528808869385211,
+            "meanPredicted": 0.125070013583366,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.02277993724748814
+          },
+          {
+            "id": "25y",
+            "windowYears": 25,
+            "applyDriftMean": false,
+            "films": 3275,
+            "shippedWindowFilms": 3802,
+            "eligible": true,
+            "logLoss": 0.29721214144388824,
+            "brier": 0.08673207981487119,
+            "meanDecileError": 0.023936043097022887,
+            "maxDecileError": 0.14384633802034208,
+            "meanPredicted": 0.12388053328118849,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.02159045694531063
+          },
+          {
+            "id": "20y",
+            "windowYears": 20,
+            "applyDriftMean": false,
+            "films": 3275,
+            "shippedWindowFilms": 3275,
+            "eligible": true,
+            "logLoss": 0.2966192546489607,
+            "brier": 0.0864110205451003,
+            "meanDecileError": 0.02109964957830567,
+            "maxDecileError": 0.13571190929704147,
+            "meanPredicted": 0.12233919280475408,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.02004911646887622
+          },
+          {
+            "id": "15y",
+            "windowYears": 15,
+            "applyDriftMean": false,
+            "films": 3275,
+            "shippedWindowFilms": 2642,
+            "eligible": true,
+            "logLoss": 0.29593884669978016,
+            "brier": 0.08606773436488001,
+            "meanDecileError": 0.020125547388049034,
+            "maxDecileError": 0.12158475029372978,
+            "meanPredicted": 0.12003538833778626,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.017745312001908403
+          },
+          {
+            "id": "12y",
+            "windowYears": 12,
+            "applyDriftMean": false,
+            "films": 3275,
+            "shippedWindowFilms": 2220,
+            "eligible": true,
+            "logLoss": 0.29561930570477285,
+            "brier": 0.0858936195693241,
+            "meanDecileError": 0.019380019064491827,
+            "maxDecileError": 0.11466823024874384,
+            "meanPredicted": 0.11813334898088175,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.01584327264500389
+          },
+          {
+            "id": "10y",
+            "windowYears": 10,
+            "applyDriftMean": false,
+            "films": 3275,
+            "shippedWindowFilms": 1907,
+            "eligible": true,
+            "logLoss": 0.29496333298153,
+            "brier": 0.085624744143506,
+            "meanDecileError": 0.02101556434327905,
+            "maxDecileError": 0.11468468102164658,
+            "meanPredicted": 0.11655385565345147,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.01426377931757361
+          },
+          {
+            "id": "8y",
+            "windowYears": 8,
+            "applyDriftMean": false,
+            "films": 3275,
+            "shippedWindowFilms": 1595,
+            "eligible": true,
+            "logLoss": 0.29468681034736544,
+            "brier": 0.08546580512350095,
+            "meanDecileError": 0.01963898675298547,
+            "maxDecileError": 0.10465602099471394,
+            "meanPredicted": 0.11487243204426498,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.012582355708387116
+          },
+          {
+            "id": "5y",
+            "windowYears": 5,
+            "applyDriftMean": false,
+            "films": 3275,
+            "shippedWindowFilms": 1055,
+            "eligible": true,
+            "logLoss": 0.29510368404544335,
+            "brier": 0.08557706494505461,
+            "meanDecileError": 0.018423374931216402,
+            "maxDecileError": 0.08443075832855429,
+            "meanPredicted": 0.11056431417496859,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.008274237839090731
+          },
+          {
+            "id": "full + drift mean",
+            "windowYears": null,
+            "applyDriftMean": true,
+            "films": 3275,
+            "shippedWindowFilms": 5227,
+            "eligible": true,
+            "logLoss": 0.2971514628099881,
+            "brier": 0.0868927747043686,
+            "meanDecileError": 0.020087263375672595,
+            "maxDecileError": 0.14904178483768915,
+            "meanPredicted": 0.11888140036645757,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.01659132403057971
+          },
+          {
+            "id": "20y + drift mean",
+            "windowYears": 20,
+            "applyDriftMean": true,
+            "films": 3275,
+            "shippedWindowFilms": 3275,
+            "eligible": true,
+            "logLoss": 0.2960258837636098,
+            "brier": 0.0861683326736182,
+            "meanDecileError": 0.02056177153662641,
+            "maxDecileError": 0.12414156592602837,
+            "meanPredicted": 0.11868765570877664,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.016397579372898777
+          },
+          {
+            "id": "10y + drift mean",
+            "windowYears": 10,
+            "applyDriftMean": true,
+            "films": 3275,
+            "shippedWindowFilms": 1907,
+            "eligible": true,
+            "logLoss": 0.29475187554853305,
+            "brier": 0.08554020047526412,
+            "meanDecileError": 0.019598410504097583,
+            "maxDecileError": 0.10861457427300814,
+            "meanPredicted": 0.11542070523422537,
+            "observed": 0.10229007633587786,
+            "levelGap": 0.013130628898347513
+          }
+        ],
+        "note": "Differences in pooled log loss between the 8, 10, 12 and 15-year windows are in the fourth decimal and should not be read as a ranking. What the table supports is \"shorter than the whole training period\": the level gap falls monotonically as the window shortens, which is the falling base rate being tracked."
+      },
+      "comparison": {
+        "v1": {
+          "n": 4063,
+          "hits": 422,
+          "auc": 0.7724776798207877,
+          "brier": 0.08885012604233314,
+          "brierSkill": 0.046603827917233054,
+          "logLoss": 0.2984134267704557,
+          "meanDecileError": 0.028788998277135103,
+          "maxDecileError": 0.17085024999999993,
+          "worstDecile": 10,
+          "worstDecileSignedError": 0.17085024999999993,
+          "worstDecilePredicted": 0.4808502499999999,
+          "worstDecileObserved": 0.31,
+          "meanPredicted": 0.11681986217080964,
+          "observed": 0.10386413979817868,
+          "accuracyAtHalf": 0.8848141767167118,
+          "accuracyAtBaseRate": 0.6869308392813193,
+          "baselineAccuracy": 0.8961358602018213,
+          "accuracyMarginAtHalf": -0.011321683485109535,
+          "precisionAtBaseRate": 0.2108843537414966,
+          "recallAtBaseRate": 0.7345971563981043,
+          "topDecileHitRate": 0.31203931203931207,
+          "topDecileLift": 3.0043026654401066,
+          "bottomDecileHitRate": 0.004914004914004914,
+          "era2010to2017": {
+            "n": 2099,
+            "hits": 210,
+            "predicted": 0.10452748928060991,
+            "observed": 0.10004764173415913,
+            "gap": 0.0044798475464507825
+          },
+          "era2018plus": {
+            "n": 1964,
+            "hits": 212,
+            "predicted": 0.1299571792260692,
+            "observed": 0.1079429735234216,
+            "gap": 0.022014205702647602
+          }
+        },
+        "v1Recalibrated": {
+          "n": 4063,
+          "hits": 422,
+          "auc": 0.7724864660117592,
+          "brier": 0.08608862409795719,
+          "brierSkill": 0.07623581045052441,
+          "logLoss": 0.29360255295757226,
+          "meanDecileError": 0.0250020428254984,
+          "maxDecileError": 0.04941719901719903,
+          "worstDecile": 8,
+          "worstDecileSignedError": -0.04941719901719903,
+          "worstDecilePredicted": 0.11028796068796066,
+          "worstDecileObserved": 0.1597051597051597,
+          "meanPredicted": 0.09399805562392283,
+          "observed": 0.10386413979817868,
+          "accuracyAtHalf": 0.893428501107556,
+          "accuracyAtBaseRate": 0.7329559438838297,
+          "baselineAccuracy": 0.8961358602018213,
+          "accuracyMarginAtHalf": -0.002707359094265338,
+          "precisionAtBaseRate": 0.22625928984310487,
+          "recallAtBaseRate": 0.6492890995260664,
+          "topDecileHitRate": 0.31203931203931207,
+          "topDecileLift": 3.0043026654401066,
+          "bottomDecileHitRate": 0.004914004914004914,
+          "era2010to2017": {
+            "n": 2099,
+            "hits": 210,
+            "predicted": 0.08476436398284877,
+            "observed": 0.10004764173415913,
+            "gap": -0.015283277751310359
+          },
+          "era2018plus": {
+            "n": 1964,
+            "hits": 212,
+            "predicted": 0.10386644602851335,
+            "observed": 0.1079429735234216,
+            "gap": -0.00407652749490825
+          }
+        },
+        "shipped": {
+          "n": 4063,
+          "hits": 422,
+          "auc": 0.7776882164813322,
+          "brier": 0.08601948712035459,
+          "brierSkill": 0.0769776769253595,
+          "logLoss": 0.292300669165214,
+          "meanDecileError": 0.027957839035195668,
+          "maxDecileError": 0.06014471744471743,
+          "worstDecile": 8,
+          "worstDecileSignedError": -0.06014471744471743,
+          "worstDecilePredicted": 0.11184545454545457,
+          "worstDecileObserved": 0.171990171990172,
+          "meanPredicted": 0.09547223726310632,
+          "observed": 0.10386413979817868,
+          "accuracyAtHalf": 0.8936746246615801,
+          "accuracyAtBaseRate": 0.7285257199113955,
+          "baselineAccuracy": 0.8961358602018213,
+          "accuracyMarginAtHalf": -0.0024612355402412467,
+          "precisionAtBaseRate": 0.2242914979757085,
+          "recallAtBaseRate": 0.6563981042654028,
+          "topDecileHitRate": 0.3095823095823096,
+          "topDecileLift": 2.9806467389405777,
+          "bottomDecileHitRate": 0.002457002457002457,
+          "era2010to2017": {
+            "n": 2099,
+            "hits": 210,
+            "predicted": 0.08664344926155336,
+            "observed": 0.10004764173415913,
+            "gap": -0.01340419247260577
+          },
+          "era2018plus": {
+            "n": 1964,
+            "hits": 212,
+            "predicted": 0.10490789205702629,
+            "observed": 0.1079429735234216,
+            "gap": -0.0030350814663953063
+          }
+        }
+      },
+      "aucInvariance": {
+        "note": "Recalibration is monotone, so it cannot change the ranking and cannot change AUC (F1-16). The residual is not exactly zero because hitProbability is rounded to four decimal places before scoring, which changes which films tie.",
+        "shippedAuc": 0.7776882164813322,
+        "sameScoreDifferentCalibrationAuc": 0.7776836606786064,
+        "delta": 0.000004555802725847435,
+        "tolerance": 0.001,
+        "slope": 0.3672359271578889
+      },
+      "targets": {
+        "note": "#114's own definition of done, measured either way.",
+        "maxDecileError": {
+          "target": 0.05,
+          "measured": 0.06014471744471743,
+          "met": false
+        },
+        "recentEraGap": {
+          "target": 0.01,
+          "measured": 0.0030350814663953063,
+          "met": true
+        },
+        "aucNotRegressed": {
+          "v1": 0.7724776798207877,
+          "shipped": 0.7776882164813322,
+          "met": true
+        },
+        "calibrationErrorNotRegressed": {
+          "v1": 0.028788998277135103,
+          "shipped": 0.027957839035195668,
+          "met": true
+        }
+      },
+      "isotonicNotAttempted": {
+        "item": "#114 item 4 — isotonic or spline recalibration in place of the two-parameter logistic",
+        "decision": "Not attempted this sprint (F1-18).",
+        "reason": "The sprint doc's stated reason — that the top-end rigidity had largely gone away, worst decile 0.142 -> 0.049 — does not hold for this model: R1 alone takes the worst decile to 0.180, and the two-parameter recalibration brings it to 0.0525, which still misses #114's 0.05 target. The reason it is still not attempted is sample size, not the premise: a free-form monotone fit has to be estimated on the training period, where the top decile holds about 100 hits, and its top-end step would then be an extrapolation into a holdout whose base rate is 4 points lower. Two constants with a measured window are the defensible instrument at this sample size. The residual 0.0025 of target is one decile of 256 films and 77 hits."
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Movie Moneyball",
+  "short_name": "Moneyball",
+  "description": "Batting averages for directors, actors, writers and DPs. Find film talent the numbers can't hide.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#1F2124",
+  "background_color": "#2A2D31",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

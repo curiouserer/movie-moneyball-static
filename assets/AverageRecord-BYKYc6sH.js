@@ -1,0 +1,1 @@
+import{j as r}from"./index-CPO9jPCe.js";function s({hits:e,films:t}){return r.jsxs("span",{"aria-hidden":"true","data-average-record":!0,className:"block sm:hidden mt-1 text-xs leading-none text-steel-light tabular-nums text-right",children:[e??0," of ",t]})}export{s as A};

@@ -1,0 +1,1810 @@
+{
+  "crew": {
+    "roles": [
+      {
+        "role": "dp",
+        "rows": [
+          {
+            "person": {
+              "id": 12166,
+              "name": "Subrata Mitra",
+              "path": "/dp/12166"
+            },
+            "record": {
+              "hits": 8,
+              "films": 8
+            },
+            "mainDirector": {
+              "id": 12160,
+              "name": "Satyajit Ray",
+              "path": "/director/12160"
+            },
+            "withDirector": {
+              "hits": 8,
+              "films": 8
+            },
+            "withoutDirector": {
+              "hits": 0,
+              "films": 0
+            }
+          },
+          {
+            "person": {
+              "id": 552001,
+              "name": "Yûharu Atsuta",
+              "path": "/dp/552001"
+            },
+            "record": {
+              "hits": 12,
+              "films": 13
+            },
+            "mainDirector": {
+              "id": 95501,
+              "name": "Yasujirō Ozu",
+              "path": "/director/95501"
+            },
+            "withDirector": {
+              "hits": 12,
+              "films": 13
+            },
+            "withoutDirector": {
+              "hits": 0,
+              "films": 0
+            }
+          },
+          {
+            "person": {
+              "id": 14020,
+              "name": "Roland Totheroh",
+              "path": "/dp/14020"
+            },
+            "record": {
+              "hits": 7,
+              "films": 8
+            },
+            "mainDirector": {
+              "id": 13848,
+              "name": "Charlie Chaplin",
+              "path": "/director/13848"
+            },
+            "withDirector": {
+              "hits": 7,
+              "films": 8
+            },
+            "withoutDirector": {
+              "hits": 0,
+              "films": 0
+            }
+          },
+          {
+            "person": {
+              "id": 17761,
+              "name": "Joseph Walker",
+              "path": "/dp/17761"
+            },
+            "record": {
+              "hits": 12,
+              "films": 16
+            },
+            "mainDirector": {
+              "id": 2662,
+              "name": "Frank Capra",
+              "path": "/director/2662"
+            },
+            "withDirector": {
+              "hits": 8,
+              "films": 10
+            },
+            "withoutDirector": {
+              "hits": 4,
+              "films": 6
+            }
+          },
+          {
+            "person": {
+              "id": 7461,
+              "name": "Kazuo Miyagawa",
+              "path": "/dp/7461"
+            },
+            "record": {
+              "hits": 7,
+              "films": 9
+            },
+            "mainDirector": {
+              "id": 97202,
+              "name": "Kenji Mizoguchi",
+              "path": "/director/97202"
+            },
+            "withDirector": {
+              "hits": 4,
+              "films": 6
+            },
+            "withoutDirector": {
+              "hits": 3,
+              "films": 3
+            }
+          },
+          {
+            "person": {
+              "id": 2005,
+              "name": "Arthur Edeson",
+              "path": "/dp/2005"
+            },
+            "record": {
+              "hits": 9,
+              "films": 12
+            },
+            "mainDirector": {
+              "id": 2917,
+              "name": "James Whale",
+              "path": "/director/2917"
+            },
+            "withDirector": {
+              "hits": 3,
+              "films": 3
+            },
+            "withoutDirector": {
+              "hits": 6,
+              "films": 9
+            }
+          },
+          {
+            "person": {
+              "id": 34380,
+              "name": "Asakazu Nakai",
+              "path": "/dp/34380"
+            },
+            "record": {
+              "hits": 9,
+              "films": 12
+            },
+            "mainDirector": {
+              "id": 5026,
+              "name": "Akira Kurosawa",
+              "path": "/director/5026"
+            },
+            "withDirector": {
+              "hits": 8,
+              "films": 11
+            },
+            "withoutDirector": {
+              "hits": 1,
+              "films": 1
+            }
+          },
+          {
+            "person": {
+              "id": 11593,
+              "name": "Rudolph Maté",
+              "path": "/dp/11593"
+            },
+            "record": {
+              "hits": 8,
+              "films": 11
+            },
+            "mainDirector": {
+              "id": 11572,
+              "name": "Carl Theodor Dreyer",
+              "path": "/director/11572"
+            },
+            "withDirector": {
+              "hits": 2,
+              "films": 3
+            },
+            "withoutDirector": {
+              "hits": 6,
+              "films": 8
+            }
+          },
+          {
+            "person": {
+              "id": 5399,
+              "name": "Otello Martelli",
+              "path": "/dp/5399"
+            },
+            "record": {
+              "hits": 6,
+              "films": 9
+            },
+            "mainDirector": {
+              "id": 4415,
+              "name": "Federico Fellini",
+              "path": "/director/4415"
+            },
+            "withDirector": {
+              "hits": 4,
+              "films": 6
+            },
+            "withoutDirector": {
+              "hits": 2,
+              "films": 3
+            }
+          },
+          {
+            "person": {
+              "id": 9836,
+              "name": "Fritz Arno Wagner",
+              "path": "/dp/9836"
+            },
+            "record": {
+              "hits": 6,
+              "films": 9
+            },
+            "mainDirector": {
+              "id": 68,
+              "name": "Fritz Lang",
+              "path": "/director/68"
+            },
+            "withDirector": {
+              "hits": 3,
+              "films": 4
+            },
+            "withoutDirector": {
+              "hits": 3,
+              "films": 5
+            }
+          }
+        ]
+      },
+      {
+        "role": "editor",
+        "rows": [
+          {
+            "person": {
+              "id": 12167,
+              "name": "Dulal Dutta",
+              "path": "/editor/12167"
+            },
+            "record": {
+              "hits": 11,
+              "films": 11
+            },
+            "mainDirector": {
+              "id": 12160,
+              "name": "Satyajit Ray",
+              "path": "/director/12160"
+            },
+            "withDirector": {
+              "hits": 11,
+              "films": 11
+            },
+            "withoutDirector": {
+              "hits": 0,
+              "films": 0
+            }
+          },
+          {
+            "person": {
+              "id": 552002,
+              "name": "Yoshiyasu Hamamura",
+              "path": "/editor/552002"
+            },
+            "record": {
+              "hits": 11,
+              "films": 12
+            },
+            "mainDirector": {
+              "id": 95501,
+              "name": "Yasujirō Ozu",
+              "path": "/director/95501"
+            },
+            "withDirector": {
+              "hits": 11,
+              "films": 12
+            },
+            "withoutDirector": {
+              "hits": 0,
+              "films": 0
+            }
+          },
+          {
+            "person": {
+              "id": 11532,
+              "name": "Marguerite Renoir",
+              "path": "/editor/11532"
+            },
+            "record": {
+              "hits": 13,
+              "films": 16
+            },
+            "mainDirector": {
+              "id": 11528,
+              "name": "Jean Renoir",
+              "path": "/director/11528"
+            },
+            "withDirector": {
+              "hits": 9,
+              "films": 9
+            },
+            "withoutDirector": {
+              "hits": 4,
+              "films": 7
+            }
+          },
+          {
+            "person": {
+              "id": 1697,
+              "name": "Takeshi Seyama",
+              "path": "/editor/1697"
+            },
+            "record": {
+              "hits": 14,
+              "films": 19
+            },
+            "mainDirector": {
+              "id": 608,
+              "name": "Hayao Miyazaki",
+              "path": "/director/608"
+            },
+            "withDirector": {
+              "hits": 9,
+              "films": 9
+            },
+            "withoutDirector": {
+              "hits": 5,
+              "films": 10
+            }
+          },
+          {
+            "person": {
+              "id": 30154,
+              "name": "Gene Havlick",
+              "path": "/editor/30154"
+            },
+            "record": {
+              "hits": 7,
+              "films": 9
+            },
+            "mainDirector": {
+              "id": 2662,
+              "name": "Frank Capra",
+              "path": "/director/2662"
+            },
+            "withDirector": {
+              "hits": 6,
+              "films": 6
+            },
+            "withoutDirector": {
+              "hits": 1,
+              "films": 3
+            }
+          },
+          {
+            "person": {
+              "id": 5026,
+              "name": "Akira Kurosawa",
+              "path": "/editor/5026"
+            },
+            "record": {
+              "hits": 13,
+              "films": 18
+            },
+            "mainDirector": {
+              "id": 5026,
+              "name": "Akira Kurosawa",
+              "path": "/director/5026"
+            },
+            "withDirector": {
+              "hits": 13,
+              "films": 18
+            },
+            "withoutDirector": {
+              "hits": 0,
+              "films": 0
+            }
+          },
+          {
+            "person": {
+              "id": 3838,
+              "name": "Cécile Decugis",
+              "path": "/editor/3838"
+            },
+            "record": {
+              "hits": 7,
+              "films": 11
+            },
+            "mainDirector": {
+              "id": 28615,
+              "name": "Éric Rohmer",
+              "path": "/director/28615"
+            },
+            "withDirector": {
+              "hits": 5,
+              "films": 9
+            },
+            "withoutDirector": {
+              "hits": 2,
+              "films": 2
+            }
+          },
+          {
+            "person": {
+              "id": 1552,
+              "name": "Milton Carruth",
+              "path": "/editor/1552"
+            },
+            "record": {
+              "hits": 6,
+              "films": 10
+            },
+            "mainDirector": {
+              "id": 46712,
+              "name": "Douglas Sirk",
+              "path": "/director/46712"
+            },
+            "withDirector": {
+              "hits": 2,
+              "films": 3
+            },
+            "withoutDirector": {
+              "hits": 4,
+              "films": 7
+            }
+          },
+          {
+            "person": {
+              "id": 12721,
+              "name": "Jack Harris",
+              "path": "/editor/12721"
+            },
+            "record": {
+              "hits": 6,
+              "films": 10
+            },
+            "mainDirector": {
+              "id": 12238,
+              "name": "David Lean",
+              "path": "/director/12238"
+            },
+            "withDirector": {
+              "hits": 4,
+              "films": 6
+            },
+            "withoutDirector": {
+              "hits": 2,
+              "films": 4
+            }
+          },
+          {
+            "person": {
+              "id": 46238,
+              "name": "Keiichi Uraoka",
+              "path": "/editor/46238"
+            },
+            "record": {
+              "hits": 5,
+              "films": 9
+            },
+            "mainDirector": {
+              "id": 46230,
+              "name": "Nagisa Ōshima",
+              "path": "/director/46230"
+            },
+            "withDirector": {
+              "hits": 2,
+              "films": 5
+            },
+            "withoutDirector": {
+              "hits": 3,
+              "films": 4
+            }
+          }
+        ]
+      },
+      {
+        "role": "composer",
+        "rows": [
+          {
+            "person": {
+              "id": 18609,
+              "name": "Masaru Satō",
+              "path": "/composer/18609"
+            },
+            "record": {
+              "hits": 7,
+              "films": 9
+            },
+            "mainDirector": {
+              "id": 5026,
+              "name": "Akira Kurosawa",
+              "path": "/director/5026"
+            },
+            "withDirector": {
+              "hits": 7,
+              "films": 9
+            },
+            "withoutDirector": {
+              "hits": 0,
+              "films": 0
+            }
+          },
+          {
+            "person": {
+              "id": 2500,
+              "name": "Werner R. Heymann",
+              "path": "/composer/2500"
+            },
+            "record": {
+              "hits": 6,
+              "films": 8
+            },
+            "mainDirector": {
+              "id": 2428,
+              "name": "Ernst Lubitsch",
+              "path": "/director/2428"
+            },
+            "withDirector": {
+              "hits": 3,
+              "films": 4
+            },
+            "withoutDirector": {
+              "hits": 3,
+              "films": 4
+            }
+          },
+          {
+            "person": {
+              "id": 636,
+              "name": "Joe Hisaishi",
+              "path": "/composer/636"
+            },
+            "record": {
+              "hits": 15,
+              "films": 23
+            },
+            "mainDirector": {
+              "id": 608,
+              "name": "Hayao Miyazaki",
+              "path": "/director/608"
+            },
+            "withDirector": {
+              "hits": 11,
+              "films": 11
+            },
+            "withoutDirector": {
+              "hits": 4,
+              "films": 12
+            }
+          },
+          {
+            "person": {
+              "id": 51808,
+              "name": "Tōru Takemitsu",
+              "path": "/composer/51808"
+            },
+            "record": {
+              "hits": 7,
+              "films": 10
+            },
+            "mainDirector": {
+              "id": 76978,
+              "name": "Masaki Kobayashi",
+              "path": "/director/76978"
+            },
+            "withDirector": {
+              "hits": 3,
+              "films": 3
+            },
+            "withoutDirector": {
+              "hits": 4,
+              "films": 7
+            }
+          },
+          {
+            "person": {
+              "id": 6651,
+              "name": "Erik Nordgren",
+              "path": "/composer/6651"
+            },
+            "record": {
+              "hits": 8,
+              "films": 12
+            },
+            "mainDirector": {
+              "id": 6648,
+              "name": "Ingmar Bergman",
+              "path": "/director/6648"
+            },
+            "withDirector": {
+              "hits": 8,
+              "films": 12
+            },
+            "withoutDirector": {
+              "hits": 0,
+              "films": 0
+            }
+          },
+          {
+            "person": {
+              "id": 7460,
+              "name": "Fumio Hayasaka",
+              "path": "/composer/7460"
+            },
+            "record": {
+              "hits": 8,
+              "films": 12
+            },
+            "mainDirector": {
+              "id": 5026,
+              "name": "Akira Kurosawa",
+              "path": "/director/5026"
+            },
+            "withDirector": {
+              "hits": 5,
+              "films": 7
+            },
+            "withoutDirector": {
+              "hits": 3,
+              "films": 5
+            }
+          },
+          {
+            "person": {
+              "id": 13848,
+              "name": "Charlie Chaplin",
+              "path": "/composer/13848"
+            },
+            "record": {
+              "hits": 6,
+              "films": 9
+            },
+            "mainDirector": {
+              "id": 13848,
+              "name": "Charlie Chaplin",
+              "path": "/director/13848"
+            },
+            "withDirector": {
+              "hits": 6,
+              "films": 9
+            },
+            "withoutDirector": {
+              "hits": 0,
+              "films": 0
+            }
+          },
+          {
+            "person": {
+              "id": 30268,
+              "name": "Heinz Roemheld",
+              "path": "/composer/30268"
+            },
+            "record": {
+              "hits": 7,
+              "films": 11
+            },
+            "mainDirector": {
+              "id": 8823,
+              "name": "Raoul Walsh",
+              "path": "/director/8823"
+            },
+            "withDirector": {
+              "hits": 3,
+              "films": 3
+            },
+            "withoutDirector": {
+              "hits": 4,
+              "films": 8
+            }
+          },
+          {
+            "person": {
+              "id": 3098,
+              "name": "Nino Rota",
+              "path": "/composer/3098"
+            },
+            "record": {
+              "hits": 16,
+              "films": 29
+            },
+            "mainDirector": {
+              "id": 4415,
+              "name": "Federico Fellini",
+              "path": "/director/4415"
+            },
+            "withDirector": {
+              "hits": 9,
+              "films": 16
+            },
+            "withoutDirector": {
+              "hits": 7,
+              "films": 13
+            }
+          },
+          {
+            "person": {
+              "id": 65285,
+              "name": "Zhao Jiping",
+              "path": "/composer/65285"
+            },
+            "record": {
+              "hits": 5,
+              "films": 8
+            },
+            "mainDirector": {
+              "id": 607,
+              "name": "Zhang Yimou",
+              "path": "/director/607"
+            },
+            "withDirector": {
+              "hits": 3,
+              "films": 4
+            },
+            "withoutDirector": {
+              "hits": 2,
+              "films": 4
+            }
+          }
+        ]
+      }
+    ],
+    "topMajority": 20,
+    "topAllWithOne": 9,
+    "topSelf": 2,
+    "topTotal": 30,
+    "restMajority": 371,
+    "restTotal": 1171,
+    "eraCheck": [
+      {
+        "label": "Among people whose median film is from before 1970",
+        "high": {
+          "majority": 24,
+          "total": 50
+        },
+        "rest": {
+          "majority": 37,
+          "total": 159
+        }
+      },
+      {
+        "label": "Among those whose median film is from 1970 on",
+        "high": {
+          "majority": 11,
+          "total": 15
+        },
+        "rest": {
+          "majority": 319,
+          "total": 977
+        }
+      }
+    ],
+    "writersTopSelf": 6,
+    "writersTopTotal": 10
+  },
+  "pairs": {
+    "pairsChecked": 184,
+    "pairs": [
+      {
+        "director": {
+          "id": 5026,
+          "name": "Akira Kurosawa",
+          "path": "/director/5026"
+        },
+        "partner": {
+          "id": 34373,
+          "name": "Ryuzo Kikushima",
+          "path": "/writer/34373",
+          "role": "writer"
+        },
+        "alsoOnEvery": [
+          {
+            "id": 7450,
+            "name": "Toshirō Mifune",
+            "path": "/actor/7450",
+            "role": "actor"
+          }
+        ],
+        "together": {
+          "hits": 8,
+          "films": 9,
+          "fromYear": 1949,
+          "toYear": 1965
+        },
+        "directorApart": {
+          "hits": 7,
+          "films": 21
+        },
+        "window": {
+          "fromYear": 1950,
+          "toYear": 1963
+        },
+        "windowApart": {
+          "hits": 3,
+          "films": 7
+        },
+        "verdict": "holds"
+      },
+      {
+        "director": {
+          "id": 11528,
+          "name": "Jean Renoir",
+          "path": "/director/11528"
+        },
+        "partner": {
+          "id": 11532,
+          "name": "Marguerite Renoir",
+          "path": "/editor/11532",
+          "role": "editor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 9,
+          "films": 9,
+          "fromYear": 1931,
+          "toYear": 1946
+        },
+        "directorApart": {
+          "hits": 4,
+          "films": 9
+        },
+        "window": {
+          "fromYear": 1932,
+          "toYear": 1939
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 0
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 68,
+          "name": "Fritz Lang",
+          "path": "/director/68"
+        },
+        "partner": {
+          "id": 157,
+          "name": "Thea von Harbou",
+          "path": "/writer/157",
+          "role": "writer"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 7,
+          "films": 9,
+          "fromYear": 1921,
+          "toYear": 1933
+        },
+        "directorApart": {
+          "hits": 6,
+          "films": 23
+        },
+        "window": {
+          "fromYear": 1922,
+          "toYear": 1931
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 0
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 4415,
+          "name": "Federico Fellini",
+          "path": "/director/4415"
+        },
+        "partner": {
+          "id": 5397,
+          "name": "Ennio Flaiano",
+          "path": "/writer/5397",
+          "role": "writer"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 6,
+          "films": 8,
+          "fromYear": 1950,
+          "toYear": 1965
+        },
+        "directorApart": {
+          "hits": 3,
+          "films": 12
+        },
+        "window": {
+          "fromYear": 1952,
+          "toYear": 1963
+        },
+        "windowApart": {
+          "hits": 1,
+          "films": 1
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 5026,
+          "name": "Akira Kurosawa",
+          "path": "/director/5026"
+        },
+        "partner": {
+          "id": 20827,
+          "name": "Hideo Oguni",
+          "path": "/writer/20827",
+          "role": "writer"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 9,
+          "films": 12,
+          "fromYear": 1952,
+          "toYear": 1985
+        },
+        "directorApart": {
+          "hits": 6,
+          "films": 18
+        },
+        "window": {
+          "fromYear": 1954,
+          "toYear": 1970
+        },
+        "windowApart": {
+          "hits": 1,
+          "films": 1
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 1243,
+          "name": "Woody Allen",
+          "path": "/director/1243"
+        },
+        "partner": {
+          "id": 3097,
+          "name": "Gordon Willis",
+          "path": "/dp/3097",
+          "role": "dp"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 4,
+          "films": 8,
+          "fromYear": 1977,
+          "toYear": 1985
+        },
+        "directorApart": {
+          "hits": 4,
+          "films": 42
+        },
+        "window": {
+          "fromYear": 1978,
+          "toYear": 1984
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 0
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 5026,
+          "name": "Akira Kurosawa",
+          "path": "/director/5026"
+        },
+        "partner": {
+          "id": 7450,
+          "name": "Toshirō Mifune",
+          "path": "/actor/7450",
+          "role": "actor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 11,
+          "films": 16,
+          "fromYear": 1948,
+          "toYear": 1965
+        },
+        "directorApart": {
+          "hits": 4,
+          "films": 14
+        },
+        "window": {
+          "fromYear": 1949,
+          "toYear": 1963
+        },
+        "windowApart": {
+          "hits": 1,
+          "films": 2
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 5026,
+          "name": "Akira Kurosawa",
+          "path": "/director/5026"
+        },
+        "partner": {
+          "id": 18609,
+          "name": "Masaru Satō",
+          "path": "/composer/18609",
+          "role": "composer"
+        },
+        "alsoOnEvery": [
+          {
+            "id": 7450,
+            "name": "Toshirō Mifune",
+            "path": "/actor/7450",
+            "role": "actor"
+          }
+        ],
+        "together": {
+          "hits": 7,
+          "films": 9,
+          "fromYear": 1955,
+          "toYear": 1965
+        },
+        "directorApart": {
+          "hits": 8,
+          "films": 21
+        },
+        "window": {
+          "fromYear": 1957,
+          "toYear": 1963
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 0
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 4415,
+          "name": "Federico Fellini",
+          "path": "/director/4415"
+        },
+        "partner": {
+          "id": 5396,
+          "name": "Tullio Pinelli",
+          "path": "/writer/5396",
+          "role": "writer"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 6,
+          "films": 9,
+          "fromYear": 1950,
+          "toYear": 1986
+        },
+        "directorApart": {
+          "hits": 3,
+          "films": 11
+        },
+        "window": {
+          "fromYear": 1952,
+          "toYear": 1965
+        },
+        "windowApart": {
+          "hits": 1,
+          "films": 1
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 607,
+          "name": "Zhang Yimou",
+          "path": "/director/607"
+        },
+        "partner": {
+          "id": 643,
+          "name": "Gong Li",
+          "path": "/actor/643",
+          "role": "actor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 4,
+          "films": 8,
+          "fromYear": 1988,
+          "toYear": 2014
+        },
+        "directorApart": {
+          "hits": 2,
+          "films": 16
+        },
+        "window": {
+          "fromYear": 1990,
+          "toYear": 2006
+        },
+        "windowApart": {
+          "hits": 2,
+          "films": 7
+        },
+        "verdict": "close-call"
+      },
+      {
+        "director": {
+          "id": 564,
+          "name": "Richard Linklater",
+          "path": "/director/564"
+        },
+        "partner": {
+          "id": 569,
+          "name": "Ethan Hawke",
+          "path": "/actor/569",
+          "role": "actor"
+        },
+        "alsoOnEvery": [
+          {
+            "id": 580,
+            "name": "Sandra Adair",
+            "path": "/editor/580",
+            "role": "editor"
+          }
+        ],
+        "together": {
+          "hits": 4,
+          "films": 9,
+          "fromYear": 1995,
+          "toYear": 2025
+        },
+        "directorApart": {
+          "hits": 1,
+          "films": 14
+        },
+        "window": {
+          "fromYear": 1998,
+          "toYear": 2014
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 5
+        },
+        "verdict": "close-call"
+      },
+      {
+        "director": {
+          "id": 5026,
+          "name": "Akira Kurosawa",
+          "path": "/director/5026"
+        },
+        "partner": {
+          "id": 34380,
+          "name": "Asakazu Nakai",
+          "path": "/dp/34380",
+          "role": "dp"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 8,
+          "films": 11,
+          "fromYear": 1946,
+          "toYear": 1985
+        },
+        "directorApart": {
+          "hits": 7,
+          "films": 19
+        },
+        "window": {
+          "fromYear": 1947,
+          "toYear": 1975
+        },
+        "windowApart": {
+          "hits": 6,
+          "films": 12
+        },
+        "verdict": "close-call"
+      },
+      {
+        "director": {
+          "id": 5026,
+          "name": "Akira Kurosawa",
+          "path": "/director/5026"
+        },
+        "partner": {
+          "id": 7453,
+          "name": "Takashi Shimura",
+          "path": "/actor/7453",
+          "role": "actor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 12,
+          "films": 19,
+          "fromYear": 1943,
+          "toYear": 1963
+        },
+        "directorApart": {
+          "hits": 3,
+          "films": 11
+        },
+        "window": {
+          "fromYear": 1944,
+          "toYear": 1962
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 3
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 1032,
+          "name": "Martin Scorsese",
+          "path": "/director/1032"
+        },
+        "partner": {
+          "id": 380,
+          "name": "Robert De Niro",
+          "path": "/actor/380",
+          "role": "actor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 6,
+          "films": 10,
+          "fromYear": 1973,
+          "toYear": 2023
+        },
+        "directorApart": {
+          "hits": 4,
+          "films": 16
+        },
+        "window": {
+          "fromYear": 1976,
+          "toYear": 2019
+        },
+        "windowApart": {
+          "hits": 4,
+          "films": 13
+        },
+        "verdict": "close-call"
+      },
+      {
+        "director": {
+          "id": 5026,
+          "name": "Akira Kurosawa",
+          "path": "/director/5026"
+        },
+        "partner": {
+          "id": 7449,
+          "name": "Shinobu Hashimoto",
+          "path": "/writer/7449",
+          "role": "writer"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 6,
+          "films": 8,
+          "fromYear": 1950,
+          "toYear": 1970
+        },
+        "directorApart": {
+          "hits": 9,
+          "films": 22
+        },
+        "window": {
+          "fromYear": 1952,
+          "toYear": 1960
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 2
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 24,
+          "name": "Robert Zemeckis",
+          "path": "/director/24"
+        },
+        "partner": {
+          "id": 38,
+          "name": "Arthur Schmidt",
+          "path": "/editor/38",
+          "role": "editor"
+        },
+        "alsoOnEvery": [
+          {
+            "id": 37,
+            "name": "Alan Silvestri",
+            "path": "/composer/37",
+            "role": "composer"
+          }
+        ],
+        "together": {
+          "hits": 3,
+          "films": 9,
+          "fromYear": 1985,
+          "toYear": 2000
+        },
+        "directorApart": {
+          "hits": 0,
+          "films": 13
+        },
+        "window": {
+          "fromYear": 1988,
+          "toYear": 2000
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 0
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 3776,
+          "name": "Jean-Luc Godard",
+          "path": "/director/3776"
+        },
+        "partner": {
+          "id": 3526,
+          "name": "Agnès Guillemot",
+          "path": "/editor/3526",
+          "role": "editor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 5,
+          "films": 12,
+          "fromYear": 1961,
+          "toYear": 1967
+        },
+        "directorApart": {
+          "hits": 1,
+          "films": 11
+        },
+        "window": {
+          "fromYear": 1962,
+          "toYear": 1967
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 2
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 4109,
+          "name": "Michael Curtiz",
+          "path": "/director/4109"
+        },
+        "partner": {
+          "id": 3249,
+          "name": "Max Steiner",
+          "path": "/composer/3249",
+          "role": "composer"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 6,
+          "films": 11,
+          "fromYear": 1936,
+          "toYear": 1950
+        },
+        "directorApart": {
+          "hits": 4,
+          "films": 18
+        },
+        "window": {
+          "fromYear": 1937,
+          "toYear": 1949
+        },
+        "windowApart": {
+          "hits": 3,
+          "films": 6
+        },
+        "verdict": "closes"
+      },
+      {
+        "director": {
+          "id": 2636,
+          "name": "Alfred Hitchcock",
+          "path": "/director/2636"
+        },
+        "partner": {
+          "id": 2655,
+          "name": "George Tomasini",
+          "path": "/editor/2655",
+          "role": "editor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 5,
+          "films": 9,
+          "fromYear": 1954,
+          "toYear": 1964
+        },
+        "directorApart": {
+          "hits": 10,
+          "films": 43
+        },
+        "window": {
+          "fromYear": 1955,
+          "toYear": 1963
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 1
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 6818,
+          "name": "Werner Herzog",
+          "path": "/director/6818"
+        },
+        "partner": {
+          "id": 20554,
+          "name": "Beate Mainka-Jellinghaus",
+          "path": "/editor/20554",
+          "role": "editor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 3,
+          "films": 10,
+          "fromYear": 1968,
+          "toYear": 1984
+        },
+        "directorApart": {
+          "hits": 0,
+          "films": 8
+        },
+        "window": {
+          "fromYear": 1971,
+          "toYear": 1982
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 0
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 6648,
+          "name": "Ingmar Bergman",
+          "path": "/director/6648"
+        },
+        "partner": {
+          "id": 2201,
+          "name": "Max von Sydow",
+          "path": "/actor/2201",
+          "role": "actor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 7,
+          "films": 10,
+          "fromYear": 1957,
+          "toYear": 1971
+        },
+        "directorApart": {
+          "hits": 13,
+          "films": 31
+        },
+        "window": {
+          "fromYear": 1958,
+          "toYear": 1969
+        },
+        "windowApart": {
+          "hits": 2,
+          "films": 5
+        },
+        "verdict": "close-call"
+      },
+      {
+        "director": {
+          "id": 2636,
+          "name": "Alfred Hitchcock",
+          "path": "/director/2636"
+        },
+        "partner": {
+          "id": 2654,
+          "name": "Robert Burks",
+          "path": "/dp/2654",
+          "role": "dp"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 6,
+          "films": 12,
+          "fromYear": 1951,
+          "toYear": 1964
+        },
+        "directorApart": {
+          "hits": 9,
+          "films": 40
+        },
+        "window": {
+          "fromYear": 1953,
+          "toYear": 1963
+        },
+        "windowApart": {
+          "hits": 1,
+          "films": 1
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 6648,
+          "name": "Ingmar Bergman",
+          "path": "/director/6648"
+        },
+        "partner": {
+          "id": 11905,
+          "name": "Sven Nykvist",
+          "path": "/dp/11905",
+          "role": "dp"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 13,
+          "films": 21,
+          "fromYear": 1953,
+          "toYear": 1984
+        },
+        "directorApart": {
+          "hits": 7,
+          "films": 20
+        },
+        "window": {
+          "fromYear": 1960,
+          "toYear": 1982
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 1
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 19069,
+          "name": "Claude Chabrol",
+          "path": "/director/19069"
+        },
+        "partner": {
+          "id": 19087,
+          "name": "Jacques Gaillard",
+          "path": "/editor/19087",
+          "role": "editor"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 4,
+          "films": 11,
+          "fromYear": 1959,
+          "toYear": 1975
+        },
+        "directorApart": {
+          "hits": 2,
+          "films": 19
+        },
+        "window": {
+          "fromYear": 1959,
+          "toYear": 1973
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 1
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 6648,
+          "name": "Ingmar Bergman",
+          "path": "/director/6648"
+        },
+        "partner": {
+          "id": 6651,
+          "name": "Erik Nordgren",
+          "path": "/composer/6651",
+          "role": "composer"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 8,
+          "films": 12,
+          "fromYear": 1949,
+          "toYear": 1964
+        },
+        "directorApart": {
+          "hits": 12,
+          "films": 29
+        },
+        "window": {
+          "fromYear": 1951,
+          "toYear": 1961
+        },
+        "windowApart": {
+          "hits": 2,
+          "films": 4
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 18392,
+          "name": "Robert Aldrich",
+          "path": "/director/18392"
+        },
+        "partner": {
+          "id": 21011,
+          "name": "Frank De Vol",
+          "path": "/composer/21011",
+          "role": "composer"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 3,
+          "films": 13,
+          "fromYear": 1955,
+          "toYear": 1981
+        },
+        "directorApart": {
+          "hits": 0,
+          "films": 8
+        },
+        "window": {
+          "fromYear": 1955,
+          "toYear": 1979
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 6
+        },
+        "verdict": "close-call"
+      },
+      {
+        "director": {
+          "id": 4109,
+          "name": "Michael Curtiz",
+          "path": "/director/4109"
+        },
+        "partner": {
+          "id": 8714,
+          "name": "Sol Polito",
+          "path": "/dp/8714",
+          "role": "dp"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 4,
+          "films": 8,
+          "fromYear": 1936,
+          "toYear": 1941
+        },
+        "directorApart": {
+          "hits": 6,
+          "films": 21
+        },
+        "window": {
+          "fromYear": 1938,
+          "toYear": 1940
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 0
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 1884,
+          "name": "Steven Soderbergh",
+          "path": "/director/1884"
+        },
+        "partner": {
+          "id": 8377,
+          "name": "Cliff Martinez",
+          "path": "/composer/8377",
+          "role": "composer"
+        },
+        "alsoOnEvery": [],
+        "together": {
+          "hits": 2,
+          "films": 10,
+          "fromYear": 1989,
+          "toYear": 2022
+        },
+        "directorApart": {
+          "hits": 0,
+          "films": 26
+        },
+        "window": {
+          "fromYear": 1991,
+          "toYear": 2011
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 13
+        },
+        "verdict": "close-call"
+      },
+      {
+        "director": {
+          "id": 32375,
+          "name": "Mario Monicelli",
+          "path": "/director/32375"
+        },
+        "partner": {
+          "id": 5811,
+          "name": "Agenore Incrocci",
+          "path": "/writer/5811",
+          "role": "writer"
+        },
+        "alsoOnEvery": [
+          {
+            "id": 5812,
+            "name": "Furio Scarpelli",
+            "path": "/writer/5812",
+            "role": "writer"
+          }
+        ],
+        "together": {
+          "hits": 3,
+          "films": 10,
+          "fromYear": 1949,
+          "toYear": 1974
+        },
+        "directorApart": {
+          "hits": 1,
+          "films": 10
+        },
+        "window": {
+          "fromYear": 1952,
+          "toYear": 1970
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 2
+        },
+        "verdict": "untestable"
+      },
+      {
+        "director": {
+          "id": 32375,
+          "name": "Mario Monicelli",
+          "path": "/director/32375"
+        },
+        "partner": {
+          "id": 5812,
+          "name": "Furio Scarpelli",
+          "path": "/writer/5812",
+          "role": "writer"
+        },
+        "alsoOnEvery": [
+          {
+            "id": 5811,
+            "name": "Agenore Incrocci",
+            "path": "/writer/5811",
+            "role": "writer"
+          }
+        ],
+        "together": {
+          "hits": 3,
+          "films": 10,
+          "fromYear": 1949,
+          "toYear": 1974
+        },
+        "directorApart": {
+          "hits": 1,
+          "films": 10
+        },
+        "window": {
+          "fromYear": 1952,
+          "toYear": 1970
+        },
+        "windowApart": {
+          "hits": 0,
+          "films": 2
+        },
+        "verdict": "untestable"
+      }
+    ]
+  }
+}

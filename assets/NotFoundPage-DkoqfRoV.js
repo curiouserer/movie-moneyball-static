@@ -1,0 +1,1 @@
+import{j as e}from"./index-CPO9jPCe.js";import{u as o,n as t,a as r}from"./usePrerenderRelease-BPWDNMt-.js";import{N as a}from"./NotFoundContent-frSDk2Iv.js";import"./react-vendor-BGASW16r.js";function d(){return o(t()),r(!0),e.jsx(a,{})}export{d as default};

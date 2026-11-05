@@ -1,0 +1,1 @@
+import{j as s}from"./index-CPO9jPCe.js";import{b as t,L as i}from"./react-vendor-BGASW16r.js";function c({parts:r,linkClassName:e}){return s.jsx(s.Fragment,{children:r.map((n,o)=>s.jsx(t.Fragment,{children:typeof n=="string"?n:"strong"in n?s.jsx("strong",{children:n.strong}):s.jsx(i,{to:n.link,className:e,children:n.text})},o))})}export{c as I};
